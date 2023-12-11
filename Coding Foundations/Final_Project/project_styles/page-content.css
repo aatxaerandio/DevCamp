@@ -1,0 +1,133 @@
+/*General content*/
+
+.general-content-wrapper {
+    background-color: #40434d;
+    box-shadow: inset -400px -50px 200px 10px rgba(0, 0, 0, 0.6);
+    height: 490px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+/*Left section of the content*/
+
+.content-left-wrapper {
+    width: 700px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-top: 20px;
+    gap: 30px;
+}
+
+
+.content-left-wrapper > .text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+
+.content-left-wrapper > .text-content > .text-top {
+    font-size: 2.5em;
+    font-weight: 300;
+    line-height: 1em;
+    color: #ffffff;
+}
+
+.content-left-wrapper > .text-content > .text-top strong {
+    font-weight: 700;
+}
+
+.content-left-wrapper > .text-content > .text-top img {
+    width: 30px;
+}
+
+.content-left-wrapper > .text-content > .text-bottom {
+    width: 600px;
+    font-size: 1.9em;
+    font-weight: 400;
+    line-height: 1.4em;
+    color: #A1ACAC;
+}
+
+
+/*Right section of the content*/
+
+.content-right-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.content-right-wrapper > .right-figure-title {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.content-right-wrapper > .right-figure-title span {
+    color: #78DAFD;
+}
+.content-right-wrapper > .right-figure-title span:hover {
+    color: #F4E17A;
+}
+
+
+.content-right-wrapper img {
+    width: 490px;
+    
+}
+
+
+
+/* Codepen wrapper */
+
+.codepen-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.codepen-element {
+    background-color: #36383F;
+    border: 1px solid #676767;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 20px 0px;
+}
+
+.codepen-element:hover  {
+    background-color: #b9b9b9;
+}    
+
+.codepen-element span {
+    text-transform: uppercase;
+    font-size: 1.4em;
+    letter-spacing: -2px;
+    font-weight: 900;
+}
+
+
+
+/*Page ending */ 
+.page-ending {
+    height: 100px;
+    width: 100%;
+    background-color: #191A1D;
+}
