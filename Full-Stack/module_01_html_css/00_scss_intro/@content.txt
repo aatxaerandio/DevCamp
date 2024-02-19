@@ -1,0 +1,3 @@
+El @content es una palabra clave que permite realizar lo mismo que lo visto en el apartado de mixins con argumentos, pero de una forma más sencilla e intuitiva.
+
+Basicamente es usar los mixins. En este caso hay dos valores, .error y .success. Ambas tienen el mixin includido, pero hay cosas que son diferentes en los dos. En lugar de poner unas variables en el mixin arriba, se pone @content y asi se lee que cada elemento que tenga @include mixin, habrá una parte para cada elemetos que sea diferente. 
