@@ -1,0 +1,97 @@
+
+/* GRID 1 STYLES */
+
+.gridOne {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+/* GRID 2 STYLES */
+
+.gridTwo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+.class_01 {
+    background-color: red;
+}
+.class_02 {
+    background-color: blue;
+}
+.class_03 {
+    background-color: yellow;
+}
+
+/* GRID 3 STYLES */
+.gridThree {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    width: 500px;
+    height: 300px;
+}
+
+.gridThree div:first-child {
+    background-color: green;
+}
+
+.gridThree div:last-child {
+    background-color: orange;
+}
+
+.gridThree > div img {
+    width: 500px;
+    height: 225px;
+    object-fit: cover;  
+}
+
+
+/* GRID 4 STYLES */
+
+.gridFour {
+    width: 500px;
+    background-color: green;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#grid_4_row_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+/* GRID 5 STYLES */
+
+.gridFive {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 500px;
+    background-color: green;
+}
+
+.grid_5_row_2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.grid_5_row_2 img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* GRID 6 STYLES */
+
+.gridSix {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 500px;
+    background-color: lightgray;
+}
+
+.gridSix p {
+    font-family: "Kode Mono", sans-serif;
+}
