@@ -13,8 +13,7 @@
 **Version Control System**
 -	Gives ability to create milestones for a project.
 -	Allow to create milestones
-![01_version_control_system.png](./images/01_version_control_system.png)
-dfgdfg
+
 <img align="right" src=./images/01_version_control_system.png height="50%" width="50%">
 
 -	If you break something on the server/code; this allows you to revert to that previous ooints/changes. Restrore the working versions.
