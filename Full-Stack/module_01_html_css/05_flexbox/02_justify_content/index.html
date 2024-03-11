@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: 0;
+            height: calc(100vh - 20px);
+            width: calc(100vw - 20px);
+            border: 10px solid red;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .container > .img_blocks {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="img_blocks">
+            <img src="https://source.unsplash.com/random/150x150" alt="">
+            <img src="https://source.unsplash.com/random/150x150" alt="">
+            <img src="https://source.unsplash.com/random/150x150" alt="">
+            <img src="https://source.unsplash.com/random/150x150" alt="">
+            <img src="https://source.unsplash.com/random/150x150" alt="">
+            <img src="https://source.unsplash.com/random/150x150" alt="">
+        </div>
+    </div>
+</body>
+</html>
+
+
+But what it allows you to do is to call an url and then it is going to give you a random image from their library. So I can say https://source.unsplash.com and then slash random and then you can pass in a size so here I'm going to say 150X150. And now if I hit save you can see we have an image right there. 
+
+height = make calculation, so use calc() and put 100% of the viewHeight/widt minux 20px.
+
+By deafult, ist is put as a row based direction. So jutify content does not do anything there.
+
+---
+
+justify-content
+
+Justify the content of the sinlge DIV that encompasses the images inside.
+Default is flex-start --> Wuill put things in the start. 
+flex-end --> all the way to the right hand size or down, depending on the DIV direction.
+flex-center --> As has only one item(one div)it will not make anything. 
+space-between --> look for the all avbailbnle space in the container and then put space between the elemetns inside de DIV.
+space-around --> look for all the avbailble space, but more "centered" and well distributed.
+
+If you use row instead of coluimns, images will be blurred completely as we are using two flex containers. 
+The wasy to fix this is to change the flex direction.
