@@ -13,11 +13,9 @@
 **Version Control System**
 -	Gives ability to create milestones for a project.
 -	Allow to create milestones
-
-
+![01_version_control_system.png](./images/01_version_control_system.png)
 -	If you break something on the server/code; this allows you to revert to that previous ooints/changes. Restrore the working versions.
-
-
+![02_version_control_system.png](./images/02_version_control_system.png)
 -	Each new version does not include all the data, only the specific changes you make.
 
 # 2. GIT vs GitHub
