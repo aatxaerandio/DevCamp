@@ -13,8 +13,10 @@
 
 <img align="center" src=./images/01_version_control_system.png height="50%" width="50%">
 <br>
+
 -	If you break something on the server/code; this allows you to revert to that previous ooints/changes. Restrore the working versions.
 <br>
+
 <img align="center" src=./images/02_version_control_system.png height="50%" width="50%">
 <br>
 -	Each new version does not include all the data, only the specific changes you make.
