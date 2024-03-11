@@ -1,5 +1,25 @@
 # 1. Introduction to GIT
 
+**Open Source**
+-	free to use and developed by community of developers. 
+-	Download for free and start working for Project. 
+-	Team of talented developers adding new features.
+
+**Distributed**
+-	Centralized code repository, in order to have all together and keep track of changes.
+-	Checkout of the code, in order to implement a feature. 
+-	There is a centralized repo that can access the same code you and domes developers.
+
+**Version Control System**
+-	Gives ability to create milestones for a project.
+-	Allow to create milestones
+
+
+-	If you break something on the server/code; this allows you to revert to that previous ooints/changes. Restrore the working versions.
+
+
+-	Each new version does not include all the data, only the specific changes you make.
+
 # 2. GIT vs GitHub
 Basically, GitHub is a Hub for Git projects.
 GitHub is a repository to create, modify and share code.
