@@ -12,10 +12,10 @@ Taking as reference the Codepen website, a low fidelity wireframe was created us
 
 #### Task Two - Idenitfy colors used repeatedly
 Fot task Two, [https://timmyomahony.com/](https://timmyomahony.com/) website was selected. The colors used repeatedly are:
--	#F0F0E8  For the body background color.
+-	#F0F0E8 --> For the body background color.
 -	#72645C --> For the Dates, mentioned authors, and the navigation links for “Contact”, “Work”, and “Blog”.
--	#000000  For the majority of text in the website
--	#6B7280  For the description of the person responsible for the website.
+-	#000000 --> For the majority of text in the website.
+-	#6B7280 --> For the description of the person responsible for the website.
 
 #### Task Three - Create a user story referencing one website
 I choose Google website as reference. A simple user story is:
