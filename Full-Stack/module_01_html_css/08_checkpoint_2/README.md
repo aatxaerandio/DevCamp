@@ -11,6 +11,7 @@ Flexbox assignment is available at /Task_01_Flexbox_assignment with .html and .c
 Taking as reference the Codepen website, a low fidelity wireframe was created using the online free tool [wireframe.cc](https://wireframe.cc/).
 
 <img src=./images/low-fidelity-wireframe.jpg width="50%" height="50%">
+<br>
 
 #### Task Two - Idenitfy colors used repeatedly
 Fot task Two, [https://timmyomahony.com/](https://timmyomahony.com/) website was selected. The colors used repeatedly are:
@@ -18,10 +19,12 @@ Fot task Two, [https://timmyomahony.com/](https://timmyomahony.com/) website was
 -	#72645C --> For the Dates, mentioned authors, and the navigation links for “Contact”, “Work”, and “Blog”.
 -	#000000 --> For the majority of text in the website.
 -	#6B7280 --> For the description of the person responsible for the website.
+<br>
 
 #### Task Three - Create a user story referencing one website
 I choose Google website as reference. A simple user story is:
 **As** Google user, **I need** a new feature in the interface of google search that provide users with a shorcut to make a google search by images, **So that** I can browse figures in a much more efficient and rapid way.
+<br>
 
 #### Task Four - Identify the prime objective of Facebook, Twitter, Google, and Youtube.
 1. The primordial objective of **Twitter**, or X, is to network people by allowing the broadcast short posts to share news, thoughts, comments, opinions, and promote feedback and interactions.
