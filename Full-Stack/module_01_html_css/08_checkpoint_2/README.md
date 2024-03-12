@@ -9,7 +9,12 @@ Flexbox assignment is available at /Task_01_Flexbox_assignment with .html and .c
 
 #### Task One - create a low fidelity wireframe
 Taking as reference the Codepen website, a low fidelity wireframe was created using the online free tool [wireframe.cc](https://wireframe.cc/).
+Reference Codepen website:
+<img src=./images/codepen.jpg width="50%" height="50%">
 
+<br>
+
+The low fidelity wireframe:
 <img src=./images/low-fidelity-wireframe.jpg width="50%" height="50%">
 <br>
 
