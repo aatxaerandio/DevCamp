@@ -24,6 +24,7 @@ Fot task Two, [https://timmyomahony.com/](https://timmyomahony.com/) website was
 #### Task Three - Create a user story referencing one website
 I choose Google website as reference. A simple user story is:
 **As** Google user, **I need** a new feature in the interface of google search that provide users with a shorcut to make a google search by images, **So that** I can browse figures in a much more efficient and rapid way.
+
 <br>
 
 #### Task Four - Identify the prime objective of Facebook, Twitter, Google, and Youtube.
