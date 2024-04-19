@@ -147,7 +147,30 @@ Aqui se pretende obtener los numeros que son multiplos de 2 usando un bucle dent
 
 ## TAREA 2 - Ejercicios prácticos
 ### Ejercicio 1 - Cree un bucle For de Python.
+
+Se crea una lista de numeros y con el bucle ```for``` se imprime cada numero de la lista.
+my_numbers = [1, 2, 3, 4, 5, 6]
+
+for num in my_numbers:
+  print(num)
+
+
+
+
 ### Ejercicio 2 - Cree una función de Python llamada suma que tome 3 argumentos y devuelva la suma de los 3.
+
+def suma(arg_1, arg_2, arg_3):
+  suma = arg_1 + arg_2 + arg_3
+  print(suma)
+
+suma(1,2,3)
+
+def suma(arg_1, arg_2, arg_3):
+  return arg_1 + arg_2 + arg_3
+print(suma(1,1,1))
+
+
+
 ### Ejercicio 3 - Cree una función lambda con la misma funcionalidad que la función de suma que acaba de crear.
 ### Ejercicio 4 - Utilizando la siguiente lista y variable, determine si el valor de la variable coincide o no con un valor de la lista. *Sugerencia, si es necesario, utilice un bucle for in y el operador in.
 ```
