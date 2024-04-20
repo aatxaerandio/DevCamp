@@ -178,7 +178,7 @@ pregunta = lambda elemento_1, elemento_2: f"¿Has cogido las {elemento_1} y las 
 
 print(pregunta("llaves", "gafas"))
 ```
-De este modo imprimirá ¿Has cogido las llaves y las gafas?
+De este modo imprimirá ```¿Has cogido las llaves y las gafas?```
 
 ### Pregunta 6 - ¿Qué es un paquete pip?
 
@@ -188,6 +188,16 @@ instalar y administrar los paquetes en Python.
 
 Una vez instalados se pueden importar al codigo para importar dicha funcionalidad de determinado modulo o
 biblioteca y usarlo.
+
+Por ejemplo, para importar un modulo se utiliza ```import```.
+```python
+import math
+```
+
+Adenás, se podría importar solo una funcion de cierto módulo, por ejemplo, la función ```sqrt``` del módulo ```math```:
+```python
+from math import sqrt
+```
 
 ## TAREA 2 - Ejercicios prácticos
 ### Ejercicio 1 - Cree un bucle For de Python.
