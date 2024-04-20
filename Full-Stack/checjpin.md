@@ -1,7 +1,5 @@
 # CHECKPOINT 5
 
-
-
 ## TAREA 1 - Preguntas teóricas
 ### Pregunta 1 - ¿Qué es un condicional?
 En Python, los condicionales son una serie de instrucciones para que se ejecute un bloque de código u otro dependiendo de una serie de requisitos o condiciones.
@@ -69,14 +67,17 @@ while x < 10:
   print("You´re right")
 ```
 De este modo, si `x` es inferior a 10 (es decir, cumple el condicional)
-Se ejecuta el codigo que le sigue, se imprimer `You´re rigth`
+Se ejecuta el codigo que le sigue, se imprimer `You´re rigth`.
 Ademas, se le suma 1 a la x; siendo en el siguiente bucle 6 y en el siguiente 7.
 El bucle finalizará cuando el valor de x no cumpla la condicion, es decir, al quinto bucle el valor será 10 y por tanto parará.
 
 
 
 ### Pregunta 3 - ¿Qué es una lista por comprensión en Python?
-En este ejemplo, se pretende obtener los numeros que son multiplos de 2.
+Una lista por comprensión es una lista que permite crear listas de manera concisa y rápida.
+La particularidad de estas listases que permite definir la lista y sus elementos en una sola linea de codigo.
+
+En siguiente ejemplo, se pretende obtener los numeros que son multiplos de 2.
 De forma tradicional se realizaría de este modo; utilizando un bucle `for` y una condición `if` para verificar si el numero es multiplo de 2. Se crea una lista vacia `lista_multiplos`que a medida que el bucle vaya corriendo se vayan añadiendo los multiplos de 2.
 ```
 lista_multiplos = []
@@ -85,6 +86,7 @@ multiplos_2 = range(1, 24)
 for num in multiplos_2:
   if num % 2 == 0:
     lista_multiplos.append(num)
+
 print(lista_multiplos) # [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]
 ```
 Utilizando lista por comprension se puede simplificar mucho, de este modo:
@@ -96,27 +98,95 @@ print(multiplos_2)  # [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]
 ```
 Aqui se pretende obtener los numeros que son multiplos de 2 usando un bucle dentro de una lista. Para cada numero en el rango de 1 a 24, se verifica si es multiplo de 2 y se guarda en la lista `lista_multiplos`. De este modo se consigue el mismo resutlado pero con un codigo mas limpio.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Pregunta 4 - ¿Qué es un argumento en Python?
+
+En Python, un argumento es un elemento que se usa dentro de las funciones,
+siendo el objetivo del argumento, proveer de un valor para que la funcion 
+ejecute determinado codigo. 
+
+Hay que destacar la diferencia entre para metros y argumentos, ya que el primero
+son las variables que se especifican dentro de los parentesis cuando se define 
+una funcion (por ejemplo, arg_1 es parametro), mientras que lo segundo son los 
+valores que se pasan a esos parametros cuando llamas a una funncion (en el ejemplo 
+de abajo el argumento seria "Miguel").
+
+Hay diferentes tipos de argumentos:
+
+- Argumentos por defecto:  Estos son argumentos que tienen un valor predeterminado 
+y se usan si no se provee a la funcion de otro argumento. Se asignan con =.
+```
+def funcion_defecto(arg_1 = "Pedro"):
+  print(arg_1 + " quiere comprarse un coche")
+
+funcion_defecto()     # Pedro quiere comprarse un coche
+funcion_defecto("Miguel")     # Miguel quiere comprarse un coche
+```
+
+- Argumentos posicionales: En los que los cuales los valores son asignados en base a
+su posicion cuando la funcion es llamada. 
+
+En el ejemplo de acontinuacion, son 3 valores que se pasan a los argumentos en el 
+mismo orden, siendo a=2, b=1 y c=3.
+```
+def funcion_pos(a, b, c):
+  print((a-b)*c)
+
+funcion_pos(2, 1, 3)    # 3. 
+```
+- Argumentos keyword: son muy similares a los argumentos por defecto, ya que se designan
+con un signo igual =. Cierto valor se le asigna a un keyword, en este caso "Juan" a nombre
+y 25 a edad.
+```
+def estudiante(nombre, edad):
+  print("Detalles del estudiante:", nombre, edad)
+
+estudiante(nombre="Juan", edad=25)
+```
+
+- Argumentos arbitrarios: Se utilizan para pasar un numero varibale de argumentos sin palabras 
+clave a la funcion. Usando el asterisco * hará que ese argumento se comporte como un tupla.
+```
+def refrescos(*args):
+  for arg in args:
+    print(arg)    
+
+refrescos("cola", "pepsi", "fanta", "sprite")
+```
+
+- Argumentos arbitrarios de palabras clave: Se utilizan al mismo modo que los anteriores, pero 
+se usan dos asteriscos en lugar de uno (**). Las funciones que tengan ^^ en un argumento, harán
+que ese argumento se comporte como un diccionario, y al llamar la funcion se le asignan nombres 
+a las variables y estas son tratadas como claves del diccionario. 
+```
+def pedir(**kwargs):
+    if kwargs:
+        print(f"Buenas, quiero un kilo de {kwargs['fruta_1']} y medio de {kwargs['fruta_2']}")
+    else:
+        print("No quiero nada mas, gracias")
+
+pedir(fruta_1 = "peras", fruta_2 = "manzanas")
+```
+
 ### Pregunta 5 - ¿Qué es una función Lambda en Python?
+
+La funcion lambda en Python es una funcion rápida para realizar operaciones simples  y no es 
+necesario definir una funcion completa. Se utilizan para hacer mas sencillo y legible el codigo.
+La sintaxis de esta funcion se hace mediante la creación de una variable que contiene dicha funcion:
+```
+pregunta = lambda elemento_1, elemento_2: f"¿Has cogido las {elemento_1} y las {elemento_2}?"
+
+print(pregunta("llaves", "gafas"))
+```
+De este modo imprimirá ¿Has cogido las llaves y las gafas?
+
 ### Pregunta 6 - ¿Qué es un paquete pip?
 
+Un paquete pip es una coleccion de modulos y bibliotecas que proporcionan funcionalidades en Python.
+Pip es el acronimo de Pip Install Packages, que es el sistema de administracion de paquetes que se usa para 
+instalar y administrar los paquetes en Python.
 
-
+Una vez instalados se pueden importar al codigo para importar dicha funcionalidad de determinado modulo o
+biblioteca y usarlo.
 
 
 
@@ -147,31 +217,26 @@ Aqui se pretende obtener los numeros que son multiplos de 2 usando un bucle dent
 
 ## TAREA 2 - Ejercicios prácticos
 ### Ejercicio 1 - Cree un bucle For de Python.
-
 Se crea una lista de numeros y con el bucle ```for``` se imprime cada numero de la lista.
+```
 my_numbers = [1, 2, 3, 4, 5, 6]
 
 for num in my_numbers:
   print(num)
-
-
-
-
+```
 ### Ejercicio 2 - Cree una función de Python llamada suma que tome 3 argumentos y devuelva la suma de los 3.
-
-def suma(arg_1, arg_2, arg_3):
-  suma = arg_1 + arg_2 + arg_3
-  print(suma)
-
-suma(1,2,3)
-
+```
 def suma(arg_1, arg_2, arg_3):
   return arg_1 + arg_2 + arg_3
-print(suma(1,1,1))
 
-
-
+print(suma(1,1,1))    # 3
+```
 ### Ejercicio 3 - Cree una función lambda con la misma funcionalidad que la función de suma que acaba de crear.
+```
+suma = lambda arg_1, arg_2, arg_3: arg_1 + arg_2 + arg_3
+
+print(suma(1, 1, 1))
+```
 ### Ejercicio 4 - Utilizando la siguiente lista y variable, determine si el valor de la variable coincide o no con un valor de la lista. *Sugerencia, si es necesario, utilice un bucle for in y el operador in.
 ```
 nombre = 'Enrique'
@@ -179,4 +244,23 @@ lista_nombre = 'Jessica', 'Paul', 'George', 'Henry', 'Adán'
 Esta es toda la asignación, ¡mucha suerte!
 ```
 
+Se podria relizar de dos formas:
+
+1º Caso
+```
+for nombre in lista_nombre:
+  if nombre == "Enrique":
+    print("Este nombre está en la lista")
+else:
+    print("Este nombre NO está en la lista")
+```
+De otro modo, se podria realizar también de esta manera:
+
+2º Caso
+```
+if nombre in lista_nombre:
+  print("Este nombre esta en la lista")
+else:
+  print("Este nombre NO esta en la lista")
+```
 
