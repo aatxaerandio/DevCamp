@@ -4,9 +4,9 @@
 ### Pregunta 1 - ¿Qué es un condicional?
 En Python, los condicionales son una serie de instrucciones para que se ejecute un bloque de código u otro dependiendo de una serie de requisitos o condiciones.
 En cuanto a la sintaxis, se utilizan:
--	`if` --> Que ejecuta el código si se cumple la condición
--	`elif` --> Cuando hay mas de una condición
--	`else` --> Cuando no se cumple ninguna de las anteriores condiciones
+-	`if` --> Que ejecuta el código si se cumple la condición.
+-	`elif` --> Cuando hay mas de una condición.
+-	`else` --> Cuando no se cumple ninguna de las anteriores condiciones.
   
 ```python
 edad = 12
@@ -189,33 +189,6 @@ instalar y administrar los paquetes en Python.
 Una vez instalados se pueden importar al codigo para importar dicha funcionalidad de determinado modulo o
 biblioteca y usarlo.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## TAREA 2 - Ejercicios prácticos
 ### Ejercicio 1 - Cree un bucle For de Python.
 Se crea una lista de numeros y con el bucle ```for``` se imprime cada numero de la lista.
@@ -236,16 +209,15 @@ print(suma(1,1,1))    # 3
 ```python
 suma = lambda arg_1, arg_2, arg_3: arg_1 + arg_2 + arg_3
 
-print(suma(1, 1, 1))
+print(suma(1, 1, 1))  # 3
 ```
 ### Ejercicio 4 - Utilizando la siguiente lista y variable, determine si el valor de la variable coincide o no con un valor de la lista. *Sugerencia, si es necesario, utilice un bucle for in y el operador in.
 ```python
 nombre = 'Enrique'
 lista_nombre = 'Jessica', 'Paul', 'George', 'Henry', 'Adán'
-Esta es toda la asignación, ¡mucha suerte!
 ```
 
-Se podria relizar de dos formas:
+Se podria realizar de dos formas:
 
 **1º Caso**
 ```python
