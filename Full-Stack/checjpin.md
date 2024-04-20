@@ -22,14 +22,14 @@ Al ejecutarse, se recorren todos los condicionales y se imprimirá algo dependie
 En este caso, al establecer `edad = 12`; se cumple el primer condicional, y por tanto se imprime ```"No puedes sacarte el carnet de conducir, eres muy joven aun"```.
 
 Ademas, también se pueden combinar, en este caso con `and`:
-```
+```python
 edad = 12
 if edad >= 18 and edad <= 65:
     print("Tienes la edad adecuada")
 else:
     print("No tienes la edad adecuada")
 ```
-```
+```python
 import math from numpy
 ```
 En este caso, se usa and para combinar ambas edades y acortar el codigo.
@@ -42,12 +42,13 @@ En Python se distinguen dos tipos de bucles, los bucles `for` y los bucles `whil
 
 El bucle `for` se utiliza para iterar sobre una lista o cadena, y se usa para realizar una operación en cada elementos de esa lista o cadena.
 La sintasis de este bucle esta compuesta por el siguiente código:
-```lista = ["elemento_1", "elemento_2"]
+```python
+lista = ["elemento_1", "elemento_2"]
 for elemento_de_la_lista in lista:
     print("Codigo a ejecutarse")
 ```
 Utilizando un ejemplo:
-```
+```python
 nombres = ["Hector", "Pedro", "Jose", "Miguel"]
 for nombre in nombres:
   print(nombre)
@@ -55,12 +56,12 @@ for nombre in nombres:
 
 Por el contrario, el bucle `while` se usa para ejecutar código repetidamente mientras se cumple una condición. 
 La sintasix de este bucle esta compuesta por el siguiente codigo:
-```
+```python
 while la_condicion:
     codigo_a_ejecutarse
 ```
 Un ejemplo seria:
-```
+```python
 x = 5
 while x < 10:
   x += 1
@@ -79,7 +80,7 @@ La particularidad de estas listas es que permite definir la lista y sus elemento
 
 En siguiente ejemplo, se pretende obtener los numeros que son multiplos de 2.
 De forma tradicional se realizaría de este modo; utilizando un bucle `for` y una condición `if` para verificar si el numero es multiplo de 2. Se crea una lista vacia `lista_multiplos`que a medida que el bucle vaya corriendo se vayan añadiendo los multiplos de 2.
-```
+```python
 lista_multiplos = []
 multiplos_2 = range(1, 24)
 
@@ -89,8 +90,8 @@ for num in multiplos_2:
 
 print(lista_multiplos) # [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]
 ```
-Utilizando lista por comprension se puede simplificar mucho, de este modo:
-```
+Utilizando lista por comprensión se puede simplificar mucho, de este modo:
+```python
 multiplos_2 = range(1, 24)
 
 lista_multiplos = [num for num in multiplos_2 if num % 2 == 0]
@@ -114,7 +115,7 @@ Hay diferentes tipos de argumentos:
 
 - **Argumentos por defecto:**  Estos son argumentos que tienen un valor predeterminado 
 y se usan si no se provee a la funcion de otro argumento. Se asignan con =.
-```
+```python
 def funcion_defecto(arg_1 = "Pedro"):
   print(arg_1 + " quiere comprarse un coche")
 
@@ -127,7 +128,7 @@ su posicion cuando la funcion es llamada.
 
 En el ejemplo de acontinuacion, son 3 valores que se pasan a los argumentos en el 
 mismo orden, siendo ```a=2, b=1 y c=3.```
-```
+```python
 def funcion_pos(a, b, c):
   print((a-b)*c)
 
@@ -136,7 +137,7 @@ funcion_pos(2, 1, 3)    # 3.
 - **Argumentos keyword:** son muy similares a los argumentos por defecto, ya que se designan
 con un signo igual =. Cierto valor se le asigna a un keyword, en este caso "Juan" a ```nombre```
 y 25 a ```edad```.
-```
+```python
 def estudiante(nombre, edad):
   print("Detalles del estudiante:", nombre, edad)
 
@@ -145,7 +146,7 @@ estudiante(nombre="Juan", edad=25)
 
 - **Argumentos arbitrarios:** Se utilizan para pasar un numero varibale de argumentos sin palabras 
 clave a la funcion. Usando el asterisco ```*``` hará que ese argumento se comporte como un tupla.
-```
+```python
 def refrescos(*args):
   for arg in args:
     print(arg)    
@@ -157,7 +158,7 @@ refrescos("cola", "pepsi", "fanta", "sprite")
 se usan dos asteriscos en lugar de uno (**). Las funciones que tengan ** en un argumento, harán
 que ese argumento se comporte como un diccionario, y al llamar la funcion se le asignan nombres 
 a las variables y estas son tratadas como claves del diccionario. 
-```
+```python
 def pedir(**kwargs):
     if kwargs:
         print(f"Buenas, quiero un kilo de {kwargs['fruta_1']} y medio de {kwargs['fruta_2']}")
@@ -172,7 +173,7 @@ pedir(fruta_1 = "peras", fruta_2 = "manzanas")
 La funcion lambda en Python es una funcion rápida para realizar operaciones simples  y no es 
 necesario definir una funcion completa. Se utilizan para hacer mas sencillo y legible el codigo.
 La sintaxis de esta funcion se hace mediante la creación de una variable que contiene dicha funcion:
-```
+```python
 pregunta = lambda elemento_1, elemento_2: f"¿Has cogido las {elemento_1} y las {elemento_2}?"
 
 print(pregunta("llaves", "gafas"))
@@ -218,27 +219,27 @@ biblioteca y usarlo.
 ## TAREA 2 - Ejercicios prácticos
 ### Ejercicio 1 - Cree un bucle For de Python.
 Se crea una lista de numeros y con el bucle ```for``` se imprime cada numero de la lista.
-```
+```python
 my_numbers = [1, 2, 3, 4, 5, 6]
 
 for num in my_numbers:
   print(num)
 ```
 ### Ejercicio 2 - Cree una función de Python llamada suma que tome 3 argumentos y devuelva la suma de los 3.
-```
+```python
 def suma(arg_1, arg_2, arg_3):
   return arg_1 + arg_2 + arg_3
 
 print(suma(1,1,1))    # 3
 ```
 ### Ejercicio 3 - Cree una función lambda con la misma funcionalidad que la función de suma que acaba de crear.
-```
+```python
 suma = lambda arg_1, arg_2, arg_3: arg_1 + arg_2 + arg_3
 
 print(suma(1, 1, 1))
 ```
 ### Ejercicio 4 - Utilizando la siguiente lista y variable, determine si el valor de la variable coincide o no con un valor de la lista. *Sugerencia, si es necesario, utilice un bucle for in y el operador in.
-```
+```python
 nombre = 'Enrique'
 lista_nombre = 'Jessica', 'Paul', 'George', 'Henry', 'Adán'
 Esta es toda la asignación, ¡mucha suerte!
@@ -246,8 +247,8 @@ Esta es toda la asignación, ¡mucha suerte!
 
 Se podria relizar de dos formas:
 
-1º Caso
-```
+**1º Caso**
+```python
 for nombre in lista_nombre:
   if nombre == "Enrique":
     print("Este nombre está en la lista")
@@ -256,8 +257,8 @@ else:
 ```
 De otro modo, se podria realizar también de esta manera:
 
-2º Caso
-```
+**2º Caso**
+```python
 if nombre in lista_nombre:
   print("Este nombre esta en la lista")
 else:
