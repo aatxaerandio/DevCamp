@@ -75,7 +75,7 @@ El bucle finalizará cuando el valor de x no cumpla la condicion, es decir, al q
 
 ### Pregunta 3 - ¿Qué es una lista por comprensión en Python?
 Una lista por comprensión es una lista que permite crear listas de manera concisa y rápida.
-La particularidad de estas listases que permite definir la lista y sus elementos en una sola linea de codigo.
+La particularidad de estas listas es que permite definir la lista y sus elementos en una sola linea de codigo.
 
 En siguiente ejemplo, se pretende obtener los numeros que son multiplos de 2.
 De forma tradicional se realizaría de este modo; utilizando un bucle `for` y una condición `if` para verificar si el numero es multiplo de 2. Se crea una lista vacia `lista_multiplos`que a medida que el bucle vaya corriendo se vayan añadiendo los multiplos de 2.
@@ -104,15 +104,15 @@ En Python, un argumento es un elemento que se usa dentro de las funciones,
 siendo el objetivo del argumento, proveer de un valor para que la funcion 
 ejecute determinado codigo. 
 
-Hay que destacar la diferencia entre para metros y argumentos, ya que el primero
+Hay que destacar la diferencia entre ```parametros``` y ```argumentos```, ya que el primero
 son las variables que se especifican dentro de los parentesis cuando se define 
-una funcion (por ejemplo, arg_1 es parametro), mientras que lo segundo son los 
+una funcion (por ejemplo, ```arg_1``` es parametro), mientras que lo segundo son los 
 valores que se pasan a esos parametros cuando llamas a una funncion (en el ejemplo 
 de abajo el argumento seria "Miguel").
 
 Hay diferentes tipos de argumentos:
 
-- Argumentos por defecto:  Estos son argumentos que tienen un valor predeterminado 
+- **Argumentos por defecto:**  Estos son argumentos que tienen un valor predeterminado 
 y se usan si no se provee a la funcion de otro argumento. Se asignan con =.
 ```
 def funcion_defecto(arg_1 = "Pedro"):
@@ -122,20 +122,20 @@ funcion_defecto()     # Pedro quiere comprarse un coche
 funcion_defecto("Miguel")     # Miguel quiere comprarse un coche
 ```
 
-- Argumentos posicionales: En los que los cuales los valores son asignados en base a
+- **Argumentos posicionales:** En los que los cuales los valores son asignados en base a
 su posicion cuando la funcion es llamada. 
 
 En el ejemplo de acontinuacion, son 3 valores que se pasan a los argumentos en el 
-mismo orden, siendo a=2, b=1 y c=3.
+mismo orden, siendo ```a=2, b=1 y c=3.```
 ```
 def funcion_pos(a, b, c):
   print((a-b)*c)
 
 funcion_pos(2, 1, 3)    # 3. 
 ```
-- Argumentos keyword: son muy similares a los argumentos por defecto, ya que se designan
-con un signo igual =. Cierto valor se le asigna a un keyword, en este caso "Juan" a nombre
-y 25 a edad.
+- **Argumentos keyword:** son muy similares a los argumentos por defecto, ya que se designan
+con un signo igual =. Cierto valor se le asigna a un keyword, en este caso "Juan" a ```nombre```
+y 25 a ```edad```.
 ```
 def estudiante(nombre, edad):
   print("Detalles del estudiante:", nombre, edad)
@@ -143,8 +143,8 @@ def estudiante(nombre, edad):
 estudiante(nombre="Juan", edad=25)
 ```
 
-- Argumentos arbitrarios: Se utilizan para pasar un numero varibale de argumentos sin palabras 
-clave a la funcion. Usando el asterisco * hará que ese argumento se comporte como un tupla.
+- **Argumentos arbitrarios:** Se utilizan para pasar un numero varibale de argumentos sin palabras 
+clave a la funcion. Usando el asterisco ```*``` hará que ese argumento se comporte como un tupla.
 ```
 def refrescos(*args):
   for arg in args:
@@ -153,8 +153,8 @@ def refrescos(*args):
 refrescos("cola", "pepsi", "fanta", "sprite")
 ```
 
-- Argumentos arbitrarios de palabras clave: Se utilizan al mismo modo que los anteriores, pero 
-se usan dos asteriscos en lugar de uno (**). Las funciones que tengan ^^ en un argumento, harán
+- **Argumentos arbitrarios de palabras clave:** Se utilizan al mismo modo que los anteriores, pero 
+se usan dos asteriscos en lugar de uno (**). Las funciones que tengan ** en un argumento, harán
 que ese argumento se comporte como un diccionario, y al llamar la funcion se le asignan nombres 
 a las variables y estas son tratadas como claves del diccionario. 
 ```
