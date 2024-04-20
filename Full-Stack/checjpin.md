@@ -8,7 +8,7 @@ En cuanto a la sintaxis, se utilizan:
 -	`elif` --> Cuando hay mas de una condición
 -	`else` --> Cuando no se cumple ninguna de las anteriores condiciones
   
-```
+```python
 edad = 12
 if edad < 18:
     print("No puedes sacarte el carnet de conducir, eres muy joven aun")
@@ -19,7 +19,7 @@ else:
 ```
 Este es un ejemplo de condicional con la variable edad.
 Al ejecutarse, se recorren todos los condicionales y se imprimirá algo dependiendo del valor que se le de a la variable edad.
-En este caso, al establecer `edad = 12`; se cumple el primer condicional, y por tanto se imprime "No puedes sacarte el carnet de conducir, eres muy joven aun".
+En este caso, al establecer `edad = 12`; se cumple el primer condicional, y por tanto se imprime ```"No puedes sacarte el carnet de conducir, eres muy joven aun"```.
 
 Ademas, también se pueden combinar, en este caso con `and`:
 ```
