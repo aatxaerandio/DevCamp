@@ -37,7 +37,9 @@ En el primer ejemplo, se usa un condicional `if-elif-else` en el que se expone e
 Los condicionales serán los siguientes:
 
 Si tienes menos de 300€ NO puedes abrir una cuenta bancaria.
+
 Si tienes hasta 10.000€ SI puedes abrir una cuenta bancaria.
+
 Si tienes mas de 10.000€ no pueden ofrecerte este servicio, debes contratar otros servicios.
 
 Suponiendo que tenemos 500€, creamos la variable `dinero = 500`.
@@ -74,7 +76,7 @@ else:
   print("No has aprobado, sigue estudiando")
 ```
 Si es menor de 5 se imprimirá `No has aprobado, sigue estudiando`. Del otro modo, si es mayor o igual a 5 se cumple el primer condicional y continúa con el siguiente bloque. Aquí hay mas condicionales, están anidados en el anterior. Depende de la nota que se haya sacado, se imprimirá un bloque de código.
-Por ejemplo, si se saca un 6.2 en el examen, se recorre todo el condicional y se cumple por una parte el primero `if nota >= 5` y luego se cumple el `elif nota > 6` elñ cual imprime `Bien, aprobado` 
+Por ejemplo, si se saca un 6.2 en el examen, se recorre todo el condicional y se cumple por una parte el primero `if nota >= 5` y luego se cumple el `elif nota > 6` el cual imprime `Bien, aprobado` 
 
 Además de lo comentado hasta ahora, los condicionales se pueden combinar dando lugar a muchas utilidades. Mediante el uso de `and`, `or`, `not` y también de `in`, se pueden ver si cierto elemento está dentro de otros, etc. En el siguiente caso, se quiere ver si el nombre `Pablo` está en la lista de nombres para ser mesa electoral. Se usa `in` del siguiente modo para ver si dicho nombre esta `in = dentro de` la `lista_electoral`.
 ```python
