@@ -20,12 +20,15 @@ Estos operadores ayudan a establecer condiciones en los bloques de código que s
 
 Existen varios tipos de condicionales en 
 Python, entre los cuales están:
-```
--`if` --> Es la forma más básica de condicional y se usa para ejecutar un bloque de código si la condición se cumple.
--`if-elif` --> Permite ejecutar un bloque de código si la condición se cumple (la condición es verdadera) y otro bloque de código si no se cumple (la condición es falsa).
--`if anidada` --> Este tipo de condicional consiste en anidar una condición dentro de otra lo que a su vez hace es evaluar múltiples condiciones de forma secuencial.
--`if-elif-else` --> Este condicional permite evaluar múltiples condiciones de forma ordenada, ejecutando el bloque de código a la condición que se cumple (que es verdadera).
-```
+
+- `if` --> Es la forma más básica de condicional y se usa para ejecutar un bloque de código si la condición se cumple.
+  
+- `if-elif` --> Permite ejecutar un bloque de código si la condición se cumple (la condición es verdadera) y otro bloque de código si no se cumple (la condición es falsa).
+  
+- `if anidada` --> Este tipo de condicional consiste en anidar una condición dentro de otra lo que a su vez hace es evaluar múltiples condiciones de forma secuencial.
+  
+- `if-elif-else` --> Este condicional permite evaluar múltiples condiciones de forma ordenada, ejecutando el bloque de código a la condición que se cumple (que es verdadera).
+
 
 Para la correcta comprensión del uso de los condicionales, se explican ejemplos a continuación:
 - **Ejemplo 1**
