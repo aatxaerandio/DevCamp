@@ -135,9 +135,34 @@ Entre los metodos dunder mas utilizados y comunes hasta la fecha se encuentran _
 - __str__ --> Se usan principalmente para el debugging, devuelven la representacion en forma de string de un objeto, el cual es legible por humanos (human-readable). Basicamente es facil de leer.
 - __repr__ --> Similar al __str__, se usa para devolver un a salida en bruto/crudo, pero se utiliza más para mostrar directamente los valores, con una forma más «objeto». Por tanto, no es tan facil de leer.
 
+Para entender mejor el uso de los metodos dunder, se expone un ejemplo a continuacion:
+```python
+class Asistencia:
+  def __init__(self, nombre, apellido, edad):
+      self.nombre = nombre
+      self.apellido = apellido
+      self.edad = edad
 
+  def __str__(self):
+      return f"El alumno {self.nombre} {self.apellido} tiene {self.edad} años"
 
+  def __repr__(self):
+      return f"El alumno <valor: nombre: {self.nombre}> <valor: apellido: {self.apellido}>, tiene <valor: edad: {self.edad}> años"
 
+datos = Asistencia("Aitor", "Atxaerandio", 15)
+
+print(str(datos))     # El alumno Aitor Atxaerandio tiene 15 años
+print(repr(datos))    # El alumno <valor: nombre: Aitor> <valor: apellido: Atxaerandio>, tiene <valor: edad: 15> años
+```
+
+En este ejemplo se define la clase Asistencia que tiene atributos de nombre, apellido y edad.
+1. La clase tiene un constructor __init__ que inicia los atributos nombre, apellidos y edad automaticamente cuando se llama a la clase.
+2. La clase tiene dos metodos dunder para represetnar la instancia de la clase de manera legible:
+   - Metodo __str__ : Devuelve la representación de cadena legible para los humanos (human-readable), que en este caso indica el nombre, apellido y edad del alumno.
+   - Metodo __repr__: Devuelve la representación de cadena mas formal y detallada, lo cual hace que siga siendo legible pero algo mas difícil, ya que detalla todo de forma mas tecnica.
+  
+En el ejemplo se crea una instancia de la clase Asistencia con el nombre Aitor, apellido Atxaerandio y edad 15, y se guarda en la variable datos.
+Se imprimen las cadenas usando print(str(datos)) y print(rpr(datos)).
 
 
 
