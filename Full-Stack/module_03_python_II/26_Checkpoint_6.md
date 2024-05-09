@@ -203,26 +203,28 @@ lista_nombres = [
   "Jose",
   "Iñaki",
 ]
+```
+Creación del objeto lista_aula de la clase Aula pasandole la lista de nombres:
 
+```python
 lista_aula = Aula(lista_nombres)
+```
+Creación del iterador informe a partier de la lista_aula, usando la función iter().                   
 
-informe = iter(lista_aula)     
+```python
+informe = iter(lista_aula)                          
+```
 
-print(next(informe))        # Miguel
+Se imprime cada alumno. El método __next__() de la clase Aula se encarga de devolver cada alumno de la lista de forma secuencial, reiniciando el contador cuando se llega al final de la lista.
+
+```python
+print(next(informe))        # Miguel                
 print(next(informe))        # Aitor
 print(next(informe))        # Pedro
 print(next(informe))        # Jose
 print(next(informe))        # Iñaki
 print(next(informe))        # Miguel
 print(next(informe))        # Aitor
-.....
-
-
-
-
-
-
-
 ```
 
 
