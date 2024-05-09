@@ -388,26 +388,12 @@ Las diferencias entre las bases de datos SQL y NoSQL radican principalmente en s
 | ---------- | --------- | ------- |
 | Estructura de datos | Utiliza tablas con filas y columnas para almacenar datos estructurados. |Almacena datos no estructurados en documentos, sin una estructura fija de tablas. |
 |Consistencia|Prioriza la integridad de los datos, garantizando la consistencia.|Prioriza el rápido acceso a los datos, sacrificando en ocasiones la integridad.|
-|Escalailidad|Escalado vertical, añadiendo más potencia al servidor.|Escalabilidad horizontal, permitiendo ampliar la capacidad de la base de datos rápidamente.
+|Escalabilidad|Escalado vertical, añadiendo más potencia al servidor.|Escalabilidad horizontal, permitiendo ampliar la capacidad de la base de datos rápidamente.
 
 Por tanto, las bases de datos SQL son ideales para datos estructurados que reqieran consistencia, mientras que las bases de datos NoSQL son mas adecuadas para datos no estrucutrados que necesitan escalabilidad y rapidez de acceso.
 
+## MongoDB
+Una de las bases de datos mas utilizadas actualmente es MongoDB.
+MongoDB es una base de datos NoSQL, por tanto, almacenan coleciones de datos de una forma no estructurada, sin una estructura fija de tablas pero enfocandose en la velocidad del acceso a la base de datos.
 
-
-Por otro lado, MongoDB es un sistema gestor de base de datos no relacionales. La relación entre Postman y MongoDB radica en que Postman puede ser empleado para probar APIs que interactúan con bases de datos como MongoDB. En este contexto, Postman se utiliza para verificar el funcionamiento de las APIs que acceden a los datos almacenados en MongoDB, permitiendo probar la comunicación entre la aplicación y la base de datos no relacional
-
- MongoDB es una base de datos NoSQL orientada a documentos, que almacena datos en formato JSON. 
-
-    MongoDB is a general-purpose document-based No SQL database designed for modern and cloud applications.
-    It is written in C++ programming language.
-    Mongo DB works on the concept of collections and documents.
-
-    It doesn’t have concepts like schema, table, row, and SQL because it’s a purely document-oriented database and worked with any size and type of data.
-    
-MongoDB Features
-
-    Cross-platform
-    Document-oriented database
-    High Scalability and Performance
-    High Availability and Durability
-
+Para poder utilizar MongoDB, se puede utilizar Postman, ya que se puede usar para probar APIs que interactuan con la base de datos MongoDB. En este contexto, Postman se usa para verificar el funcionamiento de las APIs que acceden a los datos almacenados en MongoDB, permitiendo probar la comunicacion entre la aplicacion y la base de datos.
