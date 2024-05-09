@@ -384,27 +384,13 @@ Aunque hay varios tipos de bases de datos, las mas comunes que se utilizan con A
 
 Las diferencias entre las bases de datos SQL y NoSQL radican principalmente en sus estrucutra y su funcionalidad:
 
-| Operadores | Signo | Función |
+|  | SQL | NoSQL |
 | ---------- | --------- | ------- |
-| Estructura de datos |
-| SQL | Utiliza tablas con filas y columnas para almacenar datos estructurados. |
-|NoSQL| Almacena datos no estructurados en documentos, sin una estructura fija de tablas. |
+| Estructura de datos | Utiliza tablas con filas y columnas para almacenar datos estructurados. |Almacena datos no estructurados en documentos, sin una estructura fija de tablas. |
+|Consistencia|Prioriza la integridad de los datos, garantizando la consistencia.|Prioriza el rápido acceso a los datos, sacrificando en ocasiones la integridad.|
+|Escalailidad|Escalado vertical, añadiendo más potencia al servidor.|Escalabilidad horizontal, permitiendo ampliar la capacidad de la base de datos rápidamente.
 
-
-
-    Estructura de Datos:
-        SQL: Utiliza tablas con filas y columnas para almacenar datos estructurados.
-        NoSQL: Almacena datos no estructurados en documentos, sin una estructura fija de tablas.
-    Consistencia:
-        SQL: Prioriza la integridad de los datos, garantizando la consistencia.
-        NoSQL: Prioriza el rápido acceso a los datos, sacrificando en ocasiones la integridad.
-    Escalabilidad:
-        SQL: Escalado vertical, añadiendo más potencia al servidor.
-        NoSQL: Escalabilidad horizontal, permitiendo ampliar la capacidad de la base de datos rápidamente.
-
-Estas diferencias reflejan que las bases de datos SQL son ideales para datos estructurados que requieren consistencia, mientras que las bases de datos NoSQL son más adecuadas para datos no estructurados que necesitan escalabilidad y rapidez de acceso.
-
-
+Por tanto, las bases de datos SQL son ideales para datos estructurados que reqieran consistencia, mientras que las bases de datos NoSQL son mas adecuadas para datos no estrucutrados que necesitan escalabilidad y rapidez de acceso.
 
 
 
