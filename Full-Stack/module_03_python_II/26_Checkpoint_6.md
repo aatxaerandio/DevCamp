@@ -58,15 +58,20 @@ En este caso, solo hemos accedido al segundo metodo, pero como el primero __init
 print(cliente_1.saludos())    # Hola Aitor Atxaerandio, su compra total asciende a un total de 100€.
 ```
 
-## Funciones Setter y Getter
-Antes de saber que son los metodos getter y setter, hay que saber la sintaxis de los atributos de python.
-Con el fin de no reescribir y eliminar atributos, en Python se utilizan las barra-bajas para determinar si un atributo es privado y/o protegido.
- - Para crear atributos protegidos se usa _ .
- - Para crear atributos privados se usan __ .
+## Propiedades y decoradores en las clases 
+Las propiedades de las clases en Python son atributos especiales que permiten controlan el acceso a los datos de una clase y automatizar la llamada a metodos getter y setter. Al utilizar las propiedades, se garantiza un acceso mas intuitivo a los atributos de la clase y se elimina la necesidad de llamar explícitamente a métodos setter y getter.
 
-Estos atributos, al ser privados o protegidos, no pueden modificarse por si solos, y se necesita de metodos especiales para poder acceder a ellos. Aqui es donde entra en juego los metodos Setter y Getter, que son parte fundamental de python y se usan para modificar los atributos de una clase de manera controlada.
+Antes de saber que son los decoradores y los metodos getter y setter, hay que saber la sintaxis de los atributos de python.
 
-En el caso del método **getter**, se emplea para obtener el valor de un atribulo privado, permitiendo una lectura segura de los datos almacenados en una clase. Para los metodos getter, se usa la sintaxis **@property** para obetenre el valor de un atributo privado, ubicandolo delante del metodo que queremos que devuelva el valor.
+Con el fin de no reescribir y eliminar atributos, en Python se utilizan las barra-bajas para determinar si un atributo es privado y/o protegido. Depende del objetivo, se pueden crear atributos privado o protegido:
+
+ - Para crear atributos protegidos se usa _ antes del atributo.
+ - Para crear atributos privados se usan __ antes del atributo.
+
+Estos atributos, al ser privados o protegidos, no pueden modificarse por si solos, y se necesita de metodos especiales para poder acceder a ellos. Aqui es donde entra en juego los métodos Setter y Getter, que son parte fundamental de python y se usan para modificar los atributos de una clase de manera controlada.
+
+### Funciones Setter y Getter
+En el caso del método **getter**, se emplea para obtener el valor de un atribulo privado, permitiendo una lectura segura de los datos almacenados en una clase. Para los metodos getter, se usa la sintaxis **@property** para obtener el valor de un atributo privado, ubicándolo delante del metodo que queremos que devuelva el valor.
 En el caso de **setter**, se usa para asignar un valor a un atribulo privado, lo que posibilidad la modificación controlada de dicho atributo. En este caso, la sintaxis a utilizar es **@nombre_metodo.setter** delante del metodo que queremos mopdificar.
 
 Para explicarlo mejor, se describe un ejemplo a continuación:
@@ -79,7 +84,7 @@ class Factura:
         self._total = total
 
     def texto(self):
-        return f'{self._cliente} owes: ${self._total}'
+        return f'{self._cliente} debe en total: {self._total}€'
 
     @property          # Metodo Getter
     def client(self):
@@ -87,7 +92,7 @@ class Factura:
 
     @client.setter      # Metodo Setter
     def cliente(self, cliente):
-        self._client = cliente
+        self._cliente = cliente
 
     @property          # Metodo Getter
     def total(self):
@@ -103,6 +108,32 @@ En esta clase llamada factura tiene como ibjetivo representar una factura con in
       - Metodo cliente: es un getter que devuelve el valor del atributo cliente.
       - Metodo total: es otro getter que devuelve el valor del atributo total.
    - Decorador @cliente.setter: se usa para crear un metodo **setter** asignando un nuevo valor al atributo cliente.
+4. Despues de crear la clase, podemos crear instancias y obtener valores:
+
+```python
+google = Factura('Pedro', 75)    # Crear una instancia de Factura con el cliente Pedro y total 75.
+print(google.texto())            # Se imprime el resultado del metodo texto y que muestra "Pedro debe en total: 75€"
+
+print(google.cliente)    # Se accede a los valores del metodo cliente y se imprime "Pedro".
+print(google.total)    # Se accede a los valores del metodo total y se imprime "75".
+
+google.cliente = 'Miguel'     # Se modifica el calor de cliente a traves de la propiedad cliente y se imprime un nuevo valor.
+print(google.cliente)    # Miguel
+```
+
+## Métodos Dunder
+
+Los metodos dunder son metodos especiales que se utilizan para definir el comportamiento de los atributos en las clases de Python. Dunder viene de "double underscore", que significa "doble guion bajo/barrabaja" y hace referencia a como es su sintaxis. 
+
+La particularidad que tienen los metodos dunder es que se llaman automaticamente por el interprete de Python. El objetivo final del uso de metodos dunder es crear intefaces mas intuitivas y crear un codigo mas limpio y ordenado entre otras.
+
+En Python hay numerosos metodos dunder para diversas funcionalidades como realizar operaciones aritmeticas (metodos __add__, __sub__, __mul__, etc), operaciones de comparacion (__eq__, __lt__, etc), operaciones de ciclo de vida (la anteriormente vista __init__ para iniciar, __del__, __new__, etc), u operaciones de representacion (__str__ o __repr__), entre otras.
+
+Entre los metodos dunder mas utilizados y comunes hasta la fecha se encuentran __init__, __str__ y __repr__, que se explican a continuacion:
+
+- __init__ --> Sirve para diferenciar los metodos dados por defecto o los definidos por el usuario.
+- __str__ --> Se usan principalmente para el debugging, devuelven la representacion en forma de string de un objeto, el cual es legible por humanos (human-readable). Basicamente es facil de leer.
+- __repr__ --> Similar al __str__, se usa para devolver un a salida en bruto/crudo, pero se utiliza más para mostrar directamente los valores, con una forma más «objeto». Por tanto, no es tan facil de leer.
 
 
 
@@ -111,15 +142,6 @@ En esta clase llamada factura tiene como ibjetivo representar una factura con in
 
 
 
-## Propiedades y decoradores de las clases en Python
-
-Las propiedades de las clases en Python son atributos especiales que permiten controlan el acceso a los datos de una clase y automatizar la llamada a metodos getter y setter. al utilizar las propiedades, se garantiza un acceso mas intuitivo a los atributos de la clase y se elimina la necesidad de llamar explícitamente a métodos setter y getter.
-las
-
-## Decoradores en Python
-
-Otro elemento particular de las clases de Python son los decoradores. Estos elementos permites modificar el comportamiento de las funciones sin cambiar su código, y su uso se basa en tomar otra función como argumento, agregándole funcionalidad adicional y devolviendo una nueva función. 
-En cuanto a la sintaxis, se usa "@nombre_decorador" y se usan de la siguiente manera:
 
 
 
