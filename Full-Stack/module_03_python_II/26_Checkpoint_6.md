@@ -347,9 +347,23 @@ print(animal_4.movimiento())    # En el caso de la lapa se mueve lenta
 ```
 
 
+# API
+Las APIs es la Interfaz de Programacion de Aplicaciones, o en su acrónimo en ingles, Application Programming Interface. Las APIs son un conjuto de funcuiones y procedimientos que permite integrar sistemas, permitiendo que sus funcionalidades puedas ser reutilizadas por otras aplicaciones o software.
 
+En breves palabras, las APIs son la columna vertebral de los sistemas, permitiendo la comunicación entre aplicaciones y sistemas. Es una especie de servidor con el cual se puede comunicar y recibir datos de vuelta, siendo su principal función la de facilitar la interacción entre los elementos que componen el sistema.
 
+## Verbos en las APIs
+Los verbos en las APIs hacen referencia a los metodos que se van a utilizar, por tanto, a diferente verbo, diferente metodo a utilizar.
+En las APIs se distinguen principalmente los siguientes verbos:
 
+1. GET --> Este metodo esta pensado para la lectura de datos, es decir, realizar una consulta sobre un objeto en concreto.
+2. POST --> Este metodo esta pensado para la creacion de nuevos recursos, asi como crear un nuevo usuario, contenido, etc.
+3. PUT --> Este metodo es para la actualizacion de un recurso concreto. Por ejemplo, se usaria este verbo par ala actualizaciond e datos de un usuario en particular. 
+4. DELETE --> Para borrar recursos, como por ejemplo, eliminacion de usuarios, etc.
+
+## Trabajar con APIs
+Para poder trabajar con APIs se necesita de programas como Postman o ThunderClient en Visual Studio Code.
+Estos progrmas se utilizan para testear collecciones y catalogos de APIs, tanto a nivel front-end como back-end y para gestionar peticiones HTTP. Mediante el uso de Postman, los desarrolladores pueden probar y depurar APIs de manera efectiva, 
 
 
 
