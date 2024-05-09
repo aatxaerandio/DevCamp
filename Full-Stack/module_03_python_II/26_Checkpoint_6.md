@@ -228,8 +228,123 @@ print(next(informe))        # Aitor
 ```
 
 
+## Herencia de clases
+
+La herencia de clases es un concepto que permite a una clase heredar atributos y emtodos de otra clase.
+Este mecanismo facilita la reuitilizacion de codigo y la organizacion jararquica de las clases-
+La herencia de clases se establece al crear una clase que hereda de otra clase, donde la clase hija hereda todos los atributos y metodos de la clase madre,.
+
+Para entenderlo mejor, se expone un ejemplo a continuación:
+
+```python
+# clase MADRE
+
+class Coche:
+  def __init__(self, marca, modelo, tamaño):
+    self.marca = marca
+    self.modelo = modelo
+    self.tamañ = tamaño
+
+  def mostrar(self):
+    return f"Marca: {self.marca}, Modelo: {self.modelo}, Tamaño:"
+
+#clase HIJA
+class Componente(Coche):
+  def kilometros(self):
+    return "Muchos kilometros"
+```
+Se crean objetos coche_1 y coche_2, cada una en una clase diferente:
+
+```python
+coche_1 = Coche("Toyota", "Corolla", "Grande")
+
+coche_2 = Componente("Ford", "Mustang", "Grande")
+```
+A la hora de imprimir:
+```python
+print(coche_1.mostrar())          # Marca: Toyota, Modelo: Corolla, Tamaño:
+#print(coche_1.kilometros())      # Error --> No se puede acceder a un metodo de la clase hija
+```
+Las clases hijas SI pueden acceder a los atributos y a los metodos de las clases madres, pero no viceversa. 
+
+Es el caso del objeto coche_1 cuando quiere acceder al metodo kilometros() de la clase Componente. El resultado da en un error.
+```python
+print(coche_2.mostrar())          # Marca: Ford, Modelo: Mustang, Tamaño:
+print(coche_2.kilometros())      # Muchos kilometros
+```
 
 
+## Polimorfismos en Python
+
+En Python, el polimorfismo se refiere a la capacidad de objetos de diferentes clases de ser tratados de manera similar utilizando el mismo intefax, pero mostrando comportamientos diferentes. Esto se puede conseguir mediante el uso de clases y de herencia de clases. 
+En el primer ejemplo, se describe un polimorfismo con clase:
+1. Polirmorfismo de clase
+
+```python
+class España:
+  def __init__(self, nombre, capital, continente):
+    self.nombre = nombre
+    self.capital = capital
+    self.continente = continente
+  def descripcion(self):
+    return f"El país {self.nombre} tiene como capital {self.capital} y se encuentra en el continente {self.continente}"
+
+
+class Portugal:
+  def __init__(self, nombre, capital, continente):
+    self.nombre = nombre
+    self.capital = capital
+    self.continente = continente
+
+  def descripcion(self):
+    return f"El país {self.nombre} tiene como capital {self.capital} y se encuentra en el continente {self.continente}"
+```
+Ambas clases tienen metodos con el mismo nombre, __init__ y descripcion, al crear objetos de estas clases y recorrerlos en un bucle, se muestra como cada objeto responde al mismo mensaje de forma distinta, demostrando **polimorfismo**:
+
+```python
+objeto_españa = España("España", "Madrid", "Europa")
+objeto_portugal = Portugal("Portugal", "Lisboa", "Europa")
+
+print(objeto_españa.descripcion())    # El país España tiene como capital Madrid y se encuentra en el continente Europa
+print(objeto_portugal.descripcion())   # El país Portugal tiene como capital Lisboa y se encuentra en el continente Europa
+```
+
+2. Polimorfismo con Herencia
+
+```python
+class Animal:
+  def __init__(self, nombre, velocidad):
+    self.nombre = nombre
+    self.velocidad = velocidad
+  def movimiento(self):
+    print("Los animales se mueven con velocidades diferentes")
+
+class Perro(Animal):
+  def movimiento(self):
+    print(f"En el caso del {self.nombre} se mueve {self.velocidad}")
+
+class Koala(Animal):
+  def movimiento(self):
+    print(f"En el caso del {self.nombre} se mueve {self.velocidad}")
+
+class Lapa(Animal):
+  def movimiento(self):
+    print (f"En el caso de la {self.nombre} se mueve {self.velocidad}")
+```
+En este caso también, tenemos clases hijas que tienen el mismo metodo. Despues de crear los objetos de estas clases e imprimirlas, se muestras que cada objeto responde de forma distinta.
+En estos casos, cada clase hija sobrescribe el metodo movimiento de la clase Animal.
+
+```python
+animal_1 = Animal("Perro", "rapido")
+animal_2 = Perro("perro", "rapido")
+animal_3 = Koala("koala", "lento")
+animal_4 = Lapa("lapa", "lenta")
+
+print(animal_1.movimiento())   # Los animales se mueven con velocidades diferentes
+print(animal_2.movimiento())    # En el caso del perro se mueve rapido
+print(animal_3.movimiento())    # En el caso del koala se mueve lento
+print(animal_4.movimiento())    # En el caso de la lapa se mueve lenta
+```
 
 
 
