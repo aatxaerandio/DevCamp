@@ -165,8 +165,65 @@ En el ejemplo se crea una instancia de la clase Asistencia con el nombre Aitor, 
 Se imprimen las cadenas usando print(str(datos)) y print(rpr(datos)).
 
 
+### Iteradores en metodos dunder
+
+Dentro de los metodos dunder se pueden utilizar iteradores. Los iteradores mas comunes son __iter__() y __next__() que se usan indistintamente depende del objetivo de la iteración. Son elementos realmente utiles cuando se tranaja con sets de datos grandes, siendo mas eficientes en cuanto a rendimineeto al comnsumrir menos recursos del sistema. Entre los los iteradores mas comunes en los metodos dunder se encuentran:
+- __iter__() --> Devuelve un iterador para un objeto determinado (array, tupla, lista, etc), crea un objeto que puede ser llamado
+- __next__() --> En este caso, devuelve el siguiente item de la iteración, devolviendo StopIteration cuando no hay mas items disponibles.
+
+Para entender mejor el uso de los iteradores en las clases, se expone un ejemplo a continuación:
+
+```python
+class Aula:
+  def __init__(self, alumnos):
+      self.alumnos = alumnos                        #guarda la lista de alumnos.
+      self.ix_ult_alum = (len(self.alumnos) - 1)    #guarda el índice del último alumno en la lista.
+
+  def __iter__(self):                               # se hace que la clase sea iterable
+      self.n = 0                                    # se inicia un contados en 0 
+      return self                                   # se devuelve self
+
+  def get_player(self, n):                          # se crea un metodo para obtener el jugador. En este caso recibe un indice.
+      return self.alumnos[n]                        # devuelve el alumno en ese indice.
+
+  def __next__(self):
+      if self.n < self.ix_ult_alum:                 # es n menor que el indice del ultimo alumno?
+          alumno = self.get_player(self.n)          # si es asi, se obtiene el jugador en ese indice
+          self.n += 1                               # incrementa en 1 el contador
+          return alumno
+      elif self.n == self.ix_ult_alum:              # si el contador es igual al indice del ultimo alumno
+          alumno = self.get_player(self.n) 
+          self.n = 0                                # no suma nada al contador y devuelve el alumno
+          return alumno
+
+lista_nombres = [
+  "Miguel",
+  "Aitor",
+  "Pedro",
+  "Jose",
+  "Iñaki",
+]
+
+lista_aula = Aula(lista_nombres)
+
+informe = iter(lista_aula)     
+
+print(next(informe))        # Miguel
+print(next(informe))        # Aitor
+print(next(informe))        # Pedro
+print(next(informe))        # Jose
+print(next(informe))        # Iñaki
+print(next(informe))        # Miguel
+print(next(informe))        # Aitor
+.....
 
 
+
+
+
+
+
+```
 
 
 
