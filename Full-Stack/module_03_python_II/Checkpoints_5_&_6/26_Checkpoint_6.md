@@ -377,7 +377,7 @@ En las APIs se distinguen principalmente los siguientes verbos:
 **3. PUT** :arrow_right: Este método es para la actualización de un recurso concreto. Por **ejemplo**, se usaría este verbo para la actualización de datos de un usuario en particular.<br>
 **4. DELETE** :arrow_right: Para borrar recursos, como por **ejemplo**, eliminación de usuarios, etc.<br>
 
-# Trabajar con APIs
+# Trabajar con APIs - Postman
 Para poder trabajar con APIs se necesita de programas como **`Postman`** o **`ThunderClient`** en Visual Studio Code. Estos programas se utilizan para testear colecciones y catálogos de APIs, tanto a nivel front-end como back-end y para gestionar peticiones HTTP.
 Concretamente, **`Postman`** Es una herramienta popular que se utiliza para probar APIs, en la que los desarrolladores pueden enviar peticiones a servicios web y bases de datos y ver sus respuestas.<br>
 
