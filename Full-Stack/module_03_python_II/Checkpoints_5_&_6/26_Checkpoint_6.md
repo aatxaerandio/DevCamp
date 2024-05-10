@@ -433,13 +433,13 @@ En este caso se elimina al usuario "jordan" y se emplea `db.getUsers()`para conf
 **6. Creación de colecciones** :arrow_right: con el comando `db.createCollection("nombre_de_la_nueva_coleccion")`:<br><br>
 Mediante el comando `db.createCollection("books")` crea la coleccion `books`.<br><br>
 
-**7. Ver colecciones** :arrow_right: con el commando `show collections`<br>
+**7. Ver colecciones** :arrow_right: con el comando `show collections`<br>
 En nuestro caso solo hay una colección creada que es `books`.<br><br>
 
 **8. Añadir documentos a la colección** :arrow_right: con el comando `db.books.insertOne({datos en formato JSON})` <br><br>
 ![postman](./../images/5_collections_1.JPG)<br>
 Se añade el libro titulado "OOP Programming" con otros datos de autores y fecha de publiación, etc.<br>
-También se pueden añadir mas de un elemento a la vez usando el commando `db.books.insertMany({datos en formato JSON})`<br>
+También se pueden añadir mas de un elemento a la vez usando el comando `db.books.insertMany({datos en formato JSON})`<br>
 Y obtendremos confirmación por cada elemento que se haya añadido, en este caso, si se añaden 3 elementos, obtendremos tres respuestas<br><br>
 ![postman](./../images/6_Insert_many.JPG)<br><br>
 
@@ -536,7 +536,7 @@ Se selecciona el atributo `name` de `authors` y para ello tenemos que poner la a
 **El resultado es:**<br>
 ![postman](./../images/12_nested.JPG)
 
-**15. Ver si un documento existe en la colección o no** :arrow_right: con el commando `db.nombre_coleccion({nombre: {$exists: true/false})`<br><br>
+**15. Ver si un documento existe en la colección o no** :arrow_right: con el comando `db.nombre_coleccion({nombre: {$exists: true/false})`<br><br>
 ![postman](./../images/15_exists.jpg)<br>
 En este caso aplicamos `db.books.find({reviews: {$exists: true}})` y nos devuelve lo que se ve en la imagen. Si nos devuelve datos se sobreentiende que existe.<br><br>
 
