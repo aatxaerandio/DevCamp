@@ -8,7 +8,7 @@ Las clases permiten la creación de objetos con propiedades y comportamientos es
 
 En cuanto a la sintaxis, siempre debe hacerse escribiendo **class** y luego el nombre de la clase con la **primera letra en mayúscula**. Por defecto, el primer atributo en las clases siempre está denominado como **self**. A parte de self, se pueden añadir mas atributos y funciones a la clase. Para entender mejor el uso de las clases, a continuación se expone un ejemplo:
 
-##### Ejemplo: Se pretende crear una clase que se llame `Usuario`, y se le añadirán dos funciones `saludos_1` y `saludos_2`. En este caso, solo se usa un atributo, por defecto, self.
+Ejemplo: Se pretende crear una clase que se llame `Usuario`, y se le añadirán dos funciones `saludos_1` y `saludos_2`. En este caso, solo se usa un atributo, por defecto, self.
 
 ```python
 class Usuario:
