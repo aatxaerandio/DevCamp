@@ -416,7 +416,7 @@ Para poder utilizar MongoDB, se puede utilizar Postman, ya que se puede usar par
 Por otro lado, y como es de suponer, MongoDB tiene que instalarse al igual que la terminal de MongoDB, que es mongosh. Desde esta terminal se lanzarán los comandos para realizar operaciones de creación, actualización, supresión o consulta de datos. Cabe recordar otra vez que MongoDB trabaja con documentos JSON, lo cual significa que habrá que añadir los datos en ese formato. En cuanto a las funcionalidades mas comunes de MongoDB, se encuentran las siguientes:
 
 
-1. Creación de una nueva base de datos con `use nombre_database`. <br>
+1. Creación de una nueva base de datos con `use nombre_database`. <br><br>
 2. Desplegar las bases de datos disponibles `show dbs` <br>
 3. Creación de un usuarios :arrow_right: con el comando `db.createUser()` y adjuntando los datos en formato JSON.<br>
 ![postman](./../images/3_create_user.JPG)<br>
