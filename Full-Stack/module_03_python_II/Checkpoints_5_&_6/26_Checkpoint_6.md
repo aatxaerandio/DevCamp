@@ -445,16 +445,24 @@ Y obtendremos confirmación por cada elemento que se haya añadido, en este caso
 ![postman](./../images/6_Insert_many.JPG)<br>
 
 
-9. Ver documentos de la coleccion :arrow_right: con el comando `db.books.fint(). <br>
-![postman](./../images/7. collections_Quey)
+9. Ver documentos de la coleccion :arrow_right: con el comando `db.nombre_coleccion.find(). <br>
+![postman](./../images/7_collections_Quey)
+En este caso se listan todos los elementos que hay en esta coleccion `books` que en total son 6 elementos (libros). <br>
 
-10. Ver documentos especificos en la coleccion :arrow_right: <br>
+10. Ver documentos especificos en la coleccion :arrow_right: con el comando ´db.nombre_coleccion.find({datos especificos de lo que se quiere encontrar})<br>
+![postman](./../images/8_collections_Quey.JPG)
+Se busca por el nombre "The Art of the War", y devuelve los datos en el caso de que haya un libro que tenga ese nombre.<br>
+
+11. Usar las proyecciones de MongoDB.
+Las proyecciones en MogoDB es una forma de filtrar los datos que una base de datos nos devuelve.
+Por ejemplo, vamos a filtrar datos en base al `nombre`, la ´fecha de publicacion´y los `autores`. Para poder filtarlo usamos el número 1 para que lo muestre o 0 para que no lo muestre.
+![postman](./../images/9_projections.JPG)
+Aquí se nos muestran los datos solicitados y filtrados.
+
+16. Ver si un documento existe en la coleccion o no :arrow_right: <br>
 ![postman](./../images/Postman_Get.JPG)
 
-11. Ver si un documento existe en la coleccion o no :arrow_right: <br>
-![postman](./../images/Postman_Get.JPG)
-
-12. Eliminar documentos :arrow_right: <br>
+17. Eliminar documentos :arrow_right: <br>
 ![postman](./../images/Postman_Get.JPG)
 
 
