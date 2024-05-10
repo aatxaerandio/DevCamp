@@ -205,18 +205,18 @@ lista_nombres = [
   "Iñaki",
 ]
 ```
-Creación del objeto lista_aula de la clase Aula pasándole la lista de nombres:
+Creación del objeto `lista_aula` de la clase `Aula` pasándole la lista de nombres:
 
 ```python
 lista_aula = Aula(lista_nombres)
 ```
-Creación del iterador informe a partier de la lista_aula, usando la función iter().                   
+Creación del iterador informe a partier de la `lista_aula`, usando la función `iter()`.                   
 
 ```python
 informe = iter(lista_aula)                          
 ```
 
-Se imprime cada alumno. El método `__next__()` de la clase Aula se encarga de devolver cada alumno de la lista de forma secuencial, reiniciando el contador cuando se llega al final de la lista.
+Se imprime cada alumno. El método `__next__()` de la clase `Aula` se encarga de devolver cada alumno de la lista de forma secuencial, reiniciando el contador cuando se llega al final de la lista.
 
 ```python
 print(next(informe))        # Miguel                
@@ -254,7 +254,7 @@ class Componente(Coche):
   def kilometros(self):
     return "Muchos kilometros"
 ```
-Se crean objetos coche_1 y coche_2, cada una en una clase diferente:
+Se crean objetos `coche_1` y `coche_2`, cada una en una clase diferente:
 
 ```python
 coche_1 = Coche("Toyota", "Corolla", "Grande")
@@ -358,7 +358,9 @@ En breves palabras, las APIs son la columna vertebral de los sistemas, permitien
 Entre los usos mas destacables de las APIs estan:
 
 **1.** Establecer una conexión entre los sistemas y permite la accesibilidad de datos.
+
 **2.** Permite monitorizar los usuarios y su actividad.
+
 **3.** Incrementa la seguridad.
 
 Un **ejemplo** muy claro del uso de las APIs es la **conexión entre un cliente (un usuario desde su ordenador) y una base de datos**. El cliente quiere acceder a ciertos datos que están localizados en una base de datos, y para ello, necesita hacer una petición (request) a una API. Esta API a su vez hará esa petición a la base de datos y recibirá una respuesta, que son los datos solicitados. Tras ello, la API manda una respuesta al cliente de nuevo, que son dichos datos que ha solicitado. El mismo mecanismo ocurriría si en lugar de solicitar datos a una base de datos, se realizaría una petición a un servidor web. Se observa un resumen muy simple del funcionamiento de las APIs en la siguiente imagen:
@@ -367,7 +369,7 @@ Un **ejemplo** muy claro del uso de las APIs es la **conexión entre un cliente 
 Los verbos en las APIs hacen referencia a los metodos que se van a utilizar cuando se usan. Dependiendo si se quiere consultar, actualizar, crear o eliminar datos, se utilizará un verbo u otro.
 En las APIs se distinguen principalmente los siguientes verbos:
 
-**1. GET** :arrow_right: Este metodo esta pensado para la lectura de datos, es decir, realizar una consulta sobre un objeto en concreto.
+**1. GET** :arrow_right: Este metodo esta pensado para la lectura de datos, es decir, realizar una consulta sobre un objeto en concreto.<br>
 **2. POST** :arrow_right: Este metodo esta pensado para la creacion de nuevos recursos, asi como crear un nuevo usuario, contenido, etc.
 **3. PUT** :arrow_right: Este metodo es para la actualizacion de un recurso concreto. Por **ejemplo**, se usaria este verbo par ala actualizaciond e datos de un usuario en particular. 
 **4. DELETE** :arrow_right: Para borrar recursos, como por **ejemplo**, eliminacion de usuarios, etc.
