@@ -470,9 +470,9 @@ En este caso vamos a emplear el comando db.books.findOne({name: /.*deep work.*/i
 
 
 
-12. COLECCIONES ARRASY SLICE
+12. Selección de arrays anidados usando $slice<br>
 
-Se utiliza en el caso de que tengamos un documento que tenga un apartdo con 2 objetos, cada uno con un atributo con el mismo nombre. El objetivo es acceder a este docuemtno dejando fuera al segundo autor:
+Se utiliza en el caso de que tengamos un documento que tenga un apartdo con 2 objetos, cada uno con un atributo con el mismo nombre. El objetivo es acceder a este docuemtno dejando fuera al segundo autor:<br>
 ```python
 db.books.insertOne({
     "name": "Blink",
@@ -513,8 +513,35 @@ Finlamente, si solo queremos que nos devolviera el ultimo, pondriamos `-1`. <br>
 ![postman](./../images/10_array_3.jpg)<br>
 
 
-13. COLECIONES ANUDADAS
-
+13. Colecciones anidadas
+Se añade un elemento:
+```python
+db.books.insertOne({
+    "name": "Blink",
+    "publishedDate": new Date(),
+    "authors": [
+        {"name": "Malcolm Gladwell", "active": true},
+        {"name": "Ghost Writer", "active": true},
+    ]
+});
+```
+y escribimos lo siguiente para obtener el nombre del autor sin que nos indique si esta activo o no.
+```python
+db.books.find(
+    {
+        name: "Blink"
+    },
+    {
+        name: 1,
+        publishedDate: 1,
+        "authors.name": 1
+    }
+)
+```
+Authors en un array de objetos y queremos que nos devuelva el atributo `name` de cada uno de ellos.<br>
+Se selecciona el atributo ´name´ de `authors` y para ello tenemos que poner la anotacion de un punot `.`.<br>
+El resultado es:<br>
+![postman](./../images/12_nested.JPG)
 
 
 
