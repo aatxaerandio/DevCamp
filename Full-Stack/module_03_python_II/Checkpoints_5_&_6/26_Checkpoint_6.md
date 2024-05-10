@@ -539,6 +539,7 @@ Se selecciona el atributo `name` de `authors` y para ello tenemos que poner la a
 **15. Ver si un documento existe en la colección o no** :arrow_right: con el comando `db.nombre_coleccion({nombre: {$exists: true/false})`<br><br>
 ![postman](./../images/15_exists.jpg)<br>
 En este caso aplicamos `db.books.find({reviews: {$exists: true}})` y nos devuelve lo que se ve en la imagen. Si nos devuelve datos se sobreentiende que existe.<br><br>
+En el caso contrario, si aplicamos `db.books.find({reviews: {$exists: false}})` y nos devuelve datos, eso implica los datos solicitados no existen.<br><br>
 
 **16. Eliminar documentos** <br>
 Para eliminar datos se aplica :arrow_right: el comando `db.nombre_coleecion.remove({datos especificos de lo que se quiere borrar})`<br>
