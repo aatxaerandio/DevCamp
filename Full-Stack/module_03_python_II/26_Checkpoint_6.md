@@ -131,9 +131,9 @@ En Python hay numerosos metodos dunder para diversas funcionalidades como realiz
 
 Entre los metodos dunder mas utilizados y comunes hasta la fecha se encuentran `__init__`, `__str__` y `__repr__`, que se explican a continuacion:
 
-- `__init__` --> Sirve para diferenciar los metodos dados por defecto o los definidos por el usuario.
-- `__str__` --> Se usan principalmente para el debugging, devuelven la representacion en forma de string de un objeto, el cual es legible por humanos (human-readable). Básicamente es facil de leer.
-- `__repr__` --> Similar al `__str__`, se usa para devolver un a salida en bruto/crudo, pero se utiliza más para mostrar directamente los valores, con una forma más «objeto». Por tanto, no es tan facil de leer.
+- `__init__` :arrow_right: Sirve para diferenciar los metodos dados por defecto o los definidos por el usuario.
+- `__str__` :arrow_right: Se usan principalmente para el debugging, devuelven la representacion en forma de string de un objeto, el cual es legible por humanos (human-readable). Básicamente es facil de leer.
+- `__repr__` :arrow_right: Similar al `__str__`, se usa para devolver un a salida en bruto/crudo, pero se utiliza más para mostrar directamente los valores, con una forma más «objeto». Por tanto, no es tan facil de leer.
 
 Para entender mejor el uso de los metodos dunder, se expone un **ejemplo** a continuacion:
 ```python
