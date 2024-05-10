@@ -380,6 +380,21 @@ En las APIs se distinguen principalmente los siguientes verbos:
 Para poder trabajar con APIs se necesita de programas como **Postman** o **ThunderClient** en Visual Studio Code. Estos programas se utilizan para testear colecciones y catálogos de APIs, tanto a nivel front-end como back-end y para gestionar peticiones HTTP.
 Concretamente, **Postman** Es una herramienta popular que se utiliza para probar APIs, en la que los desarrolladores pueden enviar peticiones a servicios web y bases de datos y ver sus respuestas.
 
+
+
+
+
+![postman](./images/Postman.JPG)
+
+
+
+
+
+
+
+
+
+
 # Bases de datos
 Las bases de datos, como su nombre indica, son componentes indispensables de los sistemas y aplicaciones ya que sirven de soporte de almacenamiento para poder dar respuesta a las peticiones que se reciban por parte de las APIs.
 
