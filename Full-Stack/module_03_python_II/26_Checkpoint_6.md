@@ -363,6 +363,8 @@ Entre los usos más destacables de las APIs están:
 
 Un **ejemplo** muy claro del uso de las APIs es la **conexión entre un cliente (un usuario desde su ordenador) y una base de datos**. El cliente quiere acceder a ciertos datos que están localizados en una base de datos, y para ello, necesita hacer una petición (request) a una API. Esta API a su vez hará esa petición a la base de datos y recibirá una respuesta, que son los datos solicitados. Tras ello, la API manda una respuesta al cliente de nuevo, que son dichos datos que ha solicitado. El mismo mecanismo ocurriría si en lugar de solicitar datos a una base de datos, se realizaría una petición a un servidor web. Se observa un resumen muy simple del funcionamiento de las APIs en la siguiente imagen:
 
+![alt text](https://webimages.mongodb.com/_com_assets/cms/l65dhtchtsbcn16hk-image3.png?auto=format%252Ccompress)
+
 ## Verbos en las APIs
 Los verbos en las APIs hacen referencia a los métodos que se van a utilizar cuando se usan. Dependiendo si se quiere consultar, actualizar, crear o eliminar datos, se utilizará un verbo u otro.
 En las APIs se distinguen principalmente los siguientes verbos:
