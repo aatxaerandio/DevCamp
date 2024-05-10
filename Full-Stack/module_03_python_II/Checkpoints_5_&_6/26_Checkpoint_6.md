@@ -378,10 +378,10 @@ En las APIs se distinguen principalmente los siguientes verbos:
 **4. DELETE** :arrow_right: Para borrar recursos, como por **ejemplo**, eliminación de usuarios, etc.<br>
 
 # Trabajar con APIs
-Para poder trabajar con APIs se necesita de programas como **Postman** o **ThunderClient** en Visual Studio Code. Estos programas se utilizan para testear colecciones y catálogos de APIs, tanto a nivel front-end como back-end y para gestionar peticiones HTTP.
-Concretamente, **Postman** Es una herramienta popular que se utiliza para probar APIs, en la que los desarrolladores pueden enviar peticiones a servicios web y bases de datos y ver sus respuestas.<br>
+Para poder trabajar con APIs se necesita de programas como **`Postman`** o **`ThunderClient`** en Visual Studio Code. Estos programas se utilizan para testear colecciones y catálogos de APIs, tanto a nivel front-end como back-end y para gestionar peticiones HTTP.
+Concretamente, **`Postman`** Es una herramienta popular que se utiliza para probar APIs, en la que los desarrolladores pueden enviar peticiones a servicios web y bases de datos y ver sus respuestas.<br>
 
-Postman trabaja conjuntamente con Flask, que es un framework web escrito en Python que se usa para desarrollar aplicaciones web de manera rápida y sencilla. La particularidad de Flask es que permite crear rutas y definir los finales de rutas (end points), a parte de manejar peticiones. Para ello hay que instalar Flask y configurarlo, para luego poder crear guias que son las que se testarán con Postman. Una vez creadas esas guías, hay que dirigirse a Postman y seleccionar el verbo API que necesitemos, diferente si queremos crear, actualizar, consultar o eliminar contenido. En la imagen de acontinuación se muestras la interfaz de Postman.<br><br>
+Postman trabaja conjuntamente con `Flask`, que es un framework web escrito en Python que se usa para desarrollar aplicaciones web de manera rápida y sencilla. La particularidad de `Flask` es que permite crear rutas y definir los finales de rutas (end points), a parte de manejar peticiones. Para ello hay que instalar `Flask` y configurarlo, para luego poder crear guias que son las que se testarán con `Postman`. Una vez creadas esas guías, hay que dirigirse a `Postman` y seleccionar el verbo API que necesitemos, diferente si queremos crear, actualizar, consultar o eliminar contenido. En la imagen de acontinuación se muestras la interfaz de `Postman`.<br><br>
 ![postman](./../images/Postman.JPG)<br><br>
 Para testear, simplemente hay que elegir el verbo de la API y enviar a la direccion que se ponga en el recuadro, en este caso `localhost:5000/guide`, que es la del mismo ordenador. Si ha habido conexion y la API funciona correctamente, abajo en el recuadro podremos ver lo que hemos añadido/modificado/eliminado, junto con un `"Status: 200 OK"´.<br><br>
 En este ejemplo, hemos solicitado ver el contenido de `localhost:5000/guides`, y hemos obtenido respuesta satisfactoria:<br><br>
@@ -412,32 +412,31 @@ Una de las bases de datos más utilizadas actualmente es `MongoDB`.<br>
 
 Los datos que almacena `MongoDB` por tanto, se almacenan en documentos flexibles en formato similar a JSON, siendo eficienteen el manejo de grandes cantidades de datos no estructurados. Como se ha descrito anteriormente, este tipo de base de datos es muy **flexible**, lo cual permite realizar numerosas tareas en aplicaciones diferentes, desde sistemas de gestion de contenidos hasta grandes aplicaciones web. Por ese motico, `MongoDB` es famosa y utlizada por empresas como eBAY y LinkedIn, entre otros. `MongoDB` es una base de datos que tiene una serie de ventajas asi como su escalabilidad, velocidad, facilidad de manejo de datos dinamicos y la capacidad de trabajar con estrucurtras de datos cambiantes sin necesidad de migrarciones complejas, lo cual hacen de ella una herramienta muy util hoy en dia.
 
-Para poder utilizar `MongoDB`, se puede utilizar `Postman`, ya que se puede usar para probar APIs que interactúan con la base de datos `MongoDB`. En este contexto, Postman se usa para verificar el funcionamiento de las APIs que acceden a los datos almacenados en `MongoDB`, permitiendo probar la comunicación entre la aplicación y la base de datos.
+Para poder utilizar `MongoDB`, se puede utilizar `Postman`, ya que se puede usar para probar APIs que interactúan con la base de datos `MongoDB`. En este contexto, `Postman` se usa para verificar el funcionamiento de las APIs que acceden a los datos almacenados en `MongoDB`, permitiendo probar la comunicación entre la aplicación y la base de datos.
 
-Por otro lado, y como es de suponer, `MongoDB` tiene que instalarse al igual que la terminal de `MongoDB`, que es `mongosh`. Desde esta terminal se lanzarán los comandos para realizar operaciones de creación, actualización, supresión o consulta de datos. Cabe recordar otra vez que `MongoDB` trabaja con documentos JSON, lo cual significa que habrá que añadir los datos en ese formato. En cuanto a las funcionalidades mas comunes de `MongoDB`, se encuentran las siguientes:
+Por otro lado, y como es de suponer, `MongoDB` tiene que instalarse al igual que la terminal de `MongoDB`, que es `mongosh`. Desde esta terminal se lanzarán los comandos para realizar operaciones de creación, actualización, supresión o consulta de datos. Cabe recordar otra vez que `MongoDB` trabaja con **documentos JSON**, lo cual significa que habrá que añadir los datos en ese formato. En cuanto a las funcionalidades mas comunes de `MongoDB`, se encuentran las siguientes:
 
 
-1. Creación de una nueva base de datos con `use nombre_database`. <br><br>
-2. Desplegar las bases de datos disponibles `show dbs` <br><br>
-3. Creación de un usuarios :arrow_right: con el comando `db.createUser()` y adjuntando los datos en formato JSON.<br><br>
+**1. Creación de una nueva base de datos** con `use nombre_database`. <br><br>
+**2. Desplegar las bases de datos** disponibles `show dbs` <br><br>
+**3. Creación de un usuarios** :arrow_right: con el comando `db.createUser()` y adjuntando los datos en formato JSON.<br><br>
 ![postman](./../images/3_create_user.JPG)<br>
 En este caso se crea un usuario llamado "aitor" con demás datos, asi como contaseña, los roles, etc.<br><br>
-
-4. Consulta de usuarios :arrow_right: con el comando `db.getUsers()`<br><br>
+**4. Consulta de usuarios** :arrow_right: con el comando `db.getUsers()`<br><br>
 ![postman](./../images/3_get_users_1.JPG)<br>
 Se despliegan cúantos usuarios hay en la base de datos, que serian "aitor" y "jordan". <br><br>
 
-5. Eliminación de usuarios :arrow_right: con el comando `db.dropUser("usuario_a_eliminar")`<br><br>
+**5. Eliminación de usuarios** :arrow_right: con el comando `db.dropUser("usuario_a_eliminar")`<br><br>
 ![postman](./../images/3_prod_user.jpg)<br>
 En este caso se elimina al usuario "jordan" y se emplea `db.getUsers()`para confirmas que se ha eliminado.<br>
 
-6. Creacion de colecciones :arrow_right: con el comando `db.createCollection("nombre_de_la_nueva_coleccion")`:<br><br>
+**6. Creación de colecciones** :arrow_right: con el comando `db.createCollection("nombre_de_la_nueva_coleccion")`:<br><br>
 Mediante el comando `db.createCollection("books") crea la coleccion `books`.<br>
 
-7. Ver colecciones :arrow_right: con el commando `show collections`<br><br>
-En nuestro caso solo hay una coleccion creada que es `books`.<br>
+**7. Ver colecciones** :arrow_right: con el commando `show collections`<br><br>
+En nuestro caso solo hay una colección creada que es `books`.<br>
 
-8. Añadir documentos a la coleccion :arrow_right: con el commando `db.books.insertOne({datos en formato JSON}) <br><br>
+**8. Añadir documentos a la colección** :arrow_right: con el comando `db.books.insertOne({datos en formato JSON})` <br><br>
 ![postman](./../images/5_collections_1.JPG)<br>
 Se añade el libro titulado "OOP Programming" con otros datos de autores y fecha de publiación, etc.<br>
 También se pueden añadir mas de un elemento a la vez usando el commando `db.books.insertMany({datos en formabr})`<br>
@@ -445,19 +444,19 @@ Y obtendremos confirmación por cada elemento que se haya añadido, en este caso
 ![postman](./../images/6_Insert_many.JPG)<br>
 
 
-9. Ver documentos de la coleccion :arrow_right: con el comando `db.nombre_coleccion.find()`. <br><br>
+**9. Ver documentos de la coleccion** :arrow_right: con el comando `db.nombre_coleccion.find()`. <br><br>
 ![postman](./../images/7_collections_Quey.JPG)<br>
 En este caso se listan todos los elementos que hay en esta coleccion `books` que en total son 6 elementos (libros). <br>
 
-10. Ver documentos especificos en la coleccion :arrow_right: con el comando ´db.nombre_coleccion.find({datos especificos de lo que se quiere encontrar})`<br><br>
+**10. Ver documentos específicos en la colección** :arrow_right: con el comando ´db.nombre_coleccion.find({datos especificos de lo que se quiere encontrar})`<br><br>
 ![postman](./../images/8_collections_Quey.JPG)<br>
 Se busca por el nombre "The Art of the War", y devuelve los datos en el caso de que haya un libro que tenga ese nombre.<br>
 
-12. Ver un documento especifico :arrow_right: con el comando db.nombre_coleccion.findOne({datos especificos de lo que se quiere encontrar}).<br><br>
+**12. Ver un documento especifico** :arrow_right: con el comando db.nombre_coleccion.findOne({datos especificos de lo que se quiere encontrar}).<br><br>
 Si por ejemplo tenemos dos elementos que se llaman igual, con este comando solo nos mostrará el primero de ellos.<br><br>
 ![postman](./../images/13_findOne.JPG)<br>
 
-13. Usar las proyecciones de MongoDB.<br><br>
+**13. Usar las proyecciones de MongoDB**.<br><br>
 Las proyecciones en MogoDB es una forma de filtrar los datos que una base de datos nos devuelve.<br>
 Por ejemplo, vamos a filtrar datos en base al `nombre`, la ´fecha de publicacion´y los `autores`. Para poder filtarlo usamos el número 1 para que lo muestre o 0 para que no lo muestre.<br><br>
 ![postman](./../images/9_projections.JPG)<br>
@@ -470,7 +469,7 @@ En este caso vamos a emplear el comando `db.books.findOne({name: /.*deep work.*/
 
 
 
-12. Selección de arrays anidados usando $slice<br><br>
+**12. Selección de arrays anidados** usando $slice<br><br>
 
 Se utiliza en el caso de que tengamos un documento que tenga un apartdo con 2 objetos, cada uno con un atributo con el mismo nombre. El objetivo es acceder a este docuemtno dejando fuera al segundo autor:<br>
 ```python
@@ -513,7 +512,7 @@ Finlamente, si solo queremos que nos devolviera el ultimo, pondriamos `-1`. <br>
 ![postman](./../images/10_array_3.jpg)<br>
 
 
-13. Colecciones anidadas
+**13. Colecciones anidadas**
 Se añade un elemento:
 ```python
 db.books.insertOne({
@@ -538,18 +537,18 @@ db.books.find(
     }
 )
 ```
-Authors en un array de objetos y queremos que nos devuelva el atributo `name` de cada uno de ellos.<br>
+`Authors` en un array de objetos y queremos que nos devuelva el atributo `name` de cada uno de ellos.<br>
 Se selecciona el atributo ´name´ de `authors` y para ello tenemos que poner la anotacion de un punot `.`.<br>
 El resultado es:<br>
 ![postman](./../images/12_nested.JPG)
 
 
 
-13. Ver si un documento existe en la colección o no :arrow_right: con el commando db.nombre_coleccion({nombre: {$exists: true/false})<br>
+**13. Ver si un documento existe en la colección o no** :arrow_right: con el commando db.nombre_coleccion({nombre: {$exists: true/false})<br>
 ![postman](./../images/15_exists.JPG)
-En este caso aplicamos db.books.find({reviews: {$exists: true}}) y nos devuelve lo que se ve en la imagen. Si nos devuelve datos se sobreentiende que existe.
+En este caso aplicamos `db.books.find({reviews: {$exists: true}})` y nos devuelve lo que se ve en la imagen. Si nos devuelve datos se sobreentiende que existe.
 
-14. Eliminar documentos :arrow_right: <br>
+**14. Eliminar documentos** :arrow_right: <br>
 Para eliminar datos se aplica el comando db.nombre_coleecion.remove({datos especificos de lo que se quiere borrar})
 Para eliminar todos los items que tienen por nombre "OOP Programming" se emplea --> `db.books.remove({name: "OOP Programming"})`
 Para eliminar un item que tenga por nombre "OOP Programming" se emplea --> `db.books.remove({name: "OOP Programming"}, 1)`
