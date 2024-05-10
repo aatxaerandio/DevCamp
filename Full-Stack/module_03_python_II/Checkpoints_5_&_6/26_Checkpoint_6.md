@@ -355,13 +355,14 @@ Las APIs son la Interfaz de Programación de Aplicaciones, o en su acrónimo en 
 
 En breves palabras, las APIs son la columna vertebral de los sistemas, permitiendo la comunicación entre aplicaciones y sistemas. Es una especie de servidor con el cual se puede comunicar y recibir datos de vuelta, siendo su principal función la de facilitar la interacción entre los elementos que componen el sistema.
 
-Entre los usos más destacables de las APIs están:
+**Entre los usos más destacables de las APIs están:**
 
 **1.** Establecer una conexión entre los sistemas y permite la accesibilidad de datos.<br>
 **2.** Permite monitorizar los usuarios y su actividad.<br>
 **3.** Incrementa la seguridad.<br>
 
-Un **ejemplo** muy claro del uso de las APIs es la **conexión entre un cliente (un usuario desde su ordenador) y una base de datos**. El cliente quiere acceder a ciertos datos que están localizados en una base de datos, y para ello, necesita hacer una petición (request) a una API. Esta API a su vez hará esa petición a la base de datos y recibirá una respuesta, que son los datos solicitados. Tras ello, la API manda una respuesta al cliente de nuevo, que son dichos datos que ha solicitado. El mismo mecanismo ocurriría si en lugar de solicitar datos a una base de datos, se realizaría una petición a un servidor web. Se observa un resumen muy simple del funcionamiento de las APIs en la siguiente imagen:
+Un **ejemplo** muy claro del uso de las APIs es la **conexión entre un cliente (un usuario desde su ordenador) y una base de datos**. El cliente quiere acceder a ciertos datos que están localizados en una base de datos, y para ello, necesita hacer una petición (request) a una API. Esta API a su vez hará esa petición a la base de datos y recibirá una respuesta, que son los datos solicitados. Tras ello, la API manda una respuesta al cliente de nuevo, que son dichos datos que ha solicitado. El mismo mecanismo ocurriría si en lugar de solicitar datos a una base de datos, se realizaría una petición a un servidor web.<br>
+Se observa un resumen muy simple del funcionamiento de las APIs en la siguiente imagen:
 
 <div align="center">
 	<img src="https://webimages.mongodb.com/_com_assets/cms/l65dhtchtsbcn16hk-image3.png?auto=format%252Ccompress">
@@ -380,10 +381,10 @@ En las APIs se distinguen principalmente los siguientes verbos:
 Para poder trabajar con APIs se necesita de programas como **Postman** o **ThunderClient** en Visual Studio Code. Estos programas se utilizan para testear colecciones y catálogos de APIs, tanto a nivel front-end como back-end y para gestionar peticiones HTTP.
 Concretamente, **Postman** Es una herramienta popular que se utiliza para probar APIs, en la que los desarrolladores pueden enviar peticiones a servicios web y bases de datos y ver sus respuestas.<br>
 
-Postman trabaja conjuntamente con Flask, que es un framework web escrito en Python que se usa para desarrollar aplicaciones web de manera rápida y sencilla. La particularidad de Flask es que permite crear rutas y definir los finales de rutas (end points), a parte de manejar peticiones. Para ello hay que instalar Flask y configurarlo, para luego poder crear guias que son las que se testarán con Postman. Una vez creadas esas guías, hay que dirigirse a Postman y seleccionar el verbo API que necesitemos, diferente si queremos crear, actualizar, consultar o eliminar contenido. En la imagen de acontinuación se muestras la interfaz de Postman.<br>
-![postman](./../images/Postman.JPG)<br>
-Para testear, simplemente hay que elegir el verbo de la API y enviar a la direccion que se ponga en el recuadro, en este caso localhost:5000/guide, que es la del mismo ordenador. Si ha habido conexion y la API funciona correctamente, abajo en el recuadro podremos ver lo que hemos añadido/modificado/eliminado, junto con un "Status: 200 OK".<br>
-En este ejemplo, hemos solicitado ver el contenido de localhost:5000/guides, y hemos obtenido respuesta satisfactoria:<br>
+Postman trabaja conjuntamente con Flask, que es un framework web escrito en Python que se usa para desarrollar aplicaciones web de manera rápida y sencilla. La particularidad de Flask es que permite crear rutas y definir los finales de rutas (end points), a parte de manejar peticiones. Para ello hay que instalar Flask y configurarlo, para luego poder crear guias que son las que se testarán con Postman. Una vez creadas esas guías, hay que dirigirse a Postman y seleccionar el verbo API que necesitemos, diferente si queremos crear, actualizar, consultar o eliminar contenido. En la imagen de acontinuación se muestras la interfaz de Postman.<br><br>
+![postman](./../images/Postman.JPG)<br><br>
+Para testear, simplemente hay que elegir el verbo de la API y enviar a la direccion que se ponga en el recuadro, en este caso `localhost:5000/guide`, que es la del mismo ordenador. Si ha habido conexion y la API funciona correctamente, abajo en el recuadro podremos ver lo que hemos añadido/modificado/eliminado, junto con un `"Status: 200 OK"´.<br><br>
+En este ejemplo, hemos solicitado ver el contenido de `localhost:5000/guides`, y hemos obtenido respuesta satisfactoria:<br><br>
 ![postman](./../images/Postman_Get.JPG)
 
 # Bases de datos
@@ -391,9 +392,9 @@ Las bases de datos, como su nombre indica, son componentes indispensables de los
 
 Aunque hay varios tipos de bases de datos, las más comunes que se utilizan con APIs son las siguientes:
 
-**1. Bases de datos SQL:** Son el acrónimo de "Structured Query Language", y son bases de datos relacionales que usan el lenguaje SQL para almacenar y manipular datos. Principalmente se caracterizan por ser estructuradas, organizando los datos en tablas con filas y columnas. El lenguaje SQL es el estándar para interactuar con estas bases de datos, con el fin de crear, modificar o eliminar tablas. Son bases de datos versátiles y flexibles, ideales para una amplia variedad de aplicaciones y necesidades de almacenamiento de datos.
+**1. Bases de datos SQL:** Son el acrónimo de **"Structured Query Language"**, y son bases de datos relacionales que usan el lenguaje SQL para almacenar y manipular datos. Principalmente se caracterizan por ser estructuradas, organizando los datos en tablas con filas y columnas. El lenguaje SQL es el estándar para interactuar con estas bases de datos, con el fin de crear, modificar o eliminar tablas. Son bases de datos versátiles y flexibles, ideales para una amplia variedad de aplicaciones y necesidades de almacenamiento de datos.
 
-**2. Bases de datos NoSQL:** Como su nombre indica, son NoSQL (Not only SQL), son muy populares y se caracterizan porque, al contrario de las SQL, no usan tablas para organizar los datos, sino colecciones de elementos heterogéneos. En esas colecciones se pueden almacenar registros con datos distintos entre sí, y por tanto, son ideales para aplicaciones que requieren variabilidad en la información almacenada y una rápida recuperación de datos.
+**2. Bases de datos NoSQL:** Como su nombre indica, son **NoSQL (Not only SQL)**, son muy populares y se caracterizan porque, al contrario de las SQL, no usan tablas para organizar los datos, sino colecciones de elementos heterogéneos. En esas colecciones se pueden almacenar registros con datos distintos entre sí, y por tanto, son ideales para aplicaciones que requieren variabilidad en la información almacenada y una rápida recuperación de datos.
 
 Las diferencias entre las bases de datos SQL y NoSQL radican principalmente en sus estructura y su funcionalidad:
 
@@ -403,17 +404,17 @@ Las diferencias entre las bases de datos SQL y NoSQL radican principalmente en s
 |**Consistencia**|Prioriza la integridad de los datos, garantizando la consistencia.|Prioriza el rápido acceso a los datos, sacrificando en ocasiones la integridad.|
 |**Escalabilidad**|Escalado vertical, añadiendo más potencia al servidor.|Escalabilidad horizontal, permitiendo ampliar la capacidad de la base de datos rápidamente.
 
-Por tanto, las bases de datos SQL son ideales para datos estructurados que requieren consistencia, mientras que las bases de datos NoSQL son más adecuadas para datos no estructurados que necesitan escalabilidad y rapidez de acceso.
+**Por tanto, las bases de datos SQL son ideales para datos estructurados que requieren consistencia, mientras que las bases de datos NoSQL son más adecuadas para datos no estructurados que necesitan escalabilidad y rapidez de acceso.**
 
 # MongoDB
-Una de las bases de datos más utilizadas actualmente es MongoDB.
-MongoDB es una base de datos NoSQL, por tanto, almacena colecciones de datos de una forma no estructurada, sin una estructura fija de tablas pero enfocándose en la velocidad del acceso a la base de datos.
+Una de las bases de datos más utilizadas actualmente es `MongoDB`.<br>
+`MongoDB` es una **base de datos NoSQL**, por tanto, almacena colecciones de datos de una forma no estructurada, sin una estructura fija de tablas pero enfocándose en la velocidad del acceso a la base de datos.<br>
 
-Los datos que almacena MongoDB por tanto, se almacenan en documentos flexibles en formato similar a JSON, siendo eficienteen el manejo de grandes cantidades de datos no estructurados. Como se ha descrito anteriormente, este tipo de base de datos es muy flexible, lo cual permite realizar numerosas tareas en aplicaciones diferentes, desde sistemas de gestion de contenidos hasta grandes aplicaciones web. Por ese motico, MongoDB es famosa y utlizada por empresas como eBAY y LinkedIn, entre otros. MongoDB es una base de datos que tiene una serie de ventajas asi como su escalabilidad, velocidad, facilidad de manejo de datos dinamicos y la capacidad de trabajar con estrucurtras de datos cmabiantes sin necesidad de migrarciones complejas, lo cual hacen de ella una herramienta muy util hoy en dia.
+Los datos que almacena `MongoDB` por tanto, se almacenan en documentos flexibles en formato similar a JSON, siendo eficienteen el manejo de grandes cantidades de datos no estructurados. Como se ha descrito anteriormente, este tipo de base de datos es muy **flexible**, lo cual permite realizar numerosas tareas en aplicaciones diferentes, desde sistemas de gestion de contenidos hasta grandes aplicaciones web. Por ese motico, `MongoDB` es famosa y utlizada por empresas como eBAY y LinkedIn, entre otros. `MongoDB` es una base de datos que tiene una serie de ventajas asi como su escalabilidad, velocidad, facilidad de manejo de datos dinamicos y la capacidad de trabajar con estrucurtras de datos cambiantes sin necesidad de migrarciones complejas, lo cual hacen de ella una herramienta muy util hoy en dia.
 
-Para poder utilizar MongoDB, se puede utilizar Postman, ya que se puede usar para probar APIs que interactúan con la base de datos MongoDB. En este contexto, Postman se usa para verificar el funcionamiento de las APIs que acceden a los datos almacenados en MongoDB, permitiendo probar la comunicación entre la aplicación y la base de datos.
+Para poder utilizar `MongoDB`, se puede utilizar `Postman`, ya que se puede usar para probar APIs que interactúan con la base de datos `MongoDB`. En este contexto, Postman se usa para verificar el funcionamiento de las APIs que acceden a los datos almacenados en `MongoDB`, permitiendo probar la comunicación entre la aplicación y la base de datos.
 
-Por otro lado, y como es de suponer, MongoDB tiene que instalarse al igual que la terminal de MongoDB, que es mongosh. Desde esta terminal se lanzarán los comandos para realizar operaciones de creación, actualización, supresión o consulta de datos. Cabe recordar otra vez que MongoDB trabaja con documentos JSON, lo cual significa que habrá que añadir los datos en ese formato. En cuanto a las funcionalidades mas comunes de MongoDB, se encuentran las siguientes:
+Por otro lado, y como es de suponer, `MongoDB` tiene que instalarse al igual que la terminal de `MongoDB`, que es `mongosh`. Desde esta terminal se lanzarán los comandos para realizar operaciones de creación, actualización, supresión o consulta de datos. Cabe recordar otra vez que `MongoDB` trabaja con documentos JSON, lo cual significa que habrá que añadir los datos en ese formato. En cuanto a las funcionalidades mas comunes de `MongoDB`, se encuentran las siguientes:
 
 
 1. Creación de una nueva base de datos con `use nombre_database`. <br><br>
