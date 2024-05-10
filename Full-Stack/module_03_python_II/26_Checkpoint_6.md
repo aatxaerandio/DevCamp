@@ -155,7 +155,7 @@ print(str(datos))     # El alumno Aitor Atxaerandio tiene 15 años
 print(repr(datos))    # El alumno <valor: nombre: Aitor> <valor: apellido: Atxaerandio>, tiene <valor: edad: 15> años
 ```
 
-En este **ejemplo** se define la clase Asistencia que tiene atributos de nombre, apellido y edad.
+En este **ejemplo** se define la clase `Asistencia` que tiene atributos de `nombre`, `apellido` y `edad`.
 
 1. La clase tiene un constructor `__init__` que inicia los atributos `nombre`, `apellidos` y `edad` automaticamente cuando se llama a la clase.
 2. La clase tiene dos metodos dunder para representar la instancia de la clase de manera legible:
