@@ -416,37 +416,36 @@ Para poder utilizar MongoDB, se puede utilizar Postman, ya que se puede usar par
 Por otro lado, y como es de suponer, MongoDB tiene que instalarse al igual que la terminal de MongoDB, que es mongosh. Desde esta terminal se lanzarán los comandos para realizar operaciones de creación, actualización, supresión o consulta de datos. En cuanto a las funcionalidades mas comunes de MongoDB, se encuentran las siguientes:
 
 
-1. Creación de una nueva base de datos con `use nombre_database`.
-2. Desplegar las bases de datos disponibles `show dbs`
-
-3. Creación de un usuarios
+1. Creación de una nueva base de datos con `use nombre_database`. <br>
+2. Desplegar las bases de datos disponibles `show dbs` <br>
+3. Creación de un usuarios <br>
 ![postman](./../images/3_create_user.JPG)
 
-4. Consulta de usuarios
+4. Consulta de usuarios <br>
 ![postman](./../images/3_get_users_1.JPG)
 
-5. Eliminación de usuarios
+5. Eliminación de usuarios <br>
 ![postman](./../images/3_prod_user.JPG)
 
-6. Creacion de colecciones
+6. Creacion de colecciones <br>
 ![postman](./../images/Postman_Get.JPG)
 
-7. Ver colecciones
+7. Ver colecciones <br>
 ![postman](./../images/Postman_Get.JPG)
 
-8. Añadir documentos a la coleccion
+8. Añadir documentos a la coleccion <br>
 ![postman](./../images/Postman_Get.JPG)
 
-9. Ver documentos en la coleccion
+9. Ver documentos en la coleccion <br>
 ![postman](./../images/Postman_Get.JPG)
 
-10. Ver documentos especificos en la coleccion
+10. Ver documentos especificos en la coleccion <br>
 ![postman](./../images/Postman_Get.JPG)
 
-11. Ver si un documento existe en la coleccion o no
+11. Ver si un documento existe en la coleccion o no <br>
 ![postman](./../images/Postman_Get.JPG)
 
-12. Eliminar documentos
+12. Eliminar documentos <br>
 ![postman](./../images/Postman_Get.JPG)
 
 
