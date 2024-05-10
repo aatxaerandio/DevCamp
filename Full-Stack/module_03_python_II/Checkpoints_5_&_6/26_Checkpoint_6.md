@@ -68,7 +68,7 @@ Con el fin de no reescribir y eliminar atributos, en Python se utilizan las barr
 
 Estos atributos, al ser privados o protegidos, no pueden modificarse por sí solos, y se necesita de métodos especiales para poder acceder a ellos. Aquí es donde entra en juego los métodos `setter` y `getter`, que son parte fundamental de python y se usan para modificar los atributos de una clase de manera controlada.
 
-### Funciones Setter y Getter
+# Funciones Setter y Getter
 En el caso del método ``getter``, se emplea para obtener el valor de un atributo privado, permitiendo una lectura segura de los datos almacenados en una clase. Para los métodos getter, se usa la sintaxis `@property` para obtener el valor de un atributo privado, **ubicándolo delante del método** que queremos que devuelva el valor.
 
 En el caso de ``setter``, se usa para asignar un valor a un atributo privado, lo que posibilita la modificación controlada de dicho atributo. En este caso, la sintaxis a utilizar es ``@nombre_método.setter`` delante del método que queremos modificar.
@@ -376,7 +376,7 @@ En las APIs se distinguen principalmente los siguientes verbos:
 **3. PUT** :arrow_right: Este método es para la actualización de un recurso concreto. Por **ejemplo**, se usaría este verbo para la actualización de datos de un usuario en particular.<br>
 **4. DELETE** :arrow_right: Para borrar recursos, como por **ejemplo**, eliminación de usuarios, etc.<br>
 
-## Trabajar con APIs
+# Trabajar con APIs
 Para poder trabajar con APIs se necesita de programas como **Postman** o **ThunderClient** en Visual Studio Code. Estos programas se utilizan para testear colecciones y catálogos de APIs, tanto a nivel front-end como back-end y para gestionar peticiones HTTP.
 Concretamente, **Postman** Es una herramienta popular que se utiliza para probar APIs, en la que los desarrolladores pueden enviar peticiones a servicios web y bases de datos y ver sus respuestas.<br>
 
@@ -405,7 +405,7 @@ Las diferencias entre las bases de datos SQL y NoSQL radican principalmente en s
 
 Por tanto, las bases de datos SQL son ideales para datos estructurados que requieren consistencia, mientras que las bases de datos NoSQL son más adecuadas para datos no estructurados que necesitan escalabilidad y rapidez de acceso.
 
-## MongoDB
+# MongoDB
 Una de las bases de datos más utilizadas actualmente es MongoDB.
 MongoDB es una base de datos NoSQL, por tanto, almacena colecciones de datos de una forma no estructurada, sin una estructura fija de tablas pero enfocándose en la velocidad del acceso a la base de datos.
 
