@@ -506,8 +506,8 @@ Finlamente, si solo queremos que nos devuelva el último, pondriamos `-1`. <br>
 ![postman](./../images/10_array_3.jpg)<br>
 
 
-**14. Colecciones anidadas**
-Se añade un elemento:
+**14. Colecciones anidadas**<br>
+Primero se añade un elemento:
 ```python
 db.books.insertOne({
     "name": "Blink",
