@@ -464,7 +464,7 @@ Por otra parte, podemos usar una sintaxis mas avanzada para buscar datos usando 
 En este caso vamos a emplear el comando `db.books.findOne({name: /.*deep work.*/i})`, que basicamente es filtrar por el nombre, y ese nombre tiene que tener "deep work" en su interior. Además se pone la letra `i` después para que de ese modo no haga distincion entre mayúsculas y  minúsculas y busque de una forma mas amplia.<br><br>
 ![postman](./../images/14_projections.JPG)<br>
 
-**12. Selección de arrays anidados** usando `$slice`<br><br>
+**12. Selección de arrays anidados** usando `$slice`<br>
 Se utiliza en el caso de que tengamos un documento que tenga un apartdo con 2 objetos, cada uno con un atributo con el mismo nombre. El objetivo es acceder a este documento dejando fuera al segundo autor:<br>
 ```python
 db.books.insertOne({
@@ -532,8 +532,8 @@ db.books.find(
 )
 ```
 `Authors` en un array de objetos y queremos que nos devuelva el atributo `name` de cada uno de ellos.<br>
-Se selecciona el atributo `name` de `authors` y para ello tenemos que poner la anotación de un punto `.`.<br>
-El resultado es:<br>
+Se selecciona el atributo `name` de `authors` y para ello tenemos que poner la anotación de un punto `.`.<br><br>
+**El resultado es:**<br>
 ![postman](./../images/12_nested.JPG)
 
 **13. Ver si un documento existe en la colección o no** :arrow_right: con el commando `db.nombre_coleccion({nombre: {$exists: true/false})`<br>
