@@ -384,7 +384,7 @@ Concretamente, **Postman** Es una herramienta popular que se utiliza para probar
 
 
 
-![postman](./images/Postman.JPG)
+![postman](../../images/Postman.JPG)
 
 
 
