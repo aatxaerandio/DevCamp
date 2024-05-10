@@ -1,3 +1,6 @@
+<div style="text-align: justify">
+    
+
 # Clases en Python
 
 Entre las diferentes tipos de elementos en Python, se encuentran un tipo de estructura que se utiliza para definir un nuevo tipo de objeto, llamadas **clases**.
@@ -404,5 +407,7 @@ Una de las bases de datos más utilizadas actualmente es MongoDB.
 MongoDB es una base de datos NoSQL, por tanto, almacena colecciones de datos de una forma no estructurada, sin una estructura fija de tablas pero enfocándose en la velocidad del acceso a la base de datos.
 
 Para poder utilizar MongoDB, se puede utilizar Postman, ya que se puede usar para probar APIs que interactúan con la base de datos MongoDB. En este contexto, Postman se usa para verificar el funcionamiento de las APIs que acceden a los datos almacenados en MongoDB, permitiendo probar la comunicación entre la aplicación y la base de datos.
+
+</div>
 
 
