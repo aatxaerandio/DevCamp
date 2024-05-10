@@ -6,9 +6,9 @@ Principalmente, las clases en Python sirven para agrupar **datos (que son los at
 
 Las clases permiten la creación de objetos con propiedades y comportamientos específicos, lo que ayuda a organizar y modular el código, mejorar la legibilidad, facilitar la reutilización del código y mantener un código mas limpio y estructurado.
 
-En cuanto a la sintaxis, siempre debe hacerse escribiendo **class** y luego el nombre de la clase con la **primera letra en mayúscula**. Por defecto, el primer atributo en las clases siempre está denominado como **self**. A parte de self, se pueden añadir mas atributos y funciones a la clase. Para entender mejor el uso de las clases, a continuación se expone un ejemplo:
+En cuanto a la sintaxis, siempre debe hacerse escribiendo **class** y luego el nombre de la clase con la **primera letra en mayúscula**. Por defecto, el primer atributo en las clases siempre está denominado como **self**. A parte de self, se pueden añadir mas atributos y funciones a la clase. Para entender mejor el uso de las clases, a continuación se expone un **ejemplo**:
 
-Ejemplo: Se pretende crear una clase que se llame `Usuario`, y se le añadirán dos funciones `saludos_1` y `saludos_2`. En este caso, solo se usa un atributo, por defecto, self.
+**Ejemplo**: Se pretende crear una clase que se llame `Usuario`, y se le añadirán dos funciones `saludos_1` y `saludos_2`. En este caso, solo se usa un atributo, por defecto, self.
 
 ```python
 class Usuario:
@@ -36,7 +36,7 @@ print(persona_1.saludos_2())
 ## Método constructor
 En las clases, también se pueden utilizar métodos específicos como el **método constructor**.
 En este caso, el método constructor tiene la particularidad que se llama por `__init__` y se ejecuta **automáticamente** cuando se crea una instancia de la clase. Este método siempre se usa para inicializar los atributos de la clase.
-Para entenderlo mejor, se expone el siguiente ejemplo:
+Para entenderlo mejor, se expone el siguiente **ejemplo**:
 
 ```python
 class Factura:
@@ -73,7 +73,7 @@ En el caso del método ``getter``, se emplea para obtener el valor de un atribul
 
 En el caso de ``setter``, se usa para asignar un valor a un atribulo privado, lo que posibilidad la modificación controlada de dicho atributo. En este caso, la sintaxis a utilizar es ``@nombre_metodo.setter`` delante del metodo que queremos mopdificar.
 
-Para explicarlo mejor, se describe un ejemplo a continuación:
+Para explicarlo mejor, se describe un **ejemplo** a continuación:
 
 ```python
 class Factura:
@@ -135,7 +135,7 @@ Entre los metodos dunder mas utilizados y comunes hasta la fecha se encuentran `
 - `__str__` --> Se usan principalmente para el debugging, devuelven la representacion en forma de string de un objeto, el cual es legible por humanos (human-readable). Básicamente es facil de leer.
 - `__repr__` --> Similar al `__str__`, se usa para devolver un a salida en bruto/crudo, pero se utiliza más para mostrar directamente los valores, con una forma más «objeto». Por tanto, no es tan facil de leer.
 
-Para entender mejor el uso de los metodos dunder, se expone un ejemplo a continuacion:
+Para entender mejor el uso de los metodos dunder, se expone un **ejemplo** a continuacion:
 ```python
 class Asistencia:
   def __init__(self, nombre, apellido, edad):
@@ -155,14 +155,14 @@ print(str(datos))     # El alumno Aitor Atxaerandio tiene 15 años
 print(repr(datos))    # El alumno <valor: nombre: Aitor> <valor: apellido: Atxaerandio>, tiene <valor: edad: 15> años
 ```
 
-En este ejemplo se define la clase Asistencia que tiene atributos de nombre, apellido y edad.
+En este **ejemplo** se define la clase Asistencia que tiene atributos de nombre, apellido y edad.
 
 1. La clase tiene un constructor `__init__` que inicia los atributos `nombre`, `apellidos` y `edad` automaticamente cuando se llama a la clase.
 2. La clase tiene dos metodos dunder para representar la instancia de la clase de manera legible:
    - Metodo `__str__`: Devuelve la representación de cadena legible para los humanos (human-readable), que en este caso indica el `nombre`, `apellido` y `edad` del alumno.
    - Metodo `__repr__`: Devuelve la representación de cadena mas formal y detallada, lo cual hace que siga siendo legible pero algo mas difícil, ya que detalla todo de forma mas tecnica.
   
-En el ejemplo se crea una instancia de la clase `Asistencia` con el `nombre` **Aitor**, `apellido` **Atxaerandio** y `edad` **15**, y se guarda en la variable datos.
+En el **ejemplo** se crea una instancia de la clase `Asistencia` con el `nombre` **Aitor**, `apellido` **Atxaerandio** y `edad` **15**, y se guarda en la variable datos.
 Se imprimen las cadenas usando `print(str(datos))` y `print(rpr(datos))`.
 
 
@@ -172,7 +172,7 @@ Dentro de los metodos dunder se pueden utilizar iteradores. Los iteradores mas c
 - `__iter__()` :arrow_right: Devuelve un iterador para un objeto determinado (array, tupla, lista, etc), crea un objeto que puede ser llamado.
 - `__next__()` :arrow_right: En este caso, devuelve el siguiente item de la iteración, devolviendo `StopIteration` cuando no hay mas items disponibles.
 
-Para entender mejor el uso de los iteradores en las clases, se expone un ejemplo a continuación:
+Para entender mejor el uso de los iteradores en las clases, se expone un **ejemplo** a continuación:
 
 ```python
 class Aula:
@@ -235,7 +235,7 @@ La herencia de clases es un concepto que permite a una clase heredar atributos y
 Este mecanismo facilita la reutilización de codigo y la organizacion jarárquica de las clases.
 La herencia de clases se establece al crear una clase que hereda de otra clase, donde la clase hija hereda todos los atributos y métodos de la clase madre,.
 
-Para entenderlo mejor, se expone un ejemplo a continuación:
+Para entenderlo mejor, se expone un **ejemplo** a continuación:
 
 ```python
 # clase MADRE
@@ -279,7 +279,7 @@ print(coche_2.kilometros())      # Muchos kilometros
 
 En Python, el polimorfismo se refiere a la capacidad de objetos de diferentes clases de ser tratados de manera similar utilizando el mismo intefax, pero mostrando comportamientos diferentes. Esto se puede conseguir mediante el uso de clases y de herencia de clases. 
 
-En el primer ejemplo, se describe un **polimorfismo con clase**, mientras que en el segundo, un **polimorfismo con herencia de clases**:
+En el primer **ejemplo**, se describe un **polimorfismo con clase**, mientras que en el segundo, un **polimorfismo con herencia de clases**:
 
 **1. Polirmorfismo de clase**
 
@@ -361,7 +361,7 @@ Entre los usos mas destacables de las APIs estan:
 **2.** Permite monitorizar los usuarios y su actividad.
 **3.** Incrementa la seguridad.
 
-Un ejemplo muy claro del uso de las APIs es la **conexión entre un cliente (un usuario desde su ordenador) y una base de datos**. El cliente quiere acceder a ciertos datos que están localizados en una base de datos, y para ello, necesita hacer una petición (request) a una API. Esta API a su vez hará esa petición a la base de datos y recibirá una respuesta, que son los datos solicitados. Tras ello, la API manda una respuesta al cliente de nuevo, que son dichos datos que ha solicitado. El mismo mecanismo ocurriría si en lugar de solicitar datos a una base de datos, se realizaría una petición a un servidor web. Se observa un resumen muy simple del funcionamiento de las APIs en la siguiente imagen:
+Un **ejemplo** muy claro del uso de las APIs es la **conexión entre un cliente (un usuario desde su ordenador) y una base de datos**. El cliente quiere acceder a ciertos datos que están localizados en una base de datos, y para ello, necesita hacer una petición (request) a una API. Esta API a su vez hará esa petición a la base de datos y recibirá una respuesta, que son los datos solicitados. Tras ello, la API manda una respuesta al cliente de nuevo, que son dichos datos que ha solicitado. El mismo mecanismo ocurriría si en lugar de solicitar datos a una base de datos, se realizaría una petición a un servidor web. Se observa un resumen muy simple del funcionamiento de las APIs en la siguiente imagen:
 
 ## Verbos en las APIs
 Los verbos en las APIs hacen referencia a los metodos que se van a utilizar cuando se usan. Dependiendo si se quiere consultar, actualizar, crear o eliminar datos, se utilizará un verbo u otro.
@@ -369,8 +369,8 @@ En las APIs se distinguen principalmente los siguientes verbos:
 
 **1. GET** :arrow_right: Este metodo esta pensado para la lectura de datos, es decir, realizar una consulta sobre un objeto en concreto.
 **2. POST** :arrow_right: Este metodo esta pensado para la creacion de nuevos recursos, asi como crear un nuevo usuario, contenido, etc.
-**3. PUT** :arrow_right: Este metodo es para la actualizacion de un recurso concreto. Por ejemplo, se usaria este verbo par ala actualizaciond e datos de un usuario en particular. 
-**4. DELETE** :arrow_right: Para borrar recursos, como por ejemplo, eliminacion de usuarios, etc.
+**3. PUT** :arrow_right: Este metodo es para la actualizacion de un recurso concreto. Por **ejemplo**, se usaria este verbo par ala actualizaciond e datos de un usuario en particular. 
+**4. DELETE** :arrow_right: Para borrar recursos, como por **ejemplo**, eliminacion de usuarios, etc.
 
 ## Trabajar con APIs
 Para poder trabajar con APIs se necesita de programas como **Postman** o **ThunderClient** en Visual Studio Code. Estos progrmas se utilizan para testear collecciones y catalogos de APIs, tanto a nivel front-end como back-end y para gestionar peticiones HTTP. 
