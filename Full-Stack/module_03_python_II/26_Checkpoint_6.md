@@ -357,34 +357,32 @@ En breves palabras, las APIs son la columna vertebral de los sistemas, permitien
 
 Entre los usos mas destacables de las APIs estan:
 
-1. Establecer una conexión entre los sistemas y permite la accesibilidad de datos.
-2. Permite monitorizar los usuarios y su actividad.
-3. Incrementa la seguridad.
+**1.** Establecer una conexión entre los sistemas y permite la accesibilidad de datos.
+**2.** Permite monitorizar los usuarios y su actividad.
+**3.** Incrementa la seguridad.
 
 Un ejemplo muy claro del uso de las APIs es la **conexión entre un cliente (un usuario desde su ordenador) y una base de datos**. El cliente quiere acceder a ciertos datos que están localizados en una base de datos, y para ello, necesita hacer una petición (request) a una API. Esta API a su vez hará esa petición a la base de datos y recibirá una respuesta, que son los datos solicitados. Tras ello, la API manda una respuesta al cliente de nuevo, que son dichos datos que ha solicitado. El mismo mecanismo ocurriría si en lugar de solicitar datos a una base de datos, se realizaría una petición a un servidor web. Se observa un resumen muy simple del funcionamiento de las APIs en la siguiente imagen:
-
-
 
 ## Verbos en las APIs
 Los verbos en las APIs hacen referencia a los metodos que se van a utilizar cuando se usan. Dependiendo si se quiere consultar, actualizar, crear o eliminar datos, se utilizará un verbo u otro.
 En las APIs se distinguen principalmente los siguientes verbos:
 
-1. GET --> Este metodo esta pensado para la lectura de datos, es decir, realizar una consulta sobre un objeto en concreto.
-2. POST --> Este metodo esta pensado para la creacion de nuevos recursos, asi como crear un nuevo usuario, contenido, etc.
-3. PUT --> Este metodo es para la actualizacion de un recurso concreto. Por ejemplo, se usaria este verbo par ala actualizaciond e datos de un usuario en particular. 
-4. DELETE --> Para borrar recursos, como por ejemplo, eliminacion de usuarios, etc.
+**1. GET** :arrow_right: Este metodo esta pensado para la lectura de datos, es decir, realizar una consulta sobre un objeto en concreto.
+**2. POST** :arrow_right: Este metodo esta pensado para la creacion de nuevos recursos, asi como crear un nuevo usuario, contenido, etc.
+**3. PUT** :arrow_right: Este metodo es para la actualizacion de un recurso concreto. Por ejemplo, se usaria este verbo par ala actualizaciond e datos de un usuario en particular. 
+**4. DELETE** :arrow_right: Para borrar recursos, como por ejemplo, eliminacion de usuarios, etc.
 
 ## Trabajar con APIs
-Para poder trabajar con APIs se necesita de programas como Postman o ThunderClient en Visual Studio Code. Estos progrmas se utilizan para testear collecciones y catalogos de APIs, tanto a nivel front-end como back-end y para gestionar peticiones HTTP. 
-Concretamente, Postman es una herramienta popular que se utiliza para probar APIs, en la que los desarrolladores pueden enviar peticiones a servicios web y bases de datos y ver sus respuestas.
-
+Para poder trabajar con APIs se necesita de programas como **Postman** o **ThunderClient** en Visual Studio Code. Estos progrmas se utilizan para testear collecciones y catalogos de APIs, tanto a nivel front-end como back-end y para gestionar peticiones HTTP. 
+Concretamente, **Postman** es una herramienta popular que se utiliza para probar APIs, en la que los desarrolladores pueden enviar peticiones a servicios web y bases de datos y ver sus respuestas.
 
 # Bases de datos
 Las bases de datos, como su nombre indica, son componentes indispensables de los sistemas y aplicaciones ya que sirven de soporte de almacenamiento para poder dar respuesta a las peticiones que se reciban por parte de las APIs.
 
 Aunque hay varios tipos de bases de datos, las mas comunes que se utilizan con APIs son las siguientes:
-1. Bases de datos SQL: Son el acrónimo de Structured Query Languae, y son bases de datos relacionables que usan el lenguaje SQL para almacenar y manipular datos. Principalmente se caracterizan por ser estructuradas, organizando los datos en tablas con filas y columnas. El lenguaje SQL es el estnadar para interactuar con estas bases de datos, con el fin de crear, modificar o eliminar tablas. Son bases de datos versatiles y flexibles, ideales para una amplia variedad de aplicaciones y necesidades de almacenamiento de datos.
-2. Bases de datos NoSQL: Como su nombre indica, son NoSQL (Not only SQL), son muy populares y se caracterizan es, al contrario de las SQL, no usan tablas para organizar los datos, sino colleciones de elementos heterogeneos. En esas colecciones se pueden almacenar registros con datos distintos entre si, y por tanto, son ideales para aplicaciones que requieren variabilidad en la informacion almacenada y una rapida recuperacin de datos.
+
+**1. Bases de datos SQL:** Son el acrónimo de "Structured Query Language", y son bases de datos relacionables que usan el lenguaje SQL para almacenar y manipular datos. Principalmente se caracterizan por ser estructuradas, organizando los datos en tablas con filas y columnas. El lenguaje SQL es el estnadar para interactuar con estas bases de datos, con el fin de crear, modificar o eliminar tablas. Son bases de datos versatiles y flexibles, ideales para una amplia variedad de aplicaciones y necesidades de almacenamiento de datos.
+**2. Bases de datos NoSQL:** Como su nombre indica, son NoSQL (Not only SQL), son muy populares y se caracterizan es, al contrario de las SQL, no usan tablas para organizar los datos, sino colleciones de elementos heterogeneos. En esas colecciones se pueden almacenar registros con datos distintos entre si, y por tanto, son ideales para aplicaciones que requieren variabilidad en la informacion almacenada y una rapida recuperacin de datos.
 
 Las diferencias entre las bases de datos SQL y NoSQL radican principalmente en sus estrucutra y su funcionalidad:
 
