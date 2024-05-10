@@ -382,6 +382,7 @@ Las bases de datos, como su nombre indica, son componentes indispensables de los
 Aunque hay varios tipos de bases de datos, las mas comunes que se utilizan con APIs son las siguientes:
 
 **1. Bases de datos SQL:** Son el acrónimo de "Structured Query Language", y son bases de datos relacionables que usan el lenguaje SQL para almacenar y manipular datos. Principalmente se caracterizan por ser estructuradas, organizando los datos en tablas con filas y columnas. El lenguaje SQL es el estnadar para interactuar con estas bases de datos, con el fin de crear, modificar o eliminar tablas. Son bases de datos versatiles y flexibles, ideales para una amplia variedad de aplicaciones y necesidades de almacenamiento de datos.
+
 **2. Bases de datos NoSQL:** Como su nombre indica, son NoSQL (Not only SQL), son muy populares y se caracterizan es, al contrario de las SQL, no usan tablas para organizar los datos, sino colleciones de elementos heterogeneos. En esas colecciones se pueden almacenar registros con datos distintos entre si, y por tanto, son ideales para aplicaciones que requieren variabilidad en la informacion almacenada y una rapida recuperacin de datos.
 
 Las diferencias entre las bases de datos SQL y NoSQL radican principalmente en sus estrucutra y su funcionalidad:
