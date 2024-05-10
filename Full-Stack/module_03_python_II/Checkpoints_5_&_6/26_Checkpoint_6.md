@@ -428,49 +428,48 @@ Se despliegan cúantos usuarios hay en la base de datos, que serian "aitor" y "j
 
 5. Eliminación de usuarios :arrow_right: con el comando `db.dropUser("usuario_a_eliminar")`<br><br>
 ![postman](./../images/3_prod_user.jpg)<br>
-En este caso se elimina al usuario "jordan".<br>
+En este caso se elimina al usuario "jordan" y se emplea `db.getUsers()`para confirmas que se ha eliminado.<br>
 
-6. Creacion de colecciones :arrow_right: con el comando `db.createCollection("nombre_de_la_nueva_coleccion"):<br>
-Se crea la coleccion `books`.<br>
+6. Creacion de colecciones :arrow_right: con el comando `db.createCollection("nombre_de_la_nueva_coleccion")`:<br><br>
+Mediante el comando `db.createCollection("books") crea la coleccion `books`.<br>
 
-7. Ver colecciones :arrow_right: con el commando `show collections`<br>
-En nuestro caso hemos creado una coleccion con el nombre `books`.<br>
+7. Ver colecciones :arrow_right: con el commando `show collections`<br><br>
+En nuestro caso solo hay una coleccion creada que es `books`.<br>
 
-8. Añadir documentos a la coleccion :arrow_right: con el commando `db.books.insertOne({datos en formato JSON}) <br>
+8. Añadir documentos a la coleccion :arrow_right: con el commando `db.books.insertOne({datos en formato JSON}) <br><br>
 ![postman](./../images/5_collections_1.JPG)<br>
-Se añade el libro titulado "OOP Programming" con otros datos de autores y fecha de publiación, etc.
-
-También se pueden añadir mas de un elemento a la vez usando el commando `db.books.insertMany({datos en formabr})<br>
-Y obtendremos confirmación por cada elemento que se haya añadido, en este caso, si se añaden 3 elementos, obtendremos tres respuestas<br>
+Se añade el libro titulado "OOP Programming" con otros datos de autores y fecha de publiación, etc.<br>
+También se pueden añadir mas de un elemento a la vez usando el commando `db.books.insertMany({datos en formabr})`<br>
+Y obtendremos confirmación por cada elemento que se haya añadido, en este caso, si se añaden 3 elementos, obtendremos tres respuestas<br><br>
 ![postman](./../images/6_Insert_many.JPG)<br>
 
 
-9. Ver documentos de la coleccion :arrow_right: con el comando `db.nombre_coleccion.find(). <br>
-![postman](./../images/7_collections_Quey.JPG)
+9. Ver documentos de la coleccion :arrow_right: con el comando `db.nombre_coleccion.find()`. <br><br>
+![postman](./../images/7_collections_Quey.JPG)<br>
 En este caso se listan todos los elementos que hay en esta coleccion `books` que en total son 6 elementos (libros). <br>
 
-10. Ver documentos especificos en la coleccion :arrow_right: con el comando ´db.nombre_coleccion.find({datos especificos de lo que se quiere encontrar})<br>
-![postman](./../images/8_collections_Quey.JPG)
+10. Ver documentos especificos en la coleccion :arrow_right: con el comando ´db.nombre_coleccion.find({datos especificos de lo que se quiere encontrar})`<br><br>
+![postman](./../images/8_collections_Quey.JPG)<br>
 Se busca por el nombre "The Art of the War", y devuelve los datos en el caso de que haya un libro que tenga ese nombre.<br>
 
-11. Ver un documento especifico :arrow_right: con el comando db.nombre_coleccion.findOne({datos especificos de lo que se quiere encontrar}).
-Si por ejemplo tenemos dos elementos que se llaman ifual, con este comando solo nos mostrará el primero de ellos.
-![postman](./../images/13_findOne.JPG)
+12. Ver un documento especifico :arrow_right: con el comando db.nombre_coleccion.findOne({datos especificos de lo que se quiere encontrar}).<br><br>
+Si por ejemplo tenemos dos elementos que se llaman igual, con este comando solo nos mostrará el primero de ellos.<br><br>
+![postman](./../images/13_findOne.JPG)<br>
 
-12. Usar las proyecciones de MongoDB.
-Las proyecciones en MogoDB es una forma de filtrar los datos que una base de datos nos devuelve.
-Por ejemplo, vamos a filtrar datos en base al `nombre`, la ´fecha de publicacion´y los `autores`. Para poder filtarlo usamos el número 1 para que lo muestre o 0 para que no lo muestre.
-![postman](./../images/9_projections.JPG)
-Aquí se nos muestran los datos solicitados y filtrados.
+13. Usar las proyecciones de MongoDB.<br><br>
+Las proyecciones en MogoDB es una forma de filtrar los datos que una base de datos nos devuelve.<br>
+Por ejemplo, vamos a filtrar datos en base al `nombre`, la ´fecha de publicacion´y los `autores`. Para poder filtarlo usamos el número 1 para que lo muestre o 0 para que no lo muestre.<br><br>
+![postman](./../images/9_projections.JPG)<br>
+Aquí se nos muestran los datos solicitados y filtrados.<br><br>
 
 Por otra parte, podemos usar una sintaxis mas avanzada para buscar datos usando un comando muy parecido al anterior db.nombre_coleccion.findOne({name: /.*palabras clave.*/i}).<br>
-En este caso vamos a emplear el comando db.books.findOne({name: /.*deep work.*/i}), que basicamente es filtrar por el nombre, y ese nombre tiene que tener "deep work" en su interior. Además se pone el "i" despues para que de ese modo no haga distincion entre maysucuals y minusculas y busque de una forma mas amplia.
+En este caso vamos a emplear el comando `db.books.findOne({name: /.*deep work.*/i})`, que basicamente es filtrar por el nombre, y ese nombre tiene que tener "deep work" en su interior. Además se pone el "i" despues para que de ese modo no haga distincion entre maysucuals y minusculas y busque de una forma mas amplia.<br><br>
 ![postman](./../images/14_projections.JPG)<br>
 
 
 
 
-12. Selección de arrays anidados usando $slice<br>
+12. Selección de arrays anidados usando $slice<br><br>
 
 Se utiliza en el caso de que tengamos un documento que tenga un apartdo con 2 objetos, cada uno con un atributo con el mismo nombre. El objetivo es acceder a este docuemtno dejando fuera al segundo autor:<br>
 ```python
