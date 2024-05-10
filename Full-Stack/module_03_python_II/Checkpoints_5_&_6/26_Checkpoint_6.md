@@ -451,11 +451,11 @@ En este caso se listan todos los elementos que hay en esta coleccion `books` que
 ![postman](./../images/8_collections_Quey.JPG)<br>
 Se busca por el nombre "The Art of the War", y devuelve los datos en el caso de que haya un libro que tenga ese nombre.<br><br>
 
-**12. Ver un documento especifico** :arrow_right: con el comando `db.nombre_coleccion.findOne({datos especificos de lo que se quiere encontrar})`.<br>
+**11. Ver un documento especifico** :arrow_right: con el comando `db.nombre_coleccion.findOne({datos especificos de lo que se quiere encontrar})`.<br>
 Si por ejemplo tenemos dos elementos que se llaman igual, con este comando solo nos mostrará el primero de ellos.<br><br>
 ![postman](./../images/13_findOne.JPG)<br><br>
 
-**13. Usar las proyecciones de MongoDB**.<br>
+**12. Usar las proyecciones de MongoDB**.<br>
 Las proyecciones en MogoDB es una forma de filtrar los datos que una base de datos nos devuelve.<br>
 Por ejemplo, vamos a filtrar datos en base al `nombre`, la `fecha de publicación`y los `autores`. Para poder filtrarlo usamos el número `1` para que lo muestre o `0` para que no lo muestre.<br><br>
 ![postman](./../images/9_projections.JPG)<br>
@@ -464,7 +464,7 @@ Por otra parte, podemos usar una sintaxis mas avanzada para buscar datos usando 
 En este caso vamos a emplear el comando `db.books.findOne({name: /.*deep work.*/i})`, que basicamente es filtrar por el nombre, y ese nombre tiene que tener "deep work" en su interior. Además se pone la letra `i` después para que de ese modo no haga distincion entre mayúsculas y  minúsculas y busque de una forma mas amplia.<br><br>
 ![postman](./../images/14_projections.JPG)<br>
 
-**12. Selección de arrays anidados** usando `$slice`<br>
+**13. Selección de arrays anidados** usando `$slice`<br>
 Se utiliza en el caso de que tengamos un documento que tenga un apartdo con 2 objetos, cada uno con un atributo con el mismo nombre. El objetivo es acceder a este documento dejando fuera al segundo autor:<br>
 ```python
 db.books.insertOne({
@@ -506,7 +506,7 @@ Finlamente, si solo queremos que nos devuelva el último, pondriamos `-1`. <br>
 ![postman](./../images/10_array_3.jpg)<br>
 
 
-**13. Colecciones anidadas**
+**14. Colecciones anidadas**
 Se añade un elemento:
 ```python
 db.books.insertOne({
@@ -536,11 +536,11 @@ Se selecciona el atributo `name` de `authors` y para ello tenemos que poner la a
 **El resultado es:**<br>
 ![postman](./../images/12_nested.JPG)
 
-**13. Ver si un documento existe en la colección o no** :arrow_right: con el commando `db.nombre_coleccion({nombre: {$exists: true/false})`<br>
-![postman](./../images/15_exists.JPG)
+**15. Ver si un documento existe en la colección o no** :arrow_right: con el commando `db.nombre_coleccion({nombre: {$exists: true/false})`<br>
+![postman](./../images/15_exists.jpg)
 En este caso aplicamos `db.books.find({reviews: {$exists: true}})` y nos devuelve lo que se ve en la imagen. Si nos devuelve datos se sobreentiende que existe.<br><br>
 
-**14. Eliminar documentos** :arrow_right: <br>
+**16. Eliminar documentos** :arrow_right: <br>
 Para eliminar datos se aplica el comando `db.nombre_coleecion.remove({datos especificos de lo que se quiere borrar})`
 Para eliminar todos los items que tienen por nombre "OOP Programming" se emplea --> `db.books.remove({name: "OOP Programming"})`
 Para eliminar un item que tenga por nombre "OOP Programming" se emplea --> `db.books.remove({name: "OOP Programming"}, 1)`
