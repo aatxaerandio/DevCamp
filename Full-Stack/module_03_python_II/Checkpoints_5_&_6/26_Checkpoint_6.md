@@ -500,17 +500,17 @@ db.books.find(
 ```
 En el que primero usamos `authors` como filtro y luego le pasamos un objeto con el atributo `$slice`y el valor `1`para indicar que solo queremos el primer elemento del array.<br>
 
-![postman](./../images/10_array_1.JPG)<br>
+![postman](./../images/10_array_1.jpg)<br>
 
 
 Si por el contrario, queremos que nos muestre los dos primeros elementos del array, aplicariamos el nuemro `2`.<br>
 
-![postman](./../images/10_array_2.JPG)<br>
+![postman](./../images/10_array_2.jpg)<br>
 
 
 Finlamente, si solo queremos que nos devolviera el ultimo, pondriamos `-1`. <br>
 
-![postman](./../images/10_array_3.JPG)<br>
+![postman](./../images/10_array_3.jpg)<br>
 
 
 13. COLECIONES ANUDADAS
