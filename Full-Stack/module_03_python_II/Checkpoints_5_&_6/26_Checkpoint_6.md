@@ -189,12 +189,12 @@ class Aula:
 
   def __next__(self):
   	if self.n < self.ix_ult_alum:             	# es n menor que el índice del último alumno?
-      	alumno = self.get_player(self.n)      	# si es así, se obtiene el jugador en ese índice
-      	self.n += 1                           	# incrementa en 1 el contador
+      		alumno = self.get_player(self.n)      	# si es así, se obtiene el jugador en ese índice
+      		self.n += 1                           	# incrementa en 1 el contador
       	return alumno
   	elif self.n == self.ix_ult_alum:          	# si el contador es igual al índice del último alumno
-      	alumno = self.get_player(self.n)
-      	self.n = 0                            	# no suma nada al contador y devuelve el alumno
+      		alumno = self.get_player(self.n)
+      		self.n = 0                            	# no suma nada al contador y devuelve el alumno
       	return alumno
 
 lista nombres = [
