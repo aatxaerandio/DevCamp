@@ -427,7 +427,7 @@ En este caso se crea un usuario llamado "aitor" con demás datos, asi como conta
 Se despliegan cúantos usuarios hay en la base de datos, que serian "aitor" y "jordan". 
 
 5. Eliminación de usuarios :arrow_right: con el comando `db.dropUser("usuario_a_eliminar")`<br>
-![postman](./../images/3_prod_user.JPG)<br>
+![postman](./../images/3_prod_user.jpg)<br>
 En este caso se elimina al usuario "jordan".<br>
 
 6. Creacion de colecciones :arrow_right: con el comando `db.createCollection("nombre_de_la_nueva_coleccion"):<br>
@@ -446,7 +446,7 @@ Y obtendremos confirmación por cada elemento que se haya añadido, en este caso
 
 
 9. Ver documentos de la coleccion :arrow_right: con el comando `db.nombre_coleccion.find(). <br>
-![postman](./../images/7_collections_Quey)
+![postman](./../images/7_collections_Quey.JPG)
 En este caso se listan todos los elementos que hay en esta coleccion `books` que en total son 6 elementos (libros). <br>
 
 10. Ver documentos especificos en la coleccion :arrow_right: con el comando ´db.nombre_coleccion.find({datos especificos de lo que se quiere encontrar})<br>
