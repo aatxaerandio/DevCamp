@@ -380,12 +380,11 @@ En las APIs se distinguen principalmente los siguientes verbos:
 Para poder trabajar con APIs se necesita de programas como **Postman** o **ThunderClient** en Visual Studio Code. Estos programas se utilizan para testear colecciones y catálogos de APIs, tanto a nivel front-end como back-end y para gestionar peticiones HTTP.
 Concretamente, **Postman** Es una herramienta popular que se utiliza para probar APIs, en la que los desarrolladores pueden enviar peticiones a servicios web y bases de datos y ver sus respuestas.
 
-
-
-
-
+Postman trabaja conjuntamente con Flask, que es un framework web escrito en Python que se usa para desarrollar aplicaciones web de manera rápida y sencilla. La particularidad de Flask es que permite crear rutas y definir los finales de rutas (end points), a parte de manejar peticiones. Para ello hay que instalar Flask y configurarlo, para luego poder crear guias que son las que se testarán con Postman. Una vez creadas esas guías, hay que dirigirse a Postman y seleccionar el verbo API que necesitemos, diferente si queremos crear, actualizar, consultar o eliminar contenido. En la imagen de acontinuación se muestras la interfaz de Postman. 
 ![postman](./../images/Postman.JPG)
-
+Para testear, simplemente hay que elegir el verbo de la API y enviar a la direccion que se ponga en el recuadro, en este caso localhost:5000/guide, que es la del mismo ordenador. Si ha habido conexion y la API funciona correctamente, abajo en el recuadro podremos ver lo que hemos añadido/modificado/eliminado, junto con un "Status: 200 OK".
+En este ejemplo, hemos solicitado ver el contenido de localhost:5000/guides, y hemos obtenido respuesta satisfactoria:
+![postman](./../images/Postman_2.JPG)
 
 
 
