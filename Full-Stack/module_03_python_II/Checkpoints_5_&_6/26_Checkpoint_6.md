@@ -384,7 +384,7 @@ Postman trabaja conjuntamente con Flask, que es un framework web escrito en Pyth
 ![postman](./../images/Postman.JPG)
 Para testear, simplemente hay que elegir el verbo de la API y enviar a la direccion que se ponga en el recuadro, en este caso localhost:5000/guide, que es la del mismo ordenador. Si ha habido conexion y la API funciona correctamente, abajo en el recuadro podremos ver lo que hemos añadido/modificado/eliminado, junto con un "Status: 200 OK".
 En este ejemplo, hemos solicitado ver el contenido de localhost:5000/guides, y hemos obtenido respuesta satisfactoria:
-![postman](./../images/Postman_2.JPG)
+![postman](./../images/Postman_Get.JPG)
 
 
 
