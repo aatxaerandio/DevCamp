@@ -417,16 +417,16 @@ Por otro lado, y como es de suponer, MongoDB tiene que instalarse al igual que l
 
 
 1. Creación de una nueva base de datos con `use nombre_database`. <br><br>
-2. Desplegar las bases de datos disponibles `show dbs` <br>
-3. Creación de un usuarios :arrow_right: con el comando `db.createUser()` y adjuntando los datos en formato JSON.<br>
+2. Desplegar las bases de datos disponibles `show dbs` <br><br>
+3. Creación de un usuarios :arrow_right: con el comando `db.createUser()` y adjuntando los datos en formato JSON.<br><br>
 ![postman](./../images/3_create_user.JPG)<br>
-En este caso se crea un usuario llamado "aitor" con demás datos, asi como contaseña, los roles, etc.
+En este caso se crea un usuario llamado "aitor" con demás datos, asi como contaseña, los roles, etc.<br><br>
 
-4. Consulta de usuarios :arrow_right: con el comando `db.getUsers()`<br>
+4. Consulta de usuarios :arrow_right: con el comando `db.getUsers()`<br><br>
 ![postman](./../images/3_get_users_1.JPG)<br>
-Se despliegan cúantos usuarios hay en la base de datos, que serian "aitor" y "jordan". 
+Se despliegan cúantos usuarios hay en la base de datos, que serian "aitor" y "jordan". <br><br>
 
-5. Eliminación de usuarios :arrow_right: con el comando `db.dropUser("usuario_a_eliminar")`<br>
+5. Eliminación de usuarios :arrow_right: con el comando `db.dropUser("usuario_a_eliminar")`<br><br>
 ![postman](./../images/3_prod_user.jpg)<br>
 En este caso se elimina al usuario "jordan".<br>
 
