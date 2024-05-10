@@ -66,12 +66,12 @@ Con el fin de no reescribir y eliminar atributos, en Python se utilizan las barr
  - Para crear atributos protegidos se usa `_` antes del atributo.
  - Para crear atributos privados se usan `__` antes del atributo.
 
-Estos atributos, al ser privados o protegidos, no pueden modificarse por si solos, y se necesita de metodos especiales para poder acceder a ellos. Aqui es donde entra en juego los métodos `setter` y `getter`, que son parte fundamental de python y se usan para modificar los atributos de una clase de manera controlada.
+Estos atributos, al ser privados o protegidos, no pueden modificarse por si solos, y se necesita de métodos especiales para poder acceder a ellos. Aqui es donde entra en juego los métodos `setter` y `getter`, que son parte fundamental de python y se usan para modificar los atributos de una clase de manera controlada.
 
 ### Funciones Setter y Getter
-En el caso del método ``getter``, se emplea para obtener el valor de un atribulo privado, permitiendo una lectura segura de los datos almacenados en una clase. Para los metodos getter, se usa la sintaxis `@property` para obtener el valor de un atributo privado, **ubicándolo delante del metodo** que queremos que devuelva el valor.
+En el caso del método ``getter``, se emplea para obtener el valor de un atribulo privado, permitiendo una lectura segura de los datos almacenados en una clase. Para los métodos getter, se usa la sintaxis `@property` para obtener el valor de un atributo privado, **ubicándolo delante del método** que queremos que devuelva el valor.
 
-En el caso de ``setter``, se usa para asignar un valor a un atribulo privado, lo que posibilidad la modificación controlada de dicho atributo. En este caso, la sintaxis a utilizar es ``@nombre_metodo.setter`` delante del metodo que queremos mopdificar.
+En el caso de ``setter``, se usa para asignar un valor a un atribulo privado, lo que posibilidad la modificación controlada de dicho atributo. En este caso, la sintaxis a utilizar es ``@nombre_método.setter`` delante del método que queremos mopdificar.
 
 Para explicarlo mejor, se describe un **ejemplo** a continuación:
 
@@ -85,15 +85,15 @@ class Factura:
     def texto(self):
         return f'{self._cliente} debe en total: {self._total}€'
 
-    @property          # Metodo Getter
+    @property          # Método Getter
     def client(self):
         return self._cliente
 
-    @client.setter      # Metodo Setter
+    @client.setter      # Método Setter
     def cliente(self, cliente):
         self._cliente = cliente
 
-    @property          # Metodo Getter
+    @property          # Método Getter
     def total(self):
         return self._total
 
@@ -101,21 +101,21 @@ class Factura:
 
 En esta clase llamada factura tiene como objetivo representar una factura con informacion sobre un cliente y el total de la factura.
 
-1. **Metodo __ __init__ __** :arrow_right: Es un constructor de la clase, y se ejectua automaticamente e inicializa los atributos de la clase, que son cliente y total. Cliente almacena el nombre del cliente y total almacena el total de la factura.
-2. **Método texto** :arrow_right: Este metodo devuelce un string mostrando el texto de la factura.
-3. **Decorador @property y metodos cliente y total.**
-   - Decorador `@property`: se usa para crear un metodo **getter** que permite acceder al valor del atributo como si fuera un atributo de lectura.
-      - Metodo `cliente`: es un getter que devuelve el valor del atributo cliente.
-      - Metodo `total`: es otro getter que devuelve el valor del atributo total.
-   - Decorador `@cliente.setter`: se usa para crear un metodo **setter** asignando un nuevo valor al atributo cliente.
+1. **Método __ __init__ __** :arrow_right: Es un constructor de la clase, y se ejectua automaticamente e inicializa los atributos de la clase, que son cliente y total. Cliente almacena el nombre del cliente y total almacena el total de la factura.
+2. **Método texto** :arrow_right: Este método devuelce un string mostrando el texto de la factura.
+3. **Decorador @property y métodos cliente y total.**
+   - Decorador `@property`: se usa para crear un método **getter** que permite acceder al valor del atributo como si fuera un atributo de lectura.
+      - Método `cliente`: es un getter que devuelve el valor del atributo cliente.
+      - Método `total`: es otro getter que devuelve el valor del atributo total.
+   - Decorador `@cliente.setter`: se usa para crear un método **setter** asignando un nuevo valor al atributo cliente.
 4. Despues de crear la clase, podemos crear instancias y obtener valores:
 
 ```python
 google = Factura('Pedro', 75)    # Crear una instancia de Factura con el cliente Pedro y total 75.
-print(google.texto())            # Se imprime el resultado del metodo texto y que muestra "Pedro debe en total: 75€"
+print(google.texto())            # Se imprime el resultado del método texto y que muestra "Pedro debe en total: 75€"
 
-print(google.cliente)    # Se accede a los valores del metodo cliente y se imprime "Pedro".
-print(google.total)    # Se accede a los valores del metodo total y se imprime "75".
+print(google.cliente)    # Se accede a los valores del método cliente y se imprime "Pedro".
+print(google.total)    # Se accede a los valores del método total y se imprime "75".
 
 google.cliente = 'Miguel'     # Se modifica el calor de cliente a traves de la propiedad cliente y se imprime un nuevo valor.
 print(google.cliente)    # Miguel
@@ -123,19 +123,19 @@ print(google.cliente)    # Miguel
 
 ## Métodos Dunder
 
-Los metodos dunder son metodos especiales que se utilizan para definir el comportamiento de los atributos en las clases de Python. Dunder viene de "double underscore", que significa "doble guion bajo/barrabaja" y hace referencia a como es su sintaxis. 
+Los métodos dunder son métodos especiales que se utilizan para definir el comportamiento de los atributos en las clases de Python. Dunder viene de "double underscore", que significa "doble guion bajo/barrabaja" y hace referencia a como es su sintaxis. 
 
-La particularidad que tienen los metodos dunder es que se llaman automaticamente por el interprete de Python. El objetivo final del uso de metodos dunder es crear intefaces mas intuitivas y crear un codigo mas limpio y ordenado entre otras.
+La particularidad que tienen los métodos dunder es que se llaman automaticamente por el interprete de Python. El objetivo final del uso de métodos dunder es crear intefaces mas intuitivas y crear un codigo mas limpio y ordenado entre otras.
 
-En Python hay numerosos metodos dunder para diversas funcionalidades como realizar operaciones aritmeticas (metodos `__add__`, `__sub__`, `__mul__`, etc), operaciones de comparacion (`__eq__`, `__lt__`, etc), operaciones de ciclo de vida (la anteriormente vista `__init__` para iniciar, `__del__`, `__new__`, etc), u operaciones de representacion (`__str__` o `__repr__`), entre otras.
+En Python hay numerosos métodos dunder para diversas funcionalidades como realizar operaciones aritmeticas (métodos `__add__`, `__sub__`, `__mul__`, etc), operaciones de comparacion (`__eq__`, `__lt__`, etc), operaciones de ciclo de vida (la anteriormente vista `__init__` para iniciar, `__del__`, `__new__`, etc), u operaciones de representacion (`__str__` o `__repr__`), entre otras.
 
-Entre los metodos dunder mas utilizados y comunes hasta la fecha se encuentran `__init__`, `__str__` y `__repr__`, que se explican a continuacion:
+Entre los métodos dunder mas utilizados y comunes hasta la fecha se encuentran `__init__`, `__str__` y `__repr__`, que se explican a continuacion:
 
-- `__init__` :arrow_right: Sirve para diferenciar los metodos dados por defecto o los definidos por el usuario.
+- `__init__` :arrow_right: Sirve para diferenciar los métodos dados por defecto o los definidos por el usuario.
 - `__str__` :arrow_right: Se usan principalmente para el debugging, devuelven la representacion en forma de string de un objeto, el cual es legible por humanos (human-readable). Básicamente es facil de leer.
 - `__repr__` :arrow_right: Similar al `__str__`, se usa para devolver un a salida en bruto/crudo, pero se utiliza más para mostrar directamente los valores, con una forma más «objeto». Por tanto, no es tan facil de leer.
 
-Para entender mejor el uso de los metodos dunder, se expone un **ejemplo** a continuacion:
+Para entender mejor el uso de los métodos dunder, se expone un **ejemplo** a continuacion:
 ```python
 class Asistencia:
   def __init__(self, nombre, apellido, edad):
@@ -158,17 +158,17 @@ print(repr(datos))    # El alumno <valor: nombre: Aitor> <valor: apellido: Atxae
 En este **ejemplo** se define la clase `Asistencia` que tiene atributos de `nombre`, `apellido` y `edad`.
 
 1. La clase tiene un constructor `__init__` que inicia los atributos `nombre`, `apellidos` y `edad` automaticamente cuando se llama a la clase.
-2. La clase tiene dos metodos dunder para representar la instancia de la clase de manera legible:
-   - Metodo `__str__`: Devuelve la representación de cadena legible para los humanos (human-readable), que en este caso indica el `nombre`, `apellido` y `edad` del alumno.
-   - Metodo `__repr__`: Devuelve la representación de cadena mas formal y detallada, lo cual hace que siga siendo legible pero algo mas difícil, ya que detalla todo de forma mas tecnica.
+2. La clase tiene dos métodos dunder para representar la instancia de la clase de manera legible:
+   - Método `__str__`: Devuelve la representación de cadena legible para los humanos (human-readable), que en este caso indica el `nombre`, `apellido` y `edad` del alumno.
+   - Método `__repr__`: Devuelve la representación de cadena mas formal y detallada, lo cual hace que siga siendo legible pero algo mas difícil, ya que detalla todo de forma mas tecnica.
   
 En el **ejemplo** se crea una instancia de la clase `Asistencia` con el `nombre` **Aitor**, `apellido` **Atxaerandio** y `edad` **15**, y se guarda en la variable datos.
 Se imprimen las cadenas usando `print(str(datos))` y `print(rpr(datos))`.
 
 
-### Iteradores en metodos dunder
+### Iteradores en métodos dunder
 
-Dentro de los metodos dunder se pueden utilizar iteradores. Los iteradores mas comunes son `__iter__()` y `__next__()` que se usan indistintamente depende del objetivo de la iteración. Son elementos realmente utiles cuando se trabaja con sets de datos grandes, siendo mas eficientes en cuanto a rendimineeto al comnsumrir menos recursos del sistema. Entre los los iteradores mas comunes en los metodos dunder se encuentran:
+Dentro de los métodos dunder se pueden utilizar iteradores. Los iteradores mas comunes son `__iter__()` y `__next__()` que se usan indistintamente depende del objetivo de la iteración. Son elementos realmente utiles cuando se trabaja con sets de datos grandes, siendo mas eficientes en cuanto a rendimineeto al comnsumrir menos recursos del sistema. Entre los los iteradores mas comunes en los métodos dunder se encuentran:
 - `__iter__()` :arrow_right: Devuelve un iterador para un objeto determinado (array, tupla, lista, etc), crea un objeto que puede ser llamado.
 - `__next__()` :arrow_right: En este caso, devuelve el siguiente item de la iteración, devolviendo `StopIteration` cuando no hay mas items disponibles.
 
@@ -184,7 +184,7 @@ class Aula:
       self.n = 0                                    # se inicia un contados en 0 
       return self                                   # se devuelve self
 
-  def get_player(self, n):                          # se crea un metodo para obtener el jugador. En este caso recibe un indice.
+  def get_player(self, n):                          # se crea un método para obtener el jugador. En este caso recibe un indice.
       return self.alumnos[n]                        # devuelve el alumno en ese indice.
 
   def __next__(self):
@@ -264,11 +264,11 @@ coche_2 = Componente("Ford", "Mustang", "Grande")
 A la hora de imprimir:
 ```python
 print(coche_1.mostrar())          # Marca: Toyota, Modelo: Corolla, Tamaño:
-#print(coche_1.kilometros())      # Error --> No se puede acceder a un metodo de la clase hija
+#print(coche_1.kilometros())      # Error --> No se puede acceder a un método de la clase hija
 ```
-Las clases hijas **SI** pueden acceder a los atributos y a los metodos de las clases madres, **pero no viceversa**. 
+Las clases hijas **SI** pueden acceder a los atributos y a los métodos de las clases madres, **pero no viceversa**. 
 
-Es el caso del objeto `coche_1` cuando quiere acceder al metodo `kilometros()` de la clase `Componente`. El resultado da en un **error**.
+Es el caso del objeto `coche_1` cuando quiere acceder al método `kilometros()` de la clase `Componente`. El resultado da en un **error**.
 ```python
 print(coche_2.mostrar())          # Marca: Ford, Modelo: Mustang, Tamaño:
 print(coche_2.kilometros())      # Muchos kilometros
@@ -364,12 +364,12 @@ Entre los usos mas destacables de las APIs estan:
 Un **ejemplo** muy claro del uso de las APIs es la **conexión entre un cliente (un usuario desde su ordenador) y una base de datos**. El cliente quiere acceder a ciertos datos que están localizados en una base de datos, y para ello, necesita hacer una petición (request) a una API. Esta API a su vez hará esa petición a la base de datos y recibirá una respuesta, que son los datos solicitados. Tras ello, la API manda una respuesta al cliente de nuevo, que son dichos datos que ha solicitado. El mismo mecanismo ocurriría si en lugar de solicitar datos a una base de datos, se realizaría una petición a un servidor web. Se observa un resumen muy simple del funcionamiento de las APIs en la siguiente imagen:
 
 ## Verbos en las APIs
-Los verbos en las APIs hacen referencia a los metodos que se van a utilizar cuando se usan. Dependiendo si se quiere consultar, actualizar, crear o eliminar datos, se utilizará un verbo u otro.
+Los verbos en las APIs hacen referencia a los métodos que se van a utilizar cuando se usan. Dependiendo si se quiere consultar, actualizar, crear o eliminar datos, se utilizará un verbo u otro.
 En las APIs se distinguen principalmente los siguientes verbos:
 
-**1. GET** :arrow_right: Este metodo esta pensado para la lectura de datos, es decir, realizar una consulta sobre un objeto en concreto.<br>
-**2. POST** :arrow_right: Este metodo esta pensado para la creacion de nuevos recursos, asi como crear un nuevo usuario, contenido, etc.<br>
-**3. PUT** :arrow_right: Este metodo es para la actualizacion de un recurso concreto. Por **ejemplo**, se usaria este verbo par ala actualizaciond e datos de un usuario en particular.<br> 
+**1. GET** :arrow_right: Este método esta pensado para la lectura de datos, es decir, realizar una consulta sobre un objeto en concreto.<br>
+**2. POST** :arrow_right: Este método esta pensado para la creacion de nuevos recursos, asi como crear un nuevo usuario, contenido, etc.<br>
+**3. PUT** :arrow_right: Este método es para la actualizacion de un recurso concreto. Por **ejemplo**, se usaria este verbo par ala actualizaciond e datos de un usuario en particular.<br> 
 **4. DELETE** :arrow_right: Para borrar recursos, como por **ejemplo**, eliminacion de usuarios, etc.<br>
 
 ## Trabajar con APIs
