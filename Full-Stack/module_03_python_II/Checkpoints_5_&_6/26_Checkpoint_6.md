@@ -428,32 +428,33 @@ Se despliegan cúantos usuarios hay en la base de datos, que serian "aitor" y "j
 
 5. Eliminación de usuarios :arrow_right: con el comando `db.dropUser("usuario_a_eliminar")`<br>
 ![postman](./../images/3_prod_user.JPG)<br>
-En este caso se elimina al usuario "jordan".
+En este caso se elimina al usuario "jordan".<br>
+
+6. Creacion de colecciones :arrow_right: con el comando `db.createCollection("nombre_de_la_nueva_coleccion"):<br>
+Se crea la coleccion `books`.<br>
+
+7. Ver colecciones :arrow_right: con el commando `show collections`<br>
+En nuestro caso hemos creado una coleccion con el nombre `books`.<br>
+
+8. Añadir documentos a la coleccion :arrow_right: con el commando `db.books.insertOne({datos en formato JSON}) <br>
+![postman](./../images/5_collections_1.JPG)<br>
+Se añade el libro titulado "OOP Programming" con otros datos de autores y fecha de publiación, etc.
+
+También se pueden añadir mas de un elemento a la vez usando el commando `db.books.insertMany({datos en formabr})<br>
+Y obtendremos confirmación por cada elemento que se haya añadido, en este caso, si se añaden 3 elementos, obtendremos tres respuestas<br>
+![postman](./../images/6_Insert_many)<br>
 
 
+9. Ver documentos de la coleccion :arrow_right: con el comando `db.books.fint(). <br>
+![postman](./../images/7. collections_Quey)
 
-
-
-
-7. Creacion de colecciones :arrow_right: con el comando `db.nombre:<br>
+10. Ver documentos especificos en la coleccion :arrow_right: <br>
 ![postman](./../images/Postman_Get.JPG)
 
-8. Ver colecciones :arrow_right: con el commando `show collections`<br>
+11. Ver si un documento existe en la coleccion o no :arrow_right: <br>
 ![postman](./../images/Postman_Get.JPG)
 
-9. Añadir documentos a la coleccion <br>
-![postman](./../images/Postman_Get.JPG)
-
-10. Ver documentos en la coleccion <br>
-![postman](./../images/Postman_Get.JPG)
-
-11. Ver documentos especificos en la coleccion <br>
-![postman](./../images/Postman_Get.JPG)
-
-12. Ver si un documento existe en la coleccion o no <br>
-![postman](./../images/Postman_Get.JPG)
-
-13. Eliminar documentos <br>
+12. Eliminar documentos :arrow_right: <br>
 ![postman](./../images/Postman_Get.JPG)
 
 
