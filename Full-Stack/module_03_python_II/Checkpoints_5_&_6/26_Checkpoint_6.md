@@ -536,8 +536,8 @@ Se selecciona el atributo `name` de `authors` y para ello tenemos que poner la a
 **El resultado es:**<br>
 ![postman](./../images/12_nested.JPG)
 
-**15. Ver si un documento existe en la colección o no** :arrow_right: con el commando `db.nombre_coleccion({nombre: {$exists: true/false})`<br>
-![postman](./../images/15_exists.jpg)
+**15. Ver si un documento existe en la colección o no** :arrow_right: con el commando `db.nombre_coleccion({nombre: {$exists: true/false})`<br><br>
+![postman](./../images/15_exists.jpg)<br>
 En este caso aplicamos `db.books.find({reviews: {$exists: true}})` y nos devuelve lo que se ve en la imagen. Si nos devuelve datos se sobreentiende que existe.<br><br>
 
 **16. Eliminar documentos** <br>
