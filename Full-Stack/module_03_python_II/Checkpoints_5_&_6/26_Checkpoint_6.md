@@ -442,7 +442,7 @@ Se añade el libro titulado "OOP Programming" con otros datos de autores y fecha
 
 También se pueden añadir mas de un elemento a la vez usando el commando `db.books.insertMany({datos en formabr})<br>
 Y obtendremos confirmación por cada elemento que se haya añadido, en este caso, si se añaden 3 elementos, obtendremos tres respuestas<br>
-![postman](./../images/6_Insert_many)<br>
+![postman](./../images/6_Insert_many.JPG)<br>
 
 
 9. Ver documentos de la coleccion :arrow_right: con el comando `db.books.fint(). <br>
