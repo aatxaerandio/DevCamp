@@ -413,39 +413,47 @@ Los datos que almacena MongoDB por tanto, se almacenan en documentos flexibles e
 
 Para poder utilizar MongoDB, se puede utilizar Postman, ya que se puede usar para probar APIs que interactúan con la base de datos MongoDB. En este contexto, Postman se usa para verificar el funcionamiento de las APIs que acceden a los datos almacenados en MongoDB, permitiendo probar la comunicación entre la aplicación y la base de datos.
 
-Por otro lado, y como es de suponer, MongoDB tiene que instalarse al igual que la terminal de MongoDB, que es mongosh. Desde esta terminal se lanzarán los comandos para realizar operaciones de creación, actualización, supresión o consulta de datos. En cuanto a las funcionalidades mas comunes de MongoDB, se encuentran las siguientes:
+Por otro lado, y como es de suponer, MongoDB tiene que instalarse al igual que la terminal de MongoDB, que es mongosh. Desde esta terminal se lanzarán los comandos para realizar operaciones de creación, actualización, supresión o consulta de datos. Cabe recordar otra vez que MongoDB trabaja con documentos JSON, lo cual significa que habrá que añadir los datos en ese formato. En cuanto a las funcionalidades mas comunes de MongoDB, se encuentran las siguientes:
 
 
 1. Creación de una nueva base de datos con `use nombre_database`. <br>
 2. Desplegar las bases de datos disponibles `show dbs` <br>
-3. Creación de un usuarios <br>
-![postman](./../images/3_create_user.JPG)
+3. Creación de un usuarios :arrow_right: con el comando `db.createUser()` y adjuntando los datos en formato JSON.<br>
+![postman](./../images/3_create_user.JPG)<br>
+En este caso se crea un usuario llamado "aitor" con demás datos, asi como contaseña, los roles, etc.
 
-4. Consulta de usuarios <br>
-![postman](./../images/3_get_users_1.JPG)
+4. Consulta de usuarios :arrow_right: con el comando `db.getUsers()`<br>
+![postman](./../images/3_get_users_1.JPG)<br>
+Se despliegan cúantos usuarios hay en la base de datos, que serian "aitor" y "jordan". 
 
-5. Eliminación de usuarios <br>
-![postman](./../images/3_prod_user.JPG)
+5. Eliminación de usuarios :arrow_right: con el comando `db.dropUser("usuario_a_eliminar")`<br>
+![postman](./../images/3_prod_user.JPG)<br>
+En este caso se elimina al usuario "jordan".
 
-6. Creacion de colecciones <br>
+
+
+
+
+
+7. Creacion de colecciones :arrow_right: con el comando `db.nombre:<br>
 ![postman](./../images/Postman_Get.JPG)
 
-7. Ver colecciones <br>
+8. Ver colecciones :arrow_right: con el commando `show collections`<br>
 ![postman](./../images/Postman_Get.JPG)
 
-8. Añadir documentos a la coleccion <br>
+9. Añadir documentos a la coleccion <br>
 ![postman](./../images/Postman_Get.JPG)
 
-9. Ver documentos en la coleccion <br>
+10. Ver documentos en la coleccion <br>
 ![postman](./../images/Postman_Get.JPG)
 
-10. Ver documentos especificos en la coleccion <br>
+11. Ver documentos especificos en la coleccion <br>
 ![postman](./../images/Postman_Get.JPG)
 
-11. Ver si un documento existe en la coleccion o no <br>
+12. Ver si un documento existe en la coleccion o no <br>
 ![postman](./../images/Postman_Get.JPG)
 
-12. Eliminar documentos <br>
+13. Eliminar documentos <br>
 ![postman](./../images/Postman_Get.JPG)
 
 
