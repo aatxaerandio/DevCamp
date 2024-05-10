@@ -541,7 +541,7 @@ Se selecciona el atributo `name` de `authors` y para ello tenemos que poner la a
 En este caso aplicamos `db.books.find({reviews: {$exists: true}})` y nos devuelve lo que se ve en la imagen. Si nos devuelve datos se sobreentiende que existe.<br><br>
 
 **16. Eliminar documentos** :arrow_right: <br>
-Para eliminar datos se aplica el comando `db.nombre_coleecion.remove({datos especificos de lo que se quiere borrar})`
-Para eliminar todos los items que tienen por nombre "OOP Programming" se emplea --> `db.books.remove({name: "OOP Programming"})`
-Para eliminar un item que tenga por nombre "OOP Programming" se emplea --> `db.books.remove({name: "OOP Programming"}, 1)`
+Para eliminar datos se aplica el comando `db.nombre_coleecion.remove({datos especificos de lo que se quiere borrar})`<br>
+Para eliminar todos los items que tienen por nombre "OOP Programming" se emplea --> `db.books.remove({name: "OOP Programming"})`<br>
+Para eliminar un item que tenga por nombre "OOP Programming" se emplea --> `db.books.remove({name: "OOP Programming"}, 1)`<br>
 
