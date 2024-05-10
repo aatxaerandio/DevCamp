@@ -387,7 +387,7 @@ Aunque hay varios tipos de bases de datos, las más comunes que se utilizan con 
 
 Las diferencias entre las bases de datos SQL y NoSQL radican principalmente en sus estructura y su funcionalidad:
 
-|XXX| SQL | NoSQL |
+|---| SQL | NoSQL |
 | ---------- | --------- | ------- |
 | **Estructura de datos** | Utiliza tablas con filas y columnas para almacenar datos estructurados. |Almacena datos no estructurados en documentos, sin una estructura fija de tablas. |
 |**Consistencia**|Prioriza la integridad de los datos, garantizando la consistencia.|Prioriza el rápido acceso a los datos, sacrificando en ocasiones la integridad.|
