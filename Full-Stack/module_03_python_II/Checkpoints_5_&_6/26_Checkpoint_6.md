@@ -378,21 +378,13 @@ En las APIs se distinguen principalmente los siguientes verbos:
 
 ## Trabajar con APIs
 Para poder trabajar con APIs se necesita de programas como **Postman** o **ThunderClient** en Visual Studio Code. Estos programas se utilizan para testear colecciones y catálogos de APIs, tanto a nivel front-end como back-end y para gestionar peticiones HTTP.
-Concretamente, **Postman** Es una herramienta popular que se utiliza para probar APIs, en la que los desarrolladores pueden enviar peticiones a servicios web y bases de datos y ver sus respuestas.
+Concretamente, **Postman** Es una herramienta popular que se utiliza para probar APIs, en la que los desarrolladores pueden enviar peticiones a servicios web y bases de datos y ver sus respuestas.<br>
 
-Postman trabaja conjuntamente con Flask, que es un framework web escrito en Python que se usa para desarrollar aplicaciones web de manera rápida y sencilla. La particularidad de Flask es que permite crear rutas y definir los finales de rutas (end points), a parte de manejar peticiones. Para ello hay que instalar Flask y configurarlo, para luego poder crear guias que son las que se testarán con Postman. Una vez creadas esas guías, hay que dirigirse a Postman y seleccionar el verbo API que necesitemos, diferente si queremos crear, actualizar, consultar o eliminar contenido. En la imagen de acontinuación se muestras la interfaz de Postman. 
-![postman](./../images/Postman.JPG)
-Para testear, simplemente hay que elegir el verbo de la API y enviar a la direccion que se ponga en el recuadro, en este caso localhost:5000/guide, que es la del mismo ordenador. Si ha habido conexion y la API funciona correctamente, abajo en el recuadro podremos ver lo que hemos añadido/modificado/eliminado, junto con un "Status: 200 OK".
-En este ejemplo, hemos solicitado ver el contenido de localhost:5000/guides, y hemos obtenido respuesta satisfactoria:
+Postman trabaja conjuntamente con Flask, que es un framework web escrito en Python que se usa para desarrollar aplicaciones web de manera rápida y sencilla. La particularidad de Flask es que permite crear rutas y definir los finales de rutas (end points), a parte de manejar peticiones. Para ello hay que instalar Flask y configurarlo, para luego poder crear guias que son las que se testarán con Postman. Una vez creadas esas guías, hay que dirigirse a Postman y seleccionar el verbo API que necesitemos, diferente si queremos crear, actualizar, consultar o eliminar contenido. En la imagen de acontinuación se muestras la interfaz de Postman.<br>
+![postman](./../images/Postman.JPG)<br>
+Para testear, simplemente hay que elegir el verbo de la API y enviar a la direccion que se ponga en el recuadro, en este caso localhost:5000/guide, que es la del mismo ordenador. Si ha habido conexion y la API funciona correctamente, abajo en el recuadro podremos ver lo que hemos añadido/modificado/eliminado, junto con un "Status: 200 OK".<br>
+En este ejemplo, hemos solicitado ver el contenido de localhost:5000/guides, y hemos obtenido respuesta satisfactoria:<br>
 ![postman](./../images/Postman_Get.JPG)
-
-
-
-
-
-
-
-
 
 # Bases de datos
 Las bases de datos, como su nombre indica, son componentes indispensables de los sistemas y aplicaciones ya que sirven de soporte de almacenamiento para poder dar respuesta a las peticiones que se reciban por parte de las APIs.
@@ -417,4 +409,40 @@ Por tanto, las bases de datos SQL son ideales para datos estructurados que requi
 Una de las bases de datos más utilizadas actualmente es MongoDB.
 MongoDB es una base de datos NoSQL, por tanto, almacena colecciones de datos de una forma no estructurada, sin una estructura fija de tablas pero enfocándose en la velocidad del acceso a la base de datos.
 
+Los datos que almacena MongoDB por tanto, se almacenan en documentos flexibles en formato similar a JSON, siendo eficienteen el manejo de grandes cantidades de datos no estructurados. Como se ha descrito anteriormente, este tipo de base de datos es muy flexible, lo cual permite realizar numerosas tareas en aplicaciones diferentes, desde sistemas de gestion de contenidos hasta grandes aplicaciones web. Por ese motico, MongoDB es famosa y utlizada por empresas como eBAY y LinkedIn, entre otros. MongoDB es una base de datos que tiene una serie de ventajas asi como su escalabilidad, velocidad, facilidad de manejo de datos dinamicos y la capacidad de trabajar con estrucurtras de datos cmabiantes sin necesidad de migrarciones complejas, lo cual hacen de ella una herramienta muy util hoy en dia.
+
 Para poder utilizar MongoDB, se puede utilizar Postman, ya que se puede usar para probar APIs que interactúan con la base de datos MongoDB. En este contexto, Postman se usa para verificar el funcionamiento de las APIs que acceden a los datos almacenados en MongoDB, permitiendo probar la comunicación entre la aplicación y la base de datos.
+
+Por otro lado, y como es de suponer, MongoDB tiene que instalarse al igual que la terminal de MongoDB, que es mongosh. Desde esta terminal se lanzarán los comandos para realizar operaciones de creación, actualización, supresión o consulta de datos. En cuanto a las funcionalidades mas comunes de MongoDB, se encuentran las siguientes:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
