@@ -33,7 +33,7 @@ print(persona_1.saludos_2())
 ```
 
 
-## Método constructor
+# Método constructor
 En las clases, también se pueden utilizar métodos específicos como el **método constructor**.
 En este caso, el método constructor tiene la particularidad que se llama por `__init__` y se ejecuta **automáticamente** cuando se crea una instancia de la clase. Este método siempre se usa para inicializar los atributos de la clase.
 Para entenderlo mejor, se expone el siguiente **ejemplo**:
@@ -56,7 +56,7 @@ En este caso, sólo hemos accedido al segundo método, pero como el primero `__i
 print(cliente_1.saludos())	# Hola Aitor Atxaerandio, su compra total asciende a un total de 100€.
 ```
 
-## Propiedades y decoradores en las clases
+# Propiedades y decoradores en las clases
 Las propiedades de las clases en Python son atributos especiales que permiten controlar el acceso a los datos de una clase y automatizar la llamada a métodos `getter` y `setter`. Al utilizar las propiedades, se garantiza un acceso más intuitivo a los atributos de la clase y se elimina la necesidad de llamar explícitamente a métodos `setter`  y `getter`.
 
 Antes de saber que son los decoradores y los métodos getter y setter, hay que saber la sintaxis de los atributos de python.
@@ -121,7 +121,7 @@ google.cliente = 'Miguel' 	# Se modifica el valor de cliente a través de la pro
 print(google.cliente)	# Miguel
 ```
 
-## Métodos Dunder
+# Métodos Dunder
 
 Los métodos dunder son métodos especiales que se utilizan para definir el comportamiento de los atributos en las clases de Python. Dunder viene de "double underscore", que significa "doble guion bajo/barra baja" y hace referencia a cómo es su sintaxis.
 
@@ -166,7 +166,7 @@ En el **ejemplo** se crea una instancia de la clase `Asistencia` con el `nombre`
 Se imprimen las cadenas usando `print(str(datos))` y `print(rpr(datos))`.
 
 
-### Iteradores en métodos dunder
+# Iteradores en métodos dunder
 
 Dentro de los métodos dunder se pueden utilizar iteradores. Los iteradores más comunes son `__iter__()` y `__next__()` que se usan indistintamente depende del objetivo de la iteración. Son elementos realmente útiles cuando se trabaja con sets de datos grandes, siendo más eficientes en cuanto a rendimiento al consumir menos recursos del sistema. Entre los los iteradores más comunes en los métodos dunder se encuentran:
 - `__iter__()` :arrow_right: Devuelve un iterador para un objeto determinado (array, tupla, lista, etc), crea un objeto que puede ser llamado.
@@ -229,7 +229,7 @@ print(next(informe))    	# Aitor
 ```
 
 
-## Herencia de clases
+# Herencia de clases
 
 La herencia de clases es un concepto que permite a una clase heredar atributos y métodos de otra clase.
 Este mecanismo facilita la reutilización de código y la organización jerárquica de las clases.
@@ -275,7 +275,7 @@ print(coche_2.kilometros())  	# Muchos kilometros
 ```
 
 
-## Polimorfismos en Python
+# Polimorfismos en Python
 
 En Python, el polimorfismo se refiere a la capacidad de objetos de diferentes clases de ser tratados de manera similar utilizando el mismo interfaz, pero mostrando comportamientos diferentes. Esto se puede conseguir mediante el uso de clases y de herencia de clases.
 
@@ -367,7 +367,7 @@ Un **ejemplo** muy claro del uso de las APIs es la **conexión entre un cliente 
 	<img src="https://webimages.mongodb.com/_com_assets/cms/l65dhtchtsbcn16hk-image3.png?auto=format%252Ccompress">
 </div>
 
-## Verbos en las APIs
+# Verbos en las APIs
 Los verbos en las APIs hacen referencia a los métodos que se van a utilizar cuando se usan. Dependiendo si se quiere consultar, actualizar, crear o eliminar datos, se utilizará un verbo u otro.
 En las APIs se distinguen principalmente los siguientes verbos:
 
