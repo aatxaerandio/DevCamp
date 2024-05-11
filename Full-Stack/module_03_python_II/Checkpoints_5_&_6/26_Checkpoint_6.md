@@ -420,6 +420,19 @@ Por otro lado, y como es de suponer, `MongoDB` tiene que instalarse al igual que
 **1. Creación de una nueva base de datos** con `use nombre_database`. <br><br>
 **2. Desplegar las bases de datos** disponibles `show dbs` <br><br>
 **3. Creación de un usuarios** :arrow_right: con el comando `db.createUser()` y adjuntando los datos en formato JSON.<br><br>
+```python
+db.createUser({
+    user: "aitor",
+    pwd: "password",
+    customData: {startDate: new Date()},
+    roles: [
+        {role: "clusterAdmin", db: "admin"},
+        {role: "readAnyDatabase", db: "admin"},
+        "readWrite"
+    ]
+})
+```
+Tras ejecutarlo en la consola de `mongosh` nos imprime  `{ ok : 1} <br>
 ![postman](./../images/3_create_user.JPG)<br>
 En este caso se crea un usuario llamado "aitor" con demás datos, asi como contaseña, los roles, etc.<br><br>
 **4. Consulta de usuarios** :arrow_right: con el comando `db.getUsers()`<br><br>
@@ -437,6 +450,17 @@ Mediante el comando `db.createCollection("books")` crea la coleccion `books`.<br
 En nuestro caso solo hay una colección creada que es `books`.<br><br>
 
 **8. Añadir documentos a la colección** :arrow_right: con el comando `db.books.insertOne({datos en formato JSON})` <br><br>
+```python
+db.books.insertOne({
+    "name": "OOP Programming",
+    "publishedDate": new Date(),
+    "authors": [
+        {"name": "Jon Snow"},
+        {"name": "Ned Stark"},
+    ]
+})
+```
+Una vez ejecutado, nos imprime lo siguiente: <br>
 ![postman](./../images/5_collections_1.JPG)<br>
 Se añade el libro titulado "OOP Programming" con otros datos de autores y fecha de publiación, etc.<br>
 También se pueden añadir mas de un elemento a la vez usando el comando `db.books.insertMany({datos en formato JSON})`<br>
@@ -452,16 +476,33 @@ En este caso se listan todos los elementos que hay en esta coleccion `books` que
 Se busca por el nombre "The Art of the War", y devuelve los datos en el caso de que haya un libro que tenga ese nombre.<br><br>
 
 **11. Ver un documento especifico** :arrow_right: con el comando `db.nombre_coleccion.findOne({datos especificos de lo que se quiere encontrar})`.<br>
+```python
+db.books.findOne({name: "Blink"})
+```
 Si por ejemplo tenemos dos elementos que se llaman igual, con este comando solo nos mostrará el primero de ellos.<br><br>
 ![postman](./../images/13_findOne.JPG)<br><br>
 
 **12. Usar las proyecciones de MongoDB**.<br>
 Las proyecciones en MogoDB es una forma de filtrar los datos que una base de datos nos devuelve.<br>
 Por ejemplo, vamos a filtrar datos en base al `nombre`, la `fecha de publicación`y los `autores`. Para poder filtrarlo usamos el número `1` para que lo muestre o `0` para que no lo muestre.<br><br>
+```python
+db.books.find(
+    {
+        name: "Confident Ruby"
+    },
+    {
+        publishedDate: 1,
+        authors: 1
+    }
+)
+```
 ![postman](./../images/9_projections.JPG)<br>
 Aquí se nos muestran los datos solicitados y filtrados.<br><br>
 Por otra parte, podemos usar una sintaxis mas avanzada para buscar datos usando un comando muy parecido al anterior `db.nombre_coleccion.findOne({name: /.*palabras clave.*/i})`.<br>
 En este caso vamos a emplear el comando `db.books.findOne({name: /.*deep work.*/i})`, que basicamente es filtrar por el nombre, y ese nombre tiene que tener "deep work" en su interior. Además se pone la letra `i` después para que de ese modo no haga distincion entre mayúsculas y  minúsculas y busque de una forma mas amplia.<br><br>
+```python
+db.books.findOne({name: /.*deep work.*/i})
+```
 ![postman](./../images/14_projections.JPG)<br>
 
 **13. Selección de arrays anidados** usando `$slice`<br>
@@ -497,12 +538,38 @@ En el que primero usamos `authors` como filtro y luego le pasamos un objeto con 
 
 
 Si por el contrario, queremos que nos muestre los dos primeros elementos del array, aplicariamos el número `2`.<br>
-
+```python
+db.books.find(
+    {
+        name: "Blink"
+    },
+    {
+        publishedDate: 1,
+        name: 1,
+        authors: {
+            $slice: 1
+        }
+    }
+)
+```
 ![postman](./../images/10_array_2.jpg)<br>
 
 
 Finlamente, si solo queremos que nos devuelva el último, pondriamos `-1`. <br>
-
+```python
+db.books.find(
+    {
+        name: "Blink"
+    },
+    {
+        publishedDate: 1,
+        name: 1,
+        authors: {
+            $slice: -1
+        }
+    }
+)
+```
 ![postman](./../images/10_array_3.jpg)<br>
 
 
@@ -537,6 +604,9 @@ Se selecciona el atributo `name` de `authors` y para ello tenemos que poner la a
 ![postman](./../images/12_nested.JPG)
 
 **15. Ver si un documento existe en la colección o no** :arrow_right: con el comando `db.nombre_coleccion({nombre: {$exists: true/false})`<br><br>
+```python
+db.books.find({reviews: {$exists: true}})
+``` 
 ![postman](./../images/15_exists.jpg)<br>
 En este caso aplicamos `db.books.find({reviews: {$exists: true}})` y nos devuelve lo que se ve en la imagen. Si nos devuelve datos se sobreentiende que existe.<br><br>
 En el caso contrario, si aplicamos `db.books.find({reviews: {$exists: false}})` y nos devuelve datos, eso implica los datos solicitados no existen.<br><br>
