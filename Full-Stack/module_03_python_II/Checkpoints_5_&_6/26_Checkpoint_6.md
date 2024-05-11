@@ -432,7 +432,7 @@ db.createUser({
     ]
 })
 ```
-Tras ejecutarlo en la consola de `mongosh` nos imprime  `{ ok : 1} <br>
+Tras ejecutarlo en la consola de `mongosh` nos imprime  `{ ok : 1}` <br>
 ![postman](./../images/3_create_user.JPG)<br>
 En este caso se crea un usuario llamado "aitor" con demás datos, asi como contaseña, los roles, etc.<br><br>
 **4. Consulta de usuarios** :arrow_right: con el comando `db.getUsers()`<br><br>
