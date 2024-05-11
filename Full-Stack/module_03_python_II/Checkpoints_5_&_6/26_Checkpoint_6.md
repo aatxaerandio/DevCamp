@@ -446,7 +446,7 @@ En este caso se elimina al usuario "jordan" y se emplea `db.getUsers()`para conf
 **6. Creación de colecciones** :arrow_right: con el comando `db.createCollection("nombre_de_la_nueva_coleccion")`:<br><br>
 Mediante el comando `db.createCollection("books")` crea la coleccion `books`.<br><br>
 
-**7. Ver colecciones** :arrow_right: con el comando `show collections`<br>
+**7. Ver colecciones** :arrow_right: con el comando `show collections`<br><br>
 En nuestro caso solo hay una colección creada que es `books`.<br><br>
 
 **8. Añadir documentos a la colección** :arrow_right: con el comando `db.books.insertOne({datos en formato JSON})` <br><br>
@@ -460,7 +460,7 @@ db.books.insertOne({
     ]
 })
 ```
-Una vez ejecutado, nos imprime lo siguiente: <br>
+Una vez ejecutado, nos imprime lo siguiente: <br><br>
 ![postman](./../images/5_collections_1.JPG)<br>
 Se añade el libro titulado "OOP Programming" con otros datos de autores y fecha de publiación, etc.<br>
 También se pueden añadir mas de un elemento a la vez usando el comando `db.books.insertMany({datos en formato JSON})`<br>
@@ -499,7 +499,7 @@ db.books.find(
 ![postman](./../images/9_projections.JPG)<br>
 Aquí se nos muestran los datos solicitados y filtrados.<br><br>
 Por otra parte, podemos usar una sintaxis mas avanzada para buscar datos usando un comando muy parecido al anterior `db.nombre_coleccion.findOne({name: /.*palabras clave.*/i})`.<br>
-En este caso vamos a emplear el comando `db.books.findOne({name: /.*deep work.*/i})`, que basicamente es filtrar por el nombre, y ese nombre tiene que tener "deep work" en su interior. Además se pone la letra `i` después para que de ese modo no haga distincion entre mayúsculas y  minúsculas y busque de una forma mas amplia.<br><br>
+En este caso vamos a emplear el comando `db.books.findOne({name: /.*deep work.*/i})`, que basicamente es filtrar por el nombre, y ese nombre tiene que tener "deep work" en su interior. Además se pone la letra `i` después para que de ese modo no haga distincion entre mayúsculas y  minúsculas y busque de una forma mas amplia.<br>
 ```python
 db.books.findOne({name: /.*deep work.*/i})
 ```
@@ -552,10 +552,11 @@ db.books.find(
     }
 )
 ```
+Y obtendriamos la siguiente respuesta, en la que nos imprime ambos nombres <br>
 ![postman](./../images/10_array_2.jpg)<br>
 
 
-Finlamente, si solo queremos que nos devuelva el último, pondriamos `-1`. <br>
+Finlamente, si solo queremos que nos devuelva el último elmento, pondriamos `-1`. <br>
 ```python
 db.books.find(
     {
@@ -570,6 +571,7 @@ db.books.find(
     }
 )
 ```
+Y de este modo se imprime solo el último elemento:<br>
 ![postman](./../images/10_array_3.jpg)<br>
 
 
@@ -601,14 +603,14 @@ db.books.find(
 `Authors` en un array de objetos y queremos que nos devuelva el atributo `name` de cada uno de ellos.<br>
 Se selecciona el atributo `name` de `authors` y para ello tenemos que poner la anotación de un punto `.`.<br><br>
 **El resultado es:**<br>
-![postman](./../images/12_nested.JPG)
+![postman](./../images/12_nested.JPG)<br>
 
 **15. Ver si un documento existe en la colección o no** :arrow_right: con el comando `db.nombre_coleccion({nombre: {$exists: true/false})`<br><br>
 ```python
 db.books.find({reviews: {$exists: true}})
-``` 
-![postman](./../images/15_exists.jpg)<br>
+```
 En este caso aplicamos `db.books.find({reviews: {$exists: true}})` y nos devuelve lo que se ve en la imagen. Si nos devuelve datos se sobreentiende que existe.<br><br>
+![postman](./../images/15_exists.jpg)<br>
 En el caso contrario, si aplicamos `db.books.find({reviews: {$exists: false}})` y nos devuelve datos, eso implica los datos solicitados no existen.<br><br>
 
 **16. Eliminar documentos** <br>
