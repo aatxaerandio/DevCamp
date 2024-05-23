@@ -326,7 +326,7 @@ A parte de las diferencias de sintaxis entre unas y otras, otras diferencias cla
 
 |              | Declaraciones de función | Expresiones de función |
 | ---------- | --------- | ------- |
-| ** Comportamiento** | Hoisting  | Se ponen al principio del ámbito, lo cual hace que se pueden llamar antes de que se declaren | Solo se pueden usar después de que se asignen. |
+| **Comportamiento** | Hoisting  | Se ponen al principio del ámbito, lo cual hace que se pueden llamar antes de que se declaren | Solo se pueden usar después de que se asignen. |
 | **Nomenclatura** | Requieren de un nombre de función | Pueden ser anónimas |
 | **Ejecución**   | Se ejecutan antes de cualquier código | Se cargan y se ejecutan solo cuando el intérprete del programa llega a la línea de código |
 | **Almacenamiento** | No requieren de una asignación de variable | Se pueden almacenar en asignaciones de baribales |
