@@ -41,48 +41,49 @@ Y de ese modo nos aseguramos que la variable `edad` nunca va a cambiar de valor.
 
 Dicho esto, JavaScript es capaz de trabajar con una serie de datos, distintos entre ellos, que se utilizan para almacenar diferentes tipos de valores. Almacenar dichos valores en los diferentes tipos de datos permite hacer diferentes operaciones que se irán viendo más adelante. Entre los tipos de datos se encuentran:
 
-1. Booleans: para valores booleanos, es decir, verdadero o falso.
+**1. Booleans:** para valores booleanos, es decir, verdadero o falso.
+
 ```javascript
 var veredicto = true
 console.log(veredicto)      # true
 ```
-
-- Null: para valores nulos o vacíos.
+**2. Null:** para valores nulos o vacíos.
 
 ```javascript
 var valor = null;
 console.log(valor);     // null
 ```
 
-- Undefined: para valores sin definir, como variables no inicializadas.
+**3. Undefined:** para valores sin definir, como variables no inicializadas.
 
 ```javascript
 var notDefined;
 console.log(notDefined)  //undefined
 ```
 
-- Number: Para valores numéricos, ya sean enteros o decimales.
+**4. Number:** Para valores numéricos, ya sean enteros o decimales.
 
 ```javascript
 var edad = 12;
 console.log(edad)  // 12
 ```
 
-- String: Para valores de texto, como cadenas de texto o caracteres.
+**5. String:** Para valores de texto, como cadenas de texto o caracteres.
 
 ```javascript
 var nombre = "Carmen";
 console.log(nombre)     // Carmen
 ```
 
-- Symbol: Para valores únicos.
+**6. Symbol:** Para valores únicos.
 
 ```javascript
 var mySym = Symbol('foo');
 console.log(mySym);    // Symbol(foo)
 ```
 
-- Object: para estructuras de datos más complejas. Por ejemplo, dentro de una variable podemos meter una lista de objetos.
+**7. Object:** para estructuras de datos más complejas. Por ejemplo, dentro de una variable podemos meter una lista de objetos.
+
 ```javascript
 var usuario = {
     nombre: "Aitor",
@@ -97,17 +98,20 @@ var usuario = {
 console.log(usuario.nombre)    // Aitor
 console.log(usuario.ciudad.numero)    // 12
 ```
-En este caso hemos metido una lista de objetos. Si queremos acceder a ellos, primero tendremos que acceder a la variable usuario y luego el objeto que queramos que nos devuelva. Si queremos que nos devuelva `nombre` se pondrá `usuario.nombre`. Por otro lado, si queremos acceder a `numero`, tendremos que acceder primero a `usuario`, luego a `ciudad`y mas tarde a `numero`.
+
+En este caso hemos metido una lista de objetos. Si queremos acceder a ellos, primero tendremos que acceder a la variable `usuario` y luego el objeto que queramos que nos devuelva. Si queremos que nos devuelva `nombre` se pondrá `usuario.nombre`. Por otro lado, si queremos acceder a `numero`, tendremos que acceder primero a `usuario`, luego a `ciudad`y mas tarde a `numero`.
 
 
 
-# ¿Cuáles son las tres funciones de String en JS?
+# Funciones de String en JavaScript
 En JavaScript, las funciones de cadena son fundamentales para trabajar con texto, facilitando la manipulación y representación de cadenas de manera eficiente en el desarrollo de aplicaciones web y programas JavaScript.
 
-De este modo, podemos llamar a funciones para que hagan tareas así como buscar valores, encontrar los índices de caracteres, y mucho más. Aunque hay innumerables acciones que se pueden hacer con las funciones de string o cadenas en JavaScript, aquí nos centraremos en las 3 más importantes o las que más se usan.
+De este modo, podemos llamar a funciones para que hagan tareas así como buscar valores, encontrar los índices de carácteres, y mucho más. Aunque hay innumerables acciones que se pueden hacer con las funciones de string o cadenas en JavaScript, aquí **nos centraremos en las 3 más importantes o las que más se usan.**
 
-1. atributo longitud
-Este simplemente sirve para ver la longitud de la cadena. Para ello se utiliza `.length` detrás del nombre de la variable asignada. Por ejemplo:
+**1. Atributo Longitud** <br>
+Este simplemente sirve para ver la longitud de la cadena.<br>
+Para ello se utiliza `.length` detrás del nombre de la variable asignada.<br>
+Por ejemplo:
 ```javascript
 var str = "Este texto es una cadena"
 
@@ -116,8 +120,9 @@ console.log(str.length)   // 24
 Esta cadena tiene una longitud de 24 caracteres. 
 
 
-2. Concatenar strings
-Para poder concatenar dos o más cadenas. Se utiliza `.concat` antes dela variable asignada.
+**2. Concatenar strings**<br>
+Para poder concatenar dos o más cadenas. <br>
+Se utiliza `.concat` antes de la variable asignada.<br>
 En el ejemplo de a continuación, tenemos dos cadenas y queremos juntarlas:
 ```javascript
 var str = "Este texto es una cadena"
@@ -127,12 +132,15 @@ var nueva_str = str.concat(añadir)
 
 console.log(nueva_str)    // Este texto es una cadena y este texto es el que se añade
 ```
-Primero se crean las dos variables que contienen las cadenas que queremos concatenar. Creamos la variable final que será la concatenación de ambas variables. A la primera cadena (str), se concatena la segunda cadena (añadir) y el resultado final cuando llamamos a nueva_str será "Este texto es una cadena y este texto es el que se añade".
+- Primero se crean las dos variables que contienen las cadenas que queremos concatenar.
+- Creamos la variable final que será la concatenación de ambas variables.
+- A la primera cadena `str`, se concatena la segunda cadena `añadir` y el resultado final cuando llamamos a `nueva_str` será `"Este texto es una cadena y este texto es el que se añade"`.
 
-3. Buscar cadenas en cadenas
-Se utiliza para buscar cadenas o palabras clave en cierta cadena. 
-Se utiliza `.includes("cadena a buscar")` detrás de la variable asignada. En el caso de que la cadena que queramos buscar se encuentre en la cadena, nos devolverá `true`, mientras que si no está, nos devolverá `false`.
-por ejemplo:
+**3. Buscar cadenas en cadenas**<br>
+Se utiliza para buscar cadenas o palabras clave en cierta cadena. <br>
+Se utiliza `.includes("cadena a buscar")` detrás de la variable asignada.<br>
+En el caso de que la cadena que queramos buscar se encuentre en la cadena, nos devolverá `true`, mientras que si no está, nos devolverá `false`.<br>
+Por ejemplo:
 ```javascript
 var str = "El gato marrón se encontraba perdido en el bosque"
 
@@ -140,13 +148,10 @@ console.log(str.includes("gato"))    // true
 console.log(str.includes("perro"))  // false
 ```
 En la cadena `str` queremos buscar "gato" y "perro".
-Si buscamos "gato", nos devuelve `true`, lo cual significa que si está presente.
-Si por el contrario buscamos "perro", nos devuelve `false`, lo cual significa que no está presente.
+Si buscamos "gato", nos devuelve `true`, lo cual significa que **SI** está presente.
+Si por el contrario buscamos "perro", nos devuelve `false`, lo cual significa que **NO** está presente.
 
-
-
-# ¿Qué es un condicional?
-
+# Condicionales en JavaScript
 
 En JavaScript, un condicional es una estructura de control que permite ejecutar diferentes bloques de código dependiendo de si una condición es verdadera o falsa. Dependiendo de esto, permite tomar decisiones.
 
