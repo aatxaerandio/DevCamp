@@ -21,7 +21,6 @@ Por otro lado, el uso de JavaScript es fundamental para otros muchos **proyectos
 
 A diferencia de Java, JavaScript es interpretado por el navegador en tiempo real, lo que facilita su integración con páginas web sin necesidad de compilación previa. 
 
-
 # Tipos de datos de JavaScript
 
 Entre otras, JavaScript funciona con declaración de variables, que básicamente son herramientas para almacenar datos.
@@ -32,7 +31,7 @@ var nombre_variable = valor_variable
 
 var edad = 30
 ```
-Cuando se crea una variable con `var` se puede renombrar poniendo otro valor. Para evitar esto, se utiliza `let` de tal modo:
+Cuando se crea una variable con `var` se puede renombrar poniendo otro valor. Para evitar esto y que esa variable no pueda cambiar de valor, se utiliza `let` de tal modo:
 
 ```javascript
 let edad = 30
@@ -41,8 +40,7 @@ let edad = 30
 Y de ese modo nos aseguramos que la variable `edad` nunca va a cambiar de valor.
 
 Dicho esto, JavaScript es capaz de trabajar con una serie de datos, distintos entre ellos, que se utilizan para almacenar diferentes tipos de valores. Almacenar dichos valores en los diferentes tipos de datos permite hacer diferentes operaciones que se irán viendo más adelante. Entre los tipos de datos se encuentran:
-
-- Booleans: para valores booleanos, es decir, verdadero o falso.
+1- Booleans: para valores booleanos, es decir, verdadero o falso.
 
 ```javascript
 var veredicto = true
