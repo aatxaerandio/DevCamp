@@ -3,16 +3,16 @@
 JavaScript es un lenguaje de programación de alto nivel, interpretado y orientado a objetos. Se ejecuta en el lado del cliente, es decir, en el navegador web del usuario.
 
 A diferencia de otros lenguajes, JavaScript se integra con HTML y CSS, lo que permite modificar y ajustar las funcionalidades de una página web de forma dinámica. 
-JavaScript permite el desarrollo de aplicaciones modernas que interactúan directamente con los usuarios in necesidad de recargar la página constantemente y mejoran la experiencia del usuario. Entre los usos más simples pero más destacables de JavaScript están los efectos visuales, la validación de formularios o cargar contenido de forma dinámica.
+JavaScript permite el desarrollo de aplicaciones modernas que interactúan directamente con los usuarios in necesidad de recargar la página constantemente y mejoran la experiencia del usuario. Entre los usos más simples pero más destacables de JavaScript están **los efectos visuales**, **la validación de formularios** o **cargar contenido de forma dinámica**.
 
 En cuanto a las **características** más importantes de JavaScript destacan:
-- Simplicidad: Posee una estructura sencilla que lo vuelve más fácil de aprender e implementar.
-- Velocidad: Se ejecuta más rápido que otros lenguajes y favorece la detección de errores.
-- Versatilidad: Es compatible con otros lenguajes como HTML, CSS, PHP o Java.
-- Popularidad: Hay infinidad de recursos y foros disponibles para ayudar a la resolución de problemas.
-- Actualización: Se actualiza de forma continúe con nuevos frameworks y librerías, asegurándole relevancia y continuidad en el sector.
+- **Simplicidad:** Posee una estructura sencilla que lo vuelve más fácil de aprender e implementar.
+- **Velocidad:** Se ejecuta más rápido que otros lenguajes y favorece la detección de errores.
+- **Versatilidad:** Es compatible con otros lenguajes como HTML, CSS, PHP o Java.
+- **Popularidad:** Hay infinidad de recursos y foros disponibles para ayudar a la resolución de problemas.
+- **Actualización:** Se actualiza de forma continúe con nuevos frameworks y librerías, asegurándole relevancia y continuidad en el sector.
 
-Por otro lado, el uso de JavaScript es fundamental para otras muchos proyectos más grandes como por ejemplo:
+Por otro lado, el uso de JavaScript es fundamental para otros muchos **proyectos** de mayor calado como por ejemplo:
 - Desarrollo de páginas web del lado del cliente (front end).
 - Desarrollo de aplicaciones para dispositivos móviles.
 - Construcción de servidores web y aplicaciones de servidor.
@@ -22,11 +22,11 @@ Por otro lado, el uso de JavaScript es fundamental para otras muchos proyectos m
 A diferencia de Java, JavaScript es interpretado por el navegador en tiempo real, lo que facilita su integración con páginas web sin necesidad de compilación previa. 
 
 
-
 # Tipos de datos de JavaScript
 
 Entre otras, JavaScript funciona con declaración de variables, que básicamente son herramientas para almacenar datos.
-para declarar una variable en JavaScript se hace del siguiente modo:
+<br>
+Para declarar una variable en JavaScript se hace del siguiente modo:
 ```javascript
 var nombre_variable = valor_variable
 
@@ -289,14 +289,7 @@ El primer condicional es `name` que significa "existe name?". Si no se cumple, a
 
 
 
-
-
-
-
-
-
-
-# ¿Cuál es la diferencia entre una declaración de función y una expresión de función?
+# Diferencias entre una declaración de función y una expresión de función
 
 Pese a que las declaraciones de función y las expresiones de función puedan llegar a dar el mismo resultado, o utilizadas para el mimo fin, hay una serie de diferencias significativas entre ellas. Están diferencias a su vez son responsables de su utilidad.
 
@@ -317,6 +310,7 @@ let sum = function(a, b) {
 A parte de las diferencias de sintaxis entre unas y otras, otras diferencias clave son:
 
 |              | Declaraciones de función | Expresiones de función |
+| ---------- | --------- | ------- |
 |   Comportamiento / Hoisting  | Se ponen al principio del ámbito, lo cual hace que se pueden llamar antes de que se declaren | Solo se pueden usar después de que se asignen. |
 | Nomenclatura | Requieren de un nombre de función | Pueden ser anónimas |
 | Ejecución    | Se ejecutan antes de cualquier código | Se cargan y se ejecutan solo cuando el intérprete del programa llega a la línea de código |
