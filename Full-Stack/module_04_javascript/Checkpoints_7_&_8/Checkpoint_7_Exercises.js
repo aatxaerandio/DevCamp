@@ -1,5 +1,5 @@
 //Crea una función que acepte 4 argumentos:
-//Suma los dos primeros argumentos, luego los dos segundos y multiplicalos.
+//Suma los dos primeros argumentos, luego los dos segundos y multiplícalos.
 //Si el número creado es mayor que 50, la consola registra "¡El número es mayor que 50!". 
 //Si es más pequeño, la consola registra "¡El número es menor que 50!"
 
@@ -15,10 +15,12 @@ function numeros(a, b, c, d) {
   }
 }
 
-numeros(a, b, c, d)
+// numeros(a, b, c, d)
+
+numeros(3, 5, 7, 5)      // ¡El número es mayor que 50!
 
 
 // Se crea una función que se llama "numeros" y dentro de ella tres variables son los requisitos de sumas y multiplicaciones.
-// Mas tarde se crea el condicional usando "if" y "else", imprimiendo cadenas diferentes segun el valor de "num_total".
-// Para llamar a la funcion, simplemente poner los valores de a, b, c, d y listo, nos devolverá una cadena u otra.
+// Mas tarde se crea el condicional usando "if" y "else", imprimiendo cadenas diferentes según el valor de "num_total".
+// Para llamar a la función, simplemente poner los valores de a, b, c, d y listo, nos devolverá una cadena u otra.
 // A modo de mejoría, se podría añadir un "console.log(num_total) debajo de la variable "nuM_total", para que ya de paso nos dé el valor total de la multiplicación.
