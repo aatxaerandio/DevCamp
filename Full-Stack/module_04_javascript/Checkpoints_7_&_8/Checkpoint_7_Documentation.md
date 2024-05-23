@@ -389,8 +389,9 @@ var persona = {
 };
 persona.saludo();      // Hola, mi nombre es Juan y tengo 30 años.
 ```
+En este caso, se llama a la función `saludo` que se encuentra dentro de la variable `persona`. Aquí la palabra `this` hace referencia a `persona` y sería equivalente a poner `persona.nombre` y `persona.edad`. De ese modo se accede a los valores de `nombre`y `edad` mediante `this`.
 
-**2. Por si sola la palabra `this`:**
+**2. Por si sola la palabra `this`:** <br>
 Se refiere al objeto global:
 ```javascript
 function saludo() {
@@ -405,8 +406,6 @@ console.log(persona.diHola());      // Hola, mi nombre es Juan
 ```
 
 Dentro de la función `saludo`, `this` se refiere al objeto global porque la función no es llamada como un método de un objeto. Cuando se llama `persona.saludo()`, está buscando una propiedad llamada `saludo` en el objeto de persona, el cual no existe. Por ello, hay que llamar a la propiedad `diHola` que contiene la función `saludo`.
-
-
 
 Un ejemplo práctico sería ver cuantas entradas quedan por vender para ver un partido de futbol:
 ```javascript
@@ -430,14 +429,14 @@ Primero se crea el objeto `entradas` que tiene 4 propiedades; `entradas`, `entra
 
 Creamos el método `entradasRestantes`que calcula el número de entradas restantes, restando `entradasVendidas` a `entradas`. Aquí se utiliza la palabra clave `this` para poder acceder a las propiedades del objeto actual.
 
-Después se crea el método `entradaSobrantes`que primero verifica si hay entradas restantes llamando al método `entradasRestantes()`. Si el resultado es mayor que 0, devuelve el número de entradas restantes. De lo contrario, devuelve el string "No hay entradas". 
+Después se crea el método `entradaSobrantes`que primero verifica si hay entradas restantes llamando al método `entradasRestantes()`. Si el resultado es mayor que 0, devuelve el número de entradas restantes. De lo contrario, devuelve el string `"No hay entradas"`. 
 
 Podemos acceder a las propiedades y métodos del objeto `entradas` de la siguiente manera:
 ```javascript
-console.log(entradas.entradaSobrantes())  // 22
-console.log(entradas.entradas); // Output: 100
-console.log(entradas.entradasVendidas); // Output: 78
-console.log(entradas.entradasRestantes()); // Output: 22
+console.log(entradas.entradaSobrantes())          // 22
+console.log(entradas.entradas);                   // 100
+console.log(entradas.entradasVendidas);           // 78
+console.log(entradas.entradasRestantes());        // 22
 ```
-En la que vemos cuantas entradas sobrantes hay (22), cuantas entradas totales hay (100) y cuantas entradas se han vendido (78).
+En la que vemos cuántas entradas sobrantes hay (22), cuántas entradas totales hay (100) y cuántas entradas se han vendido (78).
 
