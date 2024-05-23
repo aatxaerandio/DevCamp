@@ -153,9 +153,9 @@ Si por el contrario buscamos "perro", nos devuelve `false`, lo cual significa qu
 
 # Condicionales en JavaScript
 
-En JavaScript, un condicional es una estructura de control que permite ejecutar diferentes bloques de código dependiendo de si una condición es verdadera o falsa. Dependiendo de esto, permite tomar decisiones.
+En JavaScript, un condicional es una estructura de control que permite ejecutar diferentes bloques de código dependiendo de si una **condición** es **verdadera** o **falsa**. Dependiendo de esto, permite tomar decisiones.
 
-Se utilizan muy parecido a Python, mediante el uso de operadores y también el uso de `if-else` entre otros.
+Se utilizan muy parecido a Python, mediante el uso de operadores y también el uso de `if-else`, entre otros.
 
 En los ejemplo de a continuación se describe un uso particular de los condicionales.
 
@@ -168,10 +168,11 @@ if (dinero > 550) {
   console.log("Una pena, vas a tener que ahorra algo mas!")
 }
 ```
-En este ejemplo simple se crea un condicional en el que si tienes más de 550 `dinero > 550` se cumple el primer condicional y se imprime "Tienes dinero para comprarte esta bicicleta.". En el caso en el que el valor establecido en la variable `dinero` no sea superior a 550, no se cumple el primer condicional y por tanto devuelve "Una pena, vas a tener que ahorra algo mas!".
+En este ejemplo simple se crea un condicional en el que si tienes más de 550 (`dinero > 550`), **SI** se cumple el primer condicional y se imprime `"Tienes dinero para comprarte esta bicicleta."`. <br>
+En el caso en el que el valor establecido en la variable `dinero` no sea superior a 550, **NO** se cumple el primer condicional y por tanto devuelve `"Una pena, vas a tener que ahorra algo mas!"`.
 
-Al igual que los condicionales en Python, también se pueden crear condicionales con 3 condiciones o múltiples, incluso condicionales dentro de condicionales. En el siguiente ejemplo se establecen 3 condiciones para la edad de un conductor:
-
+Al igual que los condicionales en Python, también se pueden crear condicionales con 3 condiciones o múltiples, incluso condicionales dentro de condicionales.<br>
+En el siguiente ejemplo se establecen 3 condiciones para la edad de un conductor:
 
 ```javascript
 var edad_conductor = 50
@@ -186,26 +187,28 @@ if (edad_conductor < 18) {
 
         // Puedes conducir
 ```
-Aquí se emplea un condicional en el que dependiendo de la condición (edad del conductor), se le permite conducir o no. Si el primer condicional se cumple, se devuelve `Lo sentimos , no puedes conducir`. Si no se cumple el primer condicional se irá al siguiente. Si se cumple devolverá `Puedes conducir`, y si por el contrario no se cumple, se cumplirá el tercero, devolviendo `Lo sentimos, no puedes conducir`.
-En este caso, se usan los operadores así como menor que `<` o mayor que `>`, entre otros. También se usa `&&` para meter dos operadores en un condicional, para que se cumpla el segundo condicional si la edad está entre 18 y 85.
+Aquí se emplea un condicional en el que dependiendo de la condición (edad del conductor), se le permite conducir o no.
+- Si el primer condicional se cumple, se devuelve `Lo sentimos , no puedes conducir`.
+- Si no se cumple el primer condicional se irá al siguiente. Si se cumple devolverá `Puedes conducir`.
+- Si por el contrario no se cumple el segundo condicional, se cumplirá el tercero, devolviendo `Lo sentimos, no puedes conducir`. <br>
 
-En este ejemplo, si la variable `edad_conductor` es 50, se cumplirá el segundo condicional y por tanto se imprimirá "Puedes conducir".
+En este caso, se usan los operadores así como **menor que** `<` o **mayor que** `>`, entre otros. También se usa **`&&`** para meter dos operadores en un condicional, para que se cumpla el segundo condicional si la edad está entre 18 y 85.
 
-# ¿Qué es un operador ternario?
+En este ejemplo, si la variable `edad_conductor` es 50, se cumplirá el segundo condicional y por tanto se imprimirá `"Puedes conducir"`.
 
+# Operadores Ternarios
 
-
-Se podría decir que un operador ternario es un atajo para la declaración `if...else`.
-Se utilizan principalmente ya que otros softwares igual no puedes leer adecuadamente los condicionales, y por tanto, se usa este método.
+Se podría decir que un operador ternario es un atajo para la declaración `if...else`.<br>
+Se utilizan principalmente ya que otros softwares igual no puedes leer adecuadamente los condicionales, y por tanto, se usa este método.<br><br>
 Los operadores ternarios evalúan la condición y devuelven un valor u otro dependiendo si la condición es verdadera o falda.
 
 La sintaxis de los operadores ternarios simples son de este modo:
 
 `condición ? valorSiVerdadero : valorSiFalso;`
 
-En el que se crea una condición, y le sigue un signo de interrogación `?` y se escriben los valores después. El primer valor se imprimirá si el condicional se cumple, mientras que se imprimirá el segundo valor si es falso.
+En el que se crea una `condición`, y le sigue un signo de interrogación `?` y se escriben los valores después. **El primer valor se imprimirá si el condicional se cumple, mientras que se imprimirá el segundo valor si es falso.**
 
-Para el uso de operadores ternarios se suelen incorporar en funciones. Dentro de la función se designa una variable que contiene el operador ternario y se le añade un console.log para imprimir el valor final de esa variable.
+Para el uso de operadores ternarios se suelen incorporar en `funciones`. Dentro de la función se designa una variable que contiene el operador ternario y se le añade un `console.log` para imprimir el valor final de esa variable.
 
 Para entender mejor su uso, se expone primero un condicional al uso y luego el mismo condicional pero en operador ternario:
 
@@ -220,9 +223,10 @@ function acceso(edad) {
 
 acceso(18)    // Puedes comprar tabaco
 ````
-Este seria un condicional al uso, en el que pasamos un valor que es 18 a la función `acceso`. Si es superior igual a 18 se cumple el condicional y se imprime "Puede comprar tabaco". Si por el contrario pasamos otro valor que sea menos que 18, se cumpliría el segundo condicional e imprimiría "NO puedes comprar tabaco".
+Este seria un condicional al uso, en el que pasamos un valor que es `18``  a la función `acceso`. Si es superior igual a 18 se cumple el condicional y se imprime `"Puede comprar tabaco"`.<br>
+Si por el contrario pasamos otro valor que sea menos que 18, se cumpliría el segundo condicional e imprimiría `"NO puedes comprar tabaco"`.
 
-Si utilizásemos operadores ternarios, seria del siguiente modo:
+Si utilizásemos **operadores ternarios**, seria del siguiente modo:
 ```javascript
 function acceso(edad) {
   let respuesta = edad >= 18 ? 'Puedes comprar tabaco' : 'NO puedes comprar tabaco';
@@ -231,11 +235,9 @@ function acceso(edad) {
 
 acceso(18)      // Puedes comprar tabaco
 ```
-Mediante este operador ternario llegaríamos al mismo resultado. En el que pasamos el valor 18 a la función que contiene la variable y el operador ternario. De este modo, como se cumple el condicional se imprime el primer valor, que es "Puedes comprar tabaco".
+Mediante este operador ternario llegaríamos al mismo resultado. En el que pasamos el valor 18 a la función que contiene la variable y el operador ternario. De este modo, como se cumple el condicional se imprime el primer valor, que es `"Puedes comprar tabaco"`.
 
-
-
-Además de ello, los operadores ternarios se pueden usar para condicionales compuestos, tal y como el que se expone a continuación:
+Además de ello, los operadores ternarios se pueden usar para **condicionales compuestos**, tal y como el que se expone a continuación:
 
 ```javascript
 
@@ -266,12 +268,18 @@ function accessServer(name){
 ```
 
 
-En este ejemplo se crea un condicional de acceso a un servidor. Por una parte se crea la función `accessServer` a la que le pasamos un valor, en este caso `name`. Esta función tiene por un lado un condicional que es si existe usuario. Si NO se cumple, imprimirá "Access denied". Si por el contrario se cumple el primer condicional se imprime "Wellcome to the server. 
+**En este ejemplo se crea un condicional de acceso a un servidor.** 
+- Por una parte se crea la función `accessServer` a la que le pasamos un valor, en este caso `name`.
+- Esta función tiene por un lado un condicional que es si existe usuario. Si NO se cumple, imprimirá `"Access denied"`. Si por el contrario, se cumple el primer condicional se imprime `"Wellcome to the server`.
 
-Pero no acaba aqui, el primer condicional tiene otros dos condicionales dentro de el. Nos dice que si el valor de `name.admin`existe, es decir, si `name.admin == true` entonces se imprimirá "you are an admin". Por el contrario, si `name.admin` no es ==true, imprimirá "you are NOT an admin".
+- Pero no acaba aqui, el primer condicional tiene otros dos condicionales dentro de él. Nos dice que si el valor de `name.admin` existe, es decir, si `name.admin == true` entonces se imprimirá `"you are an admin"`.
+- Por el contrario, si `name.admin` no es ==true, imprimirá `"you are NOT an admin"`.
 
-Para pasar valores a la función, tendríamos que crear variables que tengas objetos, así como usuario_1, que tiene el valor "Pedro" para `name`y "true" para `admin`. Si pasamos `usuario_1`por la función, por una parte cumplirá el primer condicional y luego dentro del primero, cumplirá de nuevo el primer condicional, lo que imprimirá "Wellcome to the server you are an admin". En el caso del segundo, `usuario_2`, se cumpliría el primer condicional y dentro del mismo no se cumpliría, lo cual imprimiría "Wellcome to the server you are NOT an admin".
-////----------------
+- Para pasar valores a la función, tendríamos que crear variables que tengan objetos, así como `usuario_1`, que tiene el valor `"Pedro"` para `name`y `"true"` para `admin`.
+  - Si pasamos `usuario_1` por la función, por una parte cumplirá el primer condicional y luego dentro del primero, cumplirá de nuevo el primer condicional, lo que imprimirá `"Wellcome to the server you are an admin"`.
+  - En el caso del segundo, `usuario_2`, se cumpliría el primer condicional y dentro del mismo no se cumpliría, lo cual imprimiría `"Wellcome to the server you are NOT an admin"`.
+
+Utilizando operadores ternarios, sería de la siguiente manera:
 
 ```javascript
 function accessServer(name) {
@@ -284,8 +292,12 @@ function accessServer(name) {
 accessServer(usuario_1)
 
 ```
-Utilizando el operador ternario seria del siguiente modo. Dentro de la función, establecemos una variable que se llame `respuesta` que será igual al operador ternario.
-El primer condicional es `name` que significa "existe name?". Si no se cumple, automáticamente se imprime lo último del operadores, "Access denied". En el caso de que se cumple, va a por el siguiente condicional que es `name.admin` que significa "tiene valor admin en ese name?". En el caso que se cumpla se imprime el primer valor del operador "Welcome to the server, you are an admin", mientras que si no se cumple se imprimirá el segundo valor del operador "Welcome to the server, you are NOT an admin"
+- Dentro de la función, establecemos una variable que se llame `respuesta` que será igual al operador ternario.
+- El primer condicional es `name` que significa "¿existe `name`?".
+- Si **NO** se cumple, automáticamente se imprime lo último del operadores, `"Access denied"`.
+- En el caso de que se cumple, va a por el siguiente condicional que es `name.admin` que significa "¿tiene valor `admin` en ese `name`?".
+  - En el caso que se cumpla se imprime el primer valor del operador `"Welcome to the server, you are an admin"`.
+  - Mientras que si **NO** se cumple se imprimirá el segundo valor del operador `"Welcome to the server, you are NOT an admin"`.
 
 
 
@@ -294,16 +306,16 @@ El primer condicional es `name` que significa "existe name?". Si no se cumple, a
 
 # Diferencias entre una declaración de función y una expresión de función
 
-Pese a que las declaraciones de función y las expresiones de función puedan llegar a dar el mismo resultado, o utilizadas para el mimo fin, hay una serie de diferencias significativas entre ellas. Están diferencias a su vez son responsables de su utilidad.
+Pese a que las declaraciones de función y las expresiones de función puedan llegar a dar el mismo resultado, o utilizadas para el mismo fin, hay una serie de diferencias significativas entre ellas. Estas diferencias a su vez son responsables de su utilidad en diferentes contextos.
 
-En cuando a la sintaxis, la declaración de función se define usando la palabra clave `function` seguida del nombre de la función, parámetro y cuerpo. Estas se procesan antes de que se ejecute cualquier otro código.
+En cuando a la sintaxis, **la declaración de función** se define usando la palabra clave `function` seguida del nombre de la función, parámetro y cuerpo. Estas se procesan antes de que se ejecute cualquier otro código.
 ```javascript
 function sumar(a, b) {
   return a+ b;
 }
 ```
 
-Una expresión de función se define asignando una función anónima a una variable usando la palabra clave `function` seguida de parámetros y cuerpo, pero **sin nombre de función**.
+Una **expresión de función** se define asignando una función anónima a una variable usando la palabra clave `function` seguida de parámetros y cuerpo, pero **SIN nombre de función**.
 ```javascript
 let sum = function(a, b) {
   return a + b;
@@ -314,15 +326,15 @@ A parte de las diferencias de sintaxis entre unas y otras, otras diferencias cla
 
 |              | Declaraciones de función | Expresiones de función |
 | ---------- | --------- | ------- |
-|   Comportamiento / Hoisting  | Se ponen al principio del ámbito, lo cual hace que se pueden llamar antes de que se declaren | Solo se pueden usar después de que se asignen. |
-| Nomenclatura | Requieren de un nombre de función | Pueden ser anónimas |
-| Ejecución    | Se ejecutan antes de cualquier código | Se cargan y se ejecutan solo cuando el intérprete del programa llega a la línea de código |
-| Almacenamiento | No requieren de una asignación de variable | Se pueden almacenar en asignaciones de baribales |
-| Condicionales | No pueden ser condiciones | Si pueden ser condicionales |
-| Facilidad de uso | Son mas legibles y fáciles de entender | Pueden dar lugar a mas confusión debido a su mayor dificultad | 
-| Versatilidad | Flexibles y legibles | versátiles y permiten usos más avanzados |
+| ** Comportamiento** | Hoisting  | Se ponen al principio del ámbito, lo cual hace que se pueden llamar antes de que se declaren | Solo se pueden usar después de que se asignen. |
+| **Nomenclatura** | Requieren de un nombre de función | Pueden ser anónimas |
+| **Ejecución**   | Se ejecutan antes de cualquier código | Se cargan y se ejecutan solo cuando el intérprete del programa llega a la línea de código |
+| **Almacenamiento** | No requieren de una asignación de variable | Se pueden almacenar en asignaciones de baribales |
+| **Condicionales** | No pueden ser condiciones | Si pueden ser condicionales |
+| **Facilidad de uso** | Son mas legibles y fáciles de entender | Pueden dar lugar a mas confusión debido a su mayor dificultad | 
+| **Versatilidad** | Flexibles y legibles | versátiles y permiten usos más avanzados |
 
-en resumen, las declaraciones de función se procesan antes de la ejecución del código y se pueden llamar en cualquier lugar, mientras que las expresiones de función se evalúan como parte de un flujo de ejecución y solo se pueden llamar desudes de que se asignen a una variable.
+**En resumen**, las declaraciones de función se procesan antes de la ejecución del código y se pueden llamar en cualquier lugar, mientras que las expresiones de función se evalúan como parte de un flujo de ejecución y solo se pueden llamar desudes de que se asignen a una variable.
 
 Poniendo un ejemplo se pretende explicar su utilidad. Podemos crear un condicional y meter dentro expresiones de funciones, ya que no es recomendable poner declaración de funciones dentro de bloques de código en condicionales.
 
@@ -351,27 +363,22 @@ if (edad <= 10) {
   }
 ```
 
-Se declara la variable `edad` y un condicional con tres condiciones, si la edad es menor de 10, si la edad está entre 10 y 18, y si la edad es superior a 18. En cada bloque de código se crea una expresión de función, es decir, se crea una variable `crearMenu` igual a una función anónima. En caso de que se cumpla esa condición se imprimirá lo que está puesto para que nos devuelva esa expresión de función. Si por ejemplo la variable `edad` es 14, se cumplirá el primer condicional y nos devolverá "Menu pra niños".
+Se declara la variable `edad` y un condicional con tres condiciones:
+- Si la edad es menor de 10.
+- Si la edad está entre 10 y 18.
+- Si la edad es superior a 18.<br>
+En cada bloque de código se crea una expresión de función, es decir, se crea una variable `crearMenu` igual a una función anónima. En caso de que se cumpla esa condición se imprimirá lo que está puesto para que nos devuelva esa expresión de función.<br>
+Si por ejemplo la variable `edad` es 14, se cumplirá el primer condicional y nos devolverá "Menu para niños".
 
+# Palabra clave "this" - función y usos
 
+La palabra clave `this` es una palabra muy especial en JavaScript, y se refiere a un objeto o contexto dentro de la función que se está ejecutando.
 
+**Esta palabra es crucial para acceder y manipular valores de objetos y comportamientos en funciones y métodos de JavaScript, dando un mayor dinamismo para interactuar con objetos en base al contexto de su invocación.**
 
+Los principales **funciones** de `this` son:
 
-
-
-
-
-
-# ¿Qué es la palabra clave "this" en JS?
-
-Es una palabra muy especial en JavaScript.
-
-La palabra `this` se refiere a un objeto o contexto dentro de la función que se está ejecutando.
-
-Esta palabra es crucial para acceder y manipular valores de objetos y comportamientos en funciones y métodos de JavaScript, dando un mayor dinamismo para interactuar con objetos en base al contexto de su invocación.
-Los principales funciones de `this` son:
-
-1. Dentro de un método:
+**1. Dentro de un método:**
 ```javascript
 var persona = {
   nombre: 'Juan',
@@ -383,7 +390,7 @@ var persona = {
 persona.saludo();      // Hola, mi nombre es Juan y tengo 30 años.
 ```
 
-2. Por si sola la palabra `this`:
+**2. Por si sola la palabra `this`:**
 Se refiere al objeto global:
 ```javascript
 function saludo() {
@@ -396,6 +403,7 @@ var persona = {
 
 console.log(persona.diHola());      // Hola, mi nombre es Juan
 ```
+
 Dentro de la función `saludo`, `this` se refiere al objeto global porque la función no es llamada como un método de un objeto. Cuando se llama `persona.saludo()`, está buscando una propiedad llamada `saludo` en el objeto de persona, el cual no existe. Por ello, hay que llamar a la propiedad `diHola` que contiene la función `saludo`.
 
 
