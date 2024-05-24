@@ -157,7 +157,59 @@ En JavaScript, un condicional es una estructura de control que permite ejecutar 
 
 Se utilizan muy parecido a Python, mediante el uso de operadores y también el uso de `if-else`, entre otros.
 
-En los ejemplo de a continuación se describe un uso particular de los condicionales.
+Utilizando los operadores, podemos crear condicionales de:
+
+1. Igualdad
+```javascript
+var edad = 12
+var edad2 = `12`
+
+if (edad == edad2) {
+  console.log("Son el mismo número")
+} else {
+  condole.log("No son el mismo número")
+}
+```
+En este caso, si las dos variables tienen el mismo valor, nos devolvería `"Son el mismo número"`
+
+Pero cuidado! No son iguales, ya que si aplicamos "igual estricto":
+```javascript
+if (edad === edad2 ) {
+  console.log("Son el mismo elemento")
+} else {
+  console.log("No son estrictamente iguales")
+}
+```
+No devolvería "No son estricamente iguales, ya que son tipos diferentes de datos, uno es un `numero` y el otro es una `cadena`.
+
+
+
+2. Des-igualdad
+```javascript
+var edad = 12
+var edad2 = `12`
+
+if (edad !== edad2) {
+  console.log("No son iguales")
+} else {
+  condole.log("Son lo mismo")
+}
+```
+Nos devolverá `"No son iguales"`.
+
+3. Mayor o igual que
+```javascript
+var edad = 12
+
+if (edad >= 20) {
+  console.log("El valor es mas grande")
+} else {
+  console.log("El valor es mas pequeño")
+}
+```
+Aquí se imprime el segundo condicional, ya que el primero es falso (no se cumple).
+
+Otro ejemplo sería:
 
 ```javascript
 var dinero = 1000
@@ -171,8 +223,53 @@ if (dinero > 550) {
 En este ejemplo simple se crea un condicional en el que si tienes más de 550 (`dinero > 550`), **SI** se cumple el primer condicional y se imprime `"Tienes dinero para comprarte esta bicicleta."`. <br>
 En el caso en el que el valor establecido en la variable `dinero` no sea superior a 550, **NO** se cumple el primer condicional y por tanto devuelve `"Una pena, vas a tener que ahorra algo mas!"`.
 
+
+4. Menor o igual que
+```javascript
+var edad = 12
+
+if (edad <= 20) {
+  console.log("El valor es mas pequeño")
+} else {
+  console.log("El valor es mas grande")
+}
+```
+En este caso, el primer condicional se cumple, ya que el valor que es 12, es mas pequeño que 20. Por tanto, se imprime `"El valor es mas pequeño"`."`
+
+5. Operador lógico
+
+Se pueden usar operadores lógicos, si una o ambas condiciones son verdaderas `true`, entonces se ejecutará el código dentro de la sentencia `if`.
+```javascript
+const pagar = true;
+const voluntariado = false;
+
+if (pagar || voluntariado) {
+  console.log("Bienvenido! Esperemos que disfrute de la velada.");
+} else {
+  console.log("No has colaborado, no puedes asistir");
+}
+```
+En este caso, si se cumple una condicion o la otra, es decir, si `pagar = true` o si `voluntariado = true`, se cumple y se imprime `"Bienvenido! Esperemos que disfrute de la velada."` Si las dos variables son `= false`, nos devolverá la otra cadena.
+
+Para cambiar este funcionamiento, podriamos aplicar el signo de exclamación `!`. De este modo, el operador tomará alfo que es `true`y lo hará `false`, o viceversa, tomará algo que es `false` y lo hará `true`:
+```javascript
+const pagar = true;
+const voluntariado = false;
+
+if (!pagar || voluntariado) {
+  console.log("Bienvenido! Esperemos que disfrute de la velada.");
+} else {
+  console.log("No has colaborado, no puedes asistir");
+}
+```
+Para que se cumpla el condicional, SI se tiene que haber pagado Ó haber hecho voluntariado. Si el valor de `voluntariado`ya es `false`, solo nos queda que `pagar` fuera verdadero `true`. La variable está asignada a `true`, pero está precedido de un `!`, lo cual tomará `distinto de`, y será `falso`. Por tanto, se imprimirá `"No has colaborado, no puedes asistir"`.
+
+
+6. Condiciones compuestas
+
 Al igual que los condicionales en Python, también se pueden crear condicionales con 3 condiciones o múltiples, incluso condicionales dentro de condicionales.<br>
-En el siguiente ejemplo se establecen 3 condiciones para la edad de un conductor:
+
+En el siguiente ejemplo se establecen 3 condiciones para la edad de un conductor. Se usa un condional compuesto en la segunda condición, ya que dentro de el, la `edad`tiene que ser mayor que 18, pero menor que 85.
 
 ```javascript
 var edad_conductor = 50
@@ -195,6 +292,89 @@ Aquí se emplea un condicional en el que dependiendo de la condición (edad del 
 En este caso, se usan los operadores así como **menor que** `<` o **mayor que** `>`, entre otros. También se usa **`&&`** para meter dos operadores en un condicional, para que se cumpla el segundo condicional si la edad está entre 18 y 85.
 
 En este ejemplo, si la variable `edad_conductor` es 50, se cumplirá el segundo condicional y por tanto se imprimirá `"Puedes conducir"`.
+7. Condicionales anidados
+
+Se pueden anidar condicionales unos en otros, tal que asi:
+```javascript
+var estado = "avion"
+
+if (estado !== "Apagado") {
+  console.log("El equipo esta encendido, ")
+  if (estado == "Encendido") {
+    console.log("y completamente operativo!")
+  } else if (estado == "mantenimiento") {
+    console.log(" pero se encuentra en modo mantenimiento")
+  } else if (estado == "avion") {
+    console.log("pero se encuentra en modo avion")
+  } else {
+    console.log("pero se está actulizando")
+  }
+} else {
+  console.log("El equipo esta apagado")
+}
+```
+Aquí se crear una variable `estado` para el estado de un equipo informatico. Se crea un condicional que sea para verificar si el equipo está encendido o apagado. Si la variable `estado` es diferente `!==`a `"Apagado"`, entonces se cumplirá el primer condicional y entrará a leer el resto de condicionales anidados. Del caso contrario, imprimiré `"El equipo esta apagado"`. 
+
+Si se cumple la primera condición, se imprime `"El qeuipo esta encendido, "` y hay ahora 3 condiciones anidadas:
+- Si el valor de la variable es `Encendido`, se cumple la primera condición e imprime `" y completamente operativo"`.
+- Si el valor de la variable es `mantenimiento`, se cumple la segunda condición e imprime `" pero se encuenta en modo mantenimiento"`.
+- Si el valor de la variable es `avion`, se cumple la tercera condicion e imprime `" pero se encuentra en modo avión"`.
+- Si no cumple nimnguna de las anteriores condiciones automaticamente imprime `" pero se está actualizando"´.
+
+Por tanto, y siguiendo el ejemplo, si la variable `estado` está asignada a `avion`, se cumpliria el primer condicional y el tercer condicional anidado, dando lugar a `"El equipo esta encendido, pero se encuentra en modo avion"`.
+
+### SWITCH
+
+En relación a los condionales, se puede usar también la declaración `switch`, que evalua una **expresión**, comparando el valor de esa expresión con una instance `case`, y ejecuta `declaraciones`asociadas a ese `case`, así como las declaraciones en los que `case`siguen.
+
+Para entenderlo mejor, vamos a poner un ejemplo a continuación:
+```javascript
+const situacion = "baja";
+
+switch (situacion) {
+  case "alta":
+    console.log("El trabajador se encuenta activo");
+    break;
+  case "baja":
+    console.log("El trabajador se encuenta de baja");
+    break;
+  case "incapacidad":
+    console.log("El trabajador tiene una incapacidad");
+    break;
+  case "fraude":
+    console.log("El trabajador está cometiendo fraude");
+    break;
+  default:
+    console.log("Se desconoce la situacion del trabajador");
+    break;
+}
+```
+Aquí, en lugar de usar condicionales multiples mediante el uso de `else if`, se pueden usar `case` y `break`para determinar el fin de la condición. Hay que tener en cuenta que para acabar, habria que poner un`default`que seria lo mismo a `else`en los condicionales al uso. De este modo se crea un condicional mas facil de escribir y de leer.
+
+`Break`--> En el caso de que se nos olvide poner `break`, el script se ejecutará desde donde se cumple la condicion y ejecutara el siguiente `case`independientemente si esta condicion se cumple o no. Se ve en el siguiente ejemplo:
+
+```javascript
+var Animal = "Jirafa";
+
+switch (Animal) {
+  case "Vaca":
+  case "Jirafa":
+  case "Perro":
+  case "Cerdo":
+    console.log("Este animal subirá al Arca de Noé.");
+    break;
+  case "Dinosaurio":
+  default:
+    console.log("Este animal no lo hará.");
+}
+```
+Aquí no hemos puesto break en ningun `case` hasta el que tiene el valor `Cerdo`. Al asignar el valor `Jirafa`, el script se ejecuta desde donde se cumple la condicon y ejecutará los siguientes `case` hasta cuando llega a `Cerdo`. Por tanto, se imprime `"Este animal subirá al Arca de Noé."`
+
+
+
+
+
+
 
 # Operadores Ternarios
 
@@ -439,4 +619,3 @@ console.log(entradas.entradasVendidas);           // 78
 console.log(entradas.entradasRestantes());        // 22
 ```
 En la que vemos cuántas entradas sobrantes hay (22), cuántas entradas totales hay (100) y cuántas entradas se han vendido (78).
-
