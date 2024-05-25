@@ -106,7 +106,7 @@ En este caso hemos metido una lista de objetos. Si queremos acceder a ellos, pri
 # Funciones de String en JavaScript
 En JavaScript, las funciones de cadena son fundamentales para trabajar con texto, facilitando la manipulación y representación de cadenas de manera eficiente en el desarrollo de aplicaciones web y programas JavaScript.
 
-De este modo, podemos llamar a funciones para que hagan tareas así como buscar valores, encontrar los índices de carácteres, y mucho más. Aunque hay innumerables acciones que se pueden hacer con las funciones de string o cadenas en JavaScript, aquí **nos centraremos en las 3 más importantes o las que más se usan.**
+De este modo, podemos llamar a funciones para que hagan tareas así como buscar valores, encontrar los índices de carácteres, y mucho más. Aunque hay innumerables acciones que se pueden hacer con las funciones de string o cadenas en JavaScript, aquí **nos centraremos en las más importantes o las que más se usan.**
 
 **1. Atributo Longitud** <br>
 Este simplemente sirve para ver la longitud de la cadena.<br>
@@ -150,6 +150,116 @@ console.log(str.includes("perro"))  // false
 En la cadena `str` queremos buscar "gato" y "perro".
 Si buscamos "gato", nos devuelve `true`, lo cual significa que **SI** está presente.
 Si por el contrario buscamos "perro", nos devuelve `false`, lo cual significa que **NO** está presente.
+
+
+
+**4. Obtener carácteres en posiciones especificas**<br>
+
+Se utiliza para obtener determinados caracteres en base al índice de ellos.<br>
+Se utiliza `.chartAT(index)` detrás de la variable asignada.<br>
+Por ejemplo:
+```javascript
+var str = "El gato marrón se encontraba perdido en el bosque"
+
+console.log(str.charAt(3))    // g
+```
+De este modo obtenemos el caracter que se encuentra en el `index = 3`.
+
+**5. Ver si hay cadenas que empiezan o acaban con palabras determinadas**
+
+Mediante el uso de `startsWith("cadena/palabra clave")`y `endsWith("cadena/palabra clave")` se puede ver si la cadena empieza o acaba con cierta palabra especifica. Si se cumple, nos devolverá `true`, y si por el contario no se cumple nos devolverá `false`.
+Por ejemplo:
+```javascript
+var str = "El gato marrón se encontraba perdido en el bosque"
+
+console.log(str.startsWith("El gato"))     // true
+```
+De este modo, se imprime si la variable `str` empieza con `"El gato"`, y nos devuelve `true`. Lo cual, nos confirma que empieza por `"El gato"`.
+
+En este otro ejemplo, queremos saber si la variable `str` acaba con `"arbol"`.
+```javascript
+console.log(str.endsWith("arbol"))    // false 
+```
+Nos devuelve `false`, lo cual se da por hecho que no acaba por `"arbol"`.
+
+**6. Reemplazar una palabra por otra**
+
+Se puede utilizar `replace("cadena_a_reemplazar", "cadena_nueva")`.<br>
+```javascript
+var str = "El gato marrón se encontraba perdido en el bosque"
+
+console.log(str.replace("gato", "perro"))  // El perro marrón se encontraba perdido en el bosque
+```
+Aquí se reemplaza `gato`con `perro`. Y nos devuelve `"El perro marrón se encontraba perdido en el bosque"`.
+
+
+**7. Buscar con `search`**
+Se utiliza `.search("cadena")` antes de la variable para buscar el indice en el que se encuentra.<br>
+Si se encuentra una coincidencia, se devuelve el índice de la primera aparición; de lo contrario, se devuelve -1.<br>
+
+```javascript
+var str = "El gato marrón se encontraba perdido en el bosque"
+
+console.log(str.search("gato"))  // 3
+console.log(str.search("arbol"))  // -1
+console.log(str.search("marron")) // -1
+```
+En el primer caso, `"gato"`se encuentra en el indice 3, y por tanto nos devuelve `3`.
+En el segundo caso, `"arbol"` no se encuentra, y por tanto nos devuelve `-1`.
+En el tercer caso, `"marron"` no tiene tilde, y por tanto, no está, nos devuelve `-1`.
+
+
+**8. Buscar indice de una cadena**
+Se usa `indexOf("cadena_a_buscar")`o `lastIndexOf("cadena_a_buscar")`, para encontrar el índice de la cadena que se repite en la variable.
+En el siguiente ejemplo, `gato`aparece dos veces, por lo tanto, para ver los indices de la primera vez que aparece `gato`se usará `indexOf("gato")`, mientras que si queremos ver el índice de la segunda vez que aparece `gato`, se usará `lastIndexOf("gato")`:
+```javascript
+
+var str = "El gato marrón se sentó. El gato marrón comió el pienso."
+
+console.log(str.indexOf("gato"))  // 3
+
+console.log(str.lastIndexOf("gato"))     // 28
+```
+De tal modo, que el índice del "primer" `gato`es `3`, mientras que el índice del "segundo" `gato` sería `28`.
+
+
+**9. Extraer una sección de la cadena.**
+En este caso, se usa `slice("índice_cadena")`para extraer una sección de la cadena que tenemos en la variable.
+Por ejemplo:
+```javascript
+var str = "El gato marrón se sentó. El gato marrón comió el pienso."
+
+console.log(str.slice(25))  // El gato marrón comió el pienso.
+
+console.log(str.slice(-10)) // el pienso.
+
+console.log(str.slice(15, -10))  // se sentó. El gato marrón comió 
+```
+
+En el primer caso, `slice(25)` extrae una subcadena a partir del índice 25 hasta el final de la cadena original. El índice 25 corresponde al carácter "E" de la palabra "El" en la segunda oración. Por tanto, nos devuelve `"El gato marrón comió el pienso."`
+
+En el segundo caso, cuando se pasa un número negativo como argumento a `slice()`, se cuenta desde el final de la cadena hacia el principio. En este caso, `slice(-10)` extrae una subcadena de los últimos 10 caracteres de la cadena original, devolviendo `"el pienso."`
+
+En el tercer caso, `slice(15, -10)` extrae una subcadena que comienza en el índice 15 y termina en el índice -10 (contando desde el final). El índice 15 corresponde al carácter "s" de la palabra "sentó". El índice -10 corresponde al carácter "c" de la palabra "comió". Por lo tanto, se devuelve `"se sentó. El gato marrón comió "`.
+
+**10. Poner en mayúscula o minúscula una cadena.**
+
+Para poner una cadena en mayúscula se usa `.toUpperCase()` delante de la variable asignada. Este método convierte todos los caracteres de la cadena a mayúsculas y devuelve una nueva cadena con el resultado.
+
+Para hacer lo mismo pero en lugar de mayúsculas, en minúsculas, se usará `toLowerCase()`.
+
+Por ejemplo:
+```javascript
+var str = "El gaTO marrón SE sentó."
+
+console.log(str.toUpperCase())      // EL GATO MARRÓN SE SENTÓ.
+
+console.log(str.toLowerCase())     // el gato marrón se sentó.
+```
+Se parte dela variable `str` que tiene mayúsculas y minúsculas de forma irregular. Para poder poner toda la cadena en mayúscula se aplica `str.toUpperCase()`, mientras que en el segundo caso se aplicar `str.toLowerCase()`. 
+
+Así, en el primer caso nos devuelve `"EL GATO MARRÓN SE SENTÓ."`, mientras que en el segundo `"el gato marrón se sentó."`
+
 
 # Condicionales en JavaScript
 
