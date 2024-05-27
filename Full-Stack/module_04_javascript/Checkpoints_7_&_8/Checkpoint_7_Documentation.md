@@ -154,7 +154,6 @@ Si por el contrario buscamos "perro", nos devuelve `false`, lo cual significa qu
 
 
 **4. Obtener carácteres en posiciones especificas**<br>
-
 Se utiliza para obtener determinados caracteres en base al índice de ellos.<br>
 Se utiliza `.chartAT(index)` detrás de la variable asignada.<br>
 Por ejemplo:
@@ -193,7 +192,7 @@ console.log(str.replace("gato", "perro"))  // El perro marrón se encontraba per
 Aquí se reemplaza `gato`con `perro`. Y nos devuelve `"El perro marrón se encontraba perdido en el bosque"`.
 
 
-**7. Buscar con `search`**
+**7. Buscar con `search`**<br>
 Se utiliza `.search("cadena")` antes de la variable para buscar el indice en el que se encuentra.<br>
 Si se encuentra una coincidencia, se devuelve el índice de la primera aparición; de lo contrario, se devuelve -1.<br>
 
@@ -204,13 +203,13 @@ console.log(str.search("gato"))  // 3
 console.log(str.search("arbol"))  // -1
 console.log(str.search("marron")) // -1
 ```
-En el primer caso, `"gato"`se encuentra en el indice 3, y por tanto nos devuelve `3`.
-En el segundo caso, `"arbol"` no se encuentra, y por tanto nos devuelve `-1`.
+En el primer caso, `"gato"`se encuentra en el indice 3, y por tanto nos devuelve `3`.<br>
+En el segundo caso, `"arbol"` no se encuentra, y por tanto nos devuelve `-1`<br>
 En el tercer caso, `"marron"` no tiene tilde, y por tanto, no está, nos devuelve `-1`.
 
 
-**8. Buscar indice de una cadena**
-Se usa `indexOf("cadena_a_buscar")`o `lastIndexOf("cadena_a_buscar")`, para encontrar el índice de la cadena que se repite en la variable.
+**8. Buscar indice de una cadena**<br>
+Se usa `indexOf("cadena_a_buscar")`o `lastIndexOf("cadena_a_buscar")`, para encontrar el índice de la cadena que se repite en la variable.<br>
 En el siguiente ejemplo, `gato`aparece dos veces, por lo tanto, para ver los indices de la primera vez que aparece `gato`se usará `indexOf("gato")`, mientras que si queremos ver el índice de la segunda vez que aparece `gato`, se usará `lastIndexOf("gato")`:
 ```javascript
 
@@ -223,8 +222,8 @@ console.log(str.lastIndexOf("gato"))     // 28
 De tal modo, que el índice del "primer" `gato`es `3`, mientras que el índice del "segundo" `gato` sería `28`.
 
 
-**9. Extraer una sección de la cadena.**
-En este caso, se usa `slice("índice_cadena")`para extraer una sección de la cadena que tenemos en la variable.
+**9. Extraer una sección de la cadena.**<br>
+En este caso, se usa `slice("índice_cadena")`para extraer una sección de la cadena que tenemos en la variable.<br>
 Por ejemplo:
 ```javascript
 var str = "El gato marrón se sentó. El gato marrón comió el pienso."
@@ -236,18 +235,13 @@ console.log(str.slice(-10)) // el pienso.
 console.log(str.slice(15, -10))  // se sentó. El gato marrón comió 
 ```
 
-En el primer caso, `slice(25)` extrae una subcadena a partir del índice 25 hasta el final de la cadena original. El índice 25 corresponde al carácter "E" de la palabra "El" en la segunda oración. Por tanto, nos devuelve `"El gato marrón comió el pienso."`
+- En el primer caso, `slice(25)` extrae una subcadena a partir del índice 25 hasta el final de la cadena original. El índice 25 corresponde al carácter "E" de la palabra "El" en la segunda oración. Por tanto, nos devuelve `"El gato marrón comió el pienso."`
+- En el segundo caso, cuando se pasa un número negativo como argumento a `slice()`, se cuenta desde el final de la cadena hacia el principio. En este caso, `slice(-10)` extrae una subcadena de los últimos 10 caracteres de la cadena original, devolviendo `"el pienso."`
+- En el tercer caso, `slice(15, -10)` extrae una subcadena que comienza en el índice 15 y termina en el índice -10 (contando desde el final). El índice 15 corresponde al carácter "s" de la palabra "sentó". El índice -10 corresponde al carácter "c" de la palabra "comió". Por lo tanto, se devuelve `"se sentó. El gato marrón comió "`.
 
-En el segundo caso, cuando se pasa un número negativo como argumento a `slice()`, se cuenta desde el final de la cadena hacia el principio. En este caso, `slice(-10)` extrae una subcadena de los últimos 10 caracteres de la cadena original, devolviendo `"el pienso."`
-
-En el tercer caso, `slice(15, -10)` extrae una subcadena que comienza en el índice 15 y termina en el índice -10 (contando desde el final). El índice 15 corresponde al carácter "s" de la palabra "sentó". El índice -10 corresponde al carácter "c" de la palabra "comió". Por lo tanto, se devuelve `"se sentó. El gato marrón comió "`.
-
-**10. Poner en mayúscula o minúscula una cadena.**
-
-Para poner una cadena en mayúscula se usa `.toUpperCase()` delante de la variable asignada. Este método convierte todos los caracteres de la cadena a mayúsculas y devuelve una nueva cadena con el resultado.
-
-Para hacer lo mismo pero en lugar de mayúsculas, en minúsculas, se usará `toLowerCase()`.
-
+**10. Poner en mayúscula o minúscula una cadena.**<br>
+Para poner una cadena en mayúscula se usa `.toUpperCase()` delante de la variable asignada. Este método convierte todos los caracteres de la cadena a mayúsculas y devuelve una nueva cadena con el resultado.<br>
+Para hacer lo mismo pero en lugar de mayúsculas, en minúsculas, se usará `toLowerCase()`.<br>
 Por ejemplo:
 ```javascript
 var str = "El gaTO marrón SE sentó."
@@ -260,7 +254,6 @@ Se parte dela variable `str` que tiene mayúsculas y minúsculas de forma irregu
 
 Así, en el primer caso nos devuelve `"EL GATO MARRÓN SE SENTÓ."`, mientras que en el segundo `"el gato marrón se sentó."`
 
-
 # Condicionales en JavaScript
 
 En JavaScript, un condicional es una estructura de control que permite ejecutar diferentes bloques de código dependiendo de si una **condición** es **verdadera** o **falsa**. Dependiendo de esto, permite tomar decisiones.
@@ -269,7 +262,7 @@ Se utilizan muy parecido a Python, mediante el uso de operadores y también el u
 
 Utilizando los operadores, podemos crear condicionales de:
 
-1. Igualdad
+**1. Igualdad**
 ```javascript
 var edad = 12
 var edad2 = `12`
@@ -292,9 +285,7 @@ if (edad === edad2 ) {
 ```
 No devolvería "No son estricamente iguales, ya que son tipos diferentes de datos, uno es un `numero` y el otro es una `cadena`.
 
-
-
-2. Des-igualdad
+**2. Des-igualdad**
 ```javascript
 var edad = 12
 var edad2 = `12`
@@ -307,7 +298,7 @@ if (edad !== edad2) {
 ```
 Nos devolverá `"No son iguales"`.
 
-3. Mayor o igual que
+**3. Mayor o igual que**
 ```javascript
 var edad = 12
 
@@ -317,10 +308,8 @@ if (edad >= 20) {
   console.log("El valor es mas pequeño")
 }
 ```
-Aquí se imprime el segundo condicional, ya que el primero es falso (no se cumple).
-
+Aquí se imprime el segundo condicional, ya que el primero es falso (no se cumple).<br>
 Otro ejemplo sería:
-
 ```javascript
 var dinero = 1000
 
@@ -333,8 +322,7 @@ if (dinero > 550) {
 En este ejemplo simple se crea un condicional en el que si tienes más de 550 (`dinero > 550`), **SI** se cumple el primer condicional y se imprime `"Tienes dinero para comprarte esta bicicleta."`. <br>
 En el caso en el que el valor establecido en la variable `dinero` no sea superior a 550, **NO** se cumple el primer condicional y por tanto devuelve `"Una pena, vas a tener que ahorra algo mas!"`.
 
-
-4. Menor o igual que
+**4. Menor o igual que**
 ```javascript
 var edad = 12
 
@@ -346,7 +334,7 @@ if (edad <= 20) {
 ```
 En este caso, el primer condicional se cumple, ya que el valor que es 12, es mas pequeño que 20. Por tanto, se imprime `"El valor es mas pequeño"`."`
 
-5. Operador lógico
+**5. Operador lógico**
 
 Se pueden usar operadores lógicos, si una o ambas condiciones son verdaderas `true`, entonces se ejecutará el código dentro de la sentencia `if`.
 ```javascript
@@ -374,13 +362,9 @@ if (!pagar || voluntariado) {
 ```
 Para que se cumpla el condicional, SI se tiene que haber pagado Ó haber hecho voluntariado. Si el valor de `voluntariado`ya es `false`, solo nos queda que `pagar` fuera verdadero `true`. La variable está asignada a `true`, pero está precedido de un `!`, lo cual tomará `distinto de`, y será `falso`. Por tanto, se imprimirá `"No has colaborado, no puedes asistir"`.
 
-
-6. Condiciones compuestas
-
+**6. Condiciones compuestas**<br>
 Al igual que los condicionales en Python, también se pueden crear condicionales con 3 condiciones o múltiples, incluso condicionales dentro de condicionales.<br>
-
 En el siguiente ejemplo se establecen 3 condiciones para la edad de un conductor. Se usa un condional compuesto en la segunda condición, ya que dentro de el, la `edad`tiene que ser mayor que 18, pero menor que 85.
-
 ```javascript
 var edad_conductor = 50
 
