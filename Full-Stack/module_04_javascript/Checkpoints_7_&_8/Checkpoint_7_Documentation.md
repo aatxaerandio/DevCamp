@@ -164,8 +164,7 @@ console.log(str.charAt(3))    // g
 ```
 De este modo obtenemos el caracter que se encuentra en el `index = 3`.
 
-**5. Ver si hay cadenas que empiezan o acaban con palabras determinadas**
-
+**5. Ver si hay cadenas que empiezan o acaban con palabras determinadas**<br>
 Mediante el uso de `startsWith("cadena/palabra clave")`y `endsWith("cadena/palabra clave")` se puede ver si la cadena empieza o acaba con cierta palabra especifica. Si se cumple, nos devolverá `true`, y si por el contario no se cumple nos devolverá `false`.
 Por ejemplo:
 ```javascript
@@ -181,8 +180,7 @@ console.log(str.endsWith("arbol"))    // false
 ```
 Nos devuelve `false`, lo cual se da por hecho que no acaba por `"arbol"`.
 
-**6. Reemplazar una palabra por otra**
-
+**6. Reemplazar una palabra por otra**<br>
 Se puede utilizar `replace("cadena_a_reemplazar", "cadena_nueva")`.<br>
 ```javascript
 var str = "El gato marrón se encontraba perdido en el bosque"
@@ -195,7 +193,6 @@ Aquí se reemplaza `gato`con `perro`. Y nos devuelve `"El perro marrón se encon
 **7. Buscar con `search`**<br>
 Se utiliza `.search("cadena")` antes de la variable para buscar el indice en el que se encuentra.<br>
 Si se encuentra una coincidencia, se devuelve el índice de la primera aparición; de lo contrario, se devuelve -1.<br>
-
 ```javascript
 var str = "El gato marrón se encontraba perdido en el bosque"
 
