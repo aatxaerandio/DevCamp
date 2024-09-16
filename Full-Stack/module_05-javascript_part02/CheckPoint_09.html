@@ -81,7 +81,15 @@ const menuDesayuno = [
             {nombre: "jamons york y queso", precio: 8.20},
             {nombre: "solo", precio: 6.00},
         ]
-    }
+    },
+    {
+        categoria: "zumos",
+        options: [
+            {nombre: "piña", precio: 2.20},
+            {nombre: "naranja", precio: 2.20},
+            {nombre: "melocotón", precio: 2.20},
+        ]
+    },
 ];
 
 
@@ -204,7 +212,7 @@ if(eleccionMenu === "desayuno"){
     console.log("DESAYUNO BOTTEGA\n");
 
     console.log(`\n---MENU DESAYUNO---`);
-    console.log("*Todos los desayunos incluyen café y zumo a elegir.")
+    console.log("*Todos los desayunos incluyen café.")
     verMenu(menuDesayuno);
 
     totalPrecio += pedirOpciones(menuDesayuno, 2)
