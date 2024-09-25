@@ -56,11 +56,10 @@ Entre los beneficios del uso de diagramas de implementación están:<br/>
 
 Este ejemplo es un ejemplo muy simple del diagrama de implementación, en el que se muestra la estructura de un sistema. Hay diferentes nodos (cajas 3D), dentro de los nodos se pueden encontrar los artefactos entre <<>>. Por otro lado, estan las asociaciones que se decriben con líneas rectas, para indicar las relaciones entre los diferentes nodos del sistema. Es asi, como se explica mediante un diagrama de implementación, el uso de la banca online, en el que se entra por mediación de Internet y qué elementos se usan para utilizarlo.<br/>
 
-## Diagrama de actividades
-
+## Diagrama de actividades<br/>
 Un diagrama de actividades en UML es una representación gráifca que muestra un flujo de actividades o acciones en un proceso o procedimiento. Es considerado un diagrama de comportamiento, mostrando las acciones que se realizan y cómo se relacionan entre si.<br/><br/>
-De forma específica, los diagramas de actividades muestran el flujo de control o de objetos con énfasis en la secuencia y las condiciones del flujo, proporcionando la posibilidad de fraccionar en parte más pequeñas y manejables. Se pueden usar como boceto inicial para tener una idea de cómo continuar con el desarrollo de un sistema. Sus componentes son “Estado Inicial”, “Estado de Actividad”, “Flujo de Acción”, “Estado de Decisión”, “Condiciones” y “Estado Final”.<br/><br/>
-### Elementos clave de un diagrama de actividades: <br/><br/>
+De forma específica, los diagramas de actividades muestran el flujo de control o de objetos con énfasis en la secuencia y las condiciones del flujo, proporcionando la posibilidad de fraccionar en parte más pequeñas y manejables. Se pueden usar como boceto inicial para tener una idea de cómo continuar con el desarrollo de un sistema. Sus componentes son “Estado Inicial”, “Estado de Actividad”, “Flujo de Acción”, “Estado de Decisión”, “Condiciones” y “Estado Final”.<br/>
+### Elementos clave de un diagrama de actividades: <br/>
 **1.	Nodos de acción:** Representan tareas individuales.<br/>
 **2.	Nodos de decisión:** Muestran puntos de bifurcación en el flujo.<br/>
 **3.	Nodos de inicio y fin:** Indican dónde comienza y termina el proceso.<br/>
