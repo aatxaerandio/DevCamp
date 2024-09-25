@@ -1,10 +1,10 @@
 # CheckPoint 14
 Primero de todo, tenemos que definir que es `npm`, que es **Node Package Manager**, un administrador de paquetes de JavaScript que gestiona las dependencias en proyectos escritos en **Node.js**.<br/>
-Con este administrador, puede administrar la instalación, actualización y eliminación de paquetes (bibliotecas). En términos generales, `npm` es el registro de software más grande del mundo.<br/>
+Con este administrador, puede administrar la instalación, actualización y eliminación de paquetes (bibliotecas). En términos generales, `npm` es el registro de software más grande del mundo.<br/><br/>
 `npm` tiene 3 componentes principales:<br/>
 **1. Sitio web** ➡️ Desde el sitio web se pueden encontrar paquetes, configurar y administrar otros aspectos.<br/>
 **2. Interfaz de línea de comando (Command Line Interface)** ➡️ Se ejecuta en la terminal a través de la cual los desarrolladores interactúan con `npm`.<br/>
-**3. Registro** ➡️ Es una gran base de datos publuca con software JavaScript e información que lo acompaña.<br/>
+**3. Registro** ➡️ Es una gran base de datos publuca con software JavaScript e información que lo acompaña.<br/><br/>
 Una de las acciones mas comunes y sencillas de ejecutar en `npm`, es instalar un módulo de Node. Para ello se requiere que se ejecute en la terminal el siguiente comando:<br/>
 ```javascript
 npm install <nombre-del-modulo>
@@ -145,7 +145,7 @@ const element = React.createElement("h1", null, "Hello, world!");
 
 El estado (state) en React es un objeto que contiene datos relevantes para un componente y que pueden cambiar a lo largo del tiempo, afectando la representación del componente en pantalla.<br/>
 Entre los principales datos que maneja React se encuentran los `state`, junto con las `props`. Este objeto contiene datos internos que un componente puede manejar y modificar, y se utiliza para almacenar datos que cambian con el tiempo dentro de un componente. De este modo, se crea dinamismo e interactividad en las aplicaciones React.<br/>
-A diferencia que los props que son inmutables, `state` es mutable, y pertenece y se define dentro del propio componente, no se pasa desde componentes padres.<br/>
+A diferencia que los props que son inmutables, `state` es mutable, y pertenece y se define dentro del propio componente, no se pasa desde componentes padres.<br/><br/>
 En cuanto a su funcionamiento, cuado el estado cambia, el componente se vuelve a renderizar automáticamente con la nueva información. Se puede definir usando el hook `useState` en **componentes funcionales** o la propiedad `state` en **componentes de clase**, y se actualiza utilizando el método `setState` (en clases) o la función actualizadora devuelta por `useState` (en funciones).<br/>
 
 En resumen, el uso de state aporta una serie de beneficios, asi como: 
@@ -180,10 +180,10 @@ Este es el constructor de la clase. Hace dos cosas importantes:
   }
 }
 ```
-Este es el método `render()`, que define lo que el componente debe mostrar:
-- Retorna un div que contiene un párrafo <p> y un botón <button>.
-- El párrafo muestra el número actual de clics, accediendo a this.state.count.
-- El botón tiene un manejador de eventos onClick que, cuando se hace clic, llama a this.setState() para incrementar count en 1.
+Este es el método `render()`, que define lo que el componente debe mostrar:<br/>
+3. Retorna un div que contiene un párrafo <p> y un botón <button>.<br/>
+4. El párrafo muestra el número actual de clics, accediendo a this.state.count.<br/>
+5. El botón tiene un manejador de eventos onClick que, cuando se hace clic, llama a this.setState() para incrementar count en 1.<br/>
 #### Funcionamiento general:
 1.	Cuando el componente se monta, muestra "Has hecho clic 0 veces" y un botón que dice "Haz clic".
 2.	Cada vez que se hace clic en el botón, el estado se actualiza incrementando count en 1.
@@ -274,7 +274,7 @@ Dentro del método render, se retorna un elemento JSX:
   - Un párrafo (`<p>`) que muestra el valor actual del contador.
   - Un botón (`<button>`) que, al hacer clic, llama al método incrementar.
 
-Funcionamiento General
+#### Funcionamiento General
 1. Al montar el componente, el `contador` se inicializa en `0`.
 2. Cada vez que el usuario hace clic en el botón `"Incrementar"`, se llama al método `incrementar`.
 3. El método `incrementar` actualiza el estado del componente, incrementando el valor del contador en `1`.
