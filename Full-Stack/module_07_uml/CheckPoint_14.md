@@ -1,6 +1,10 @@
 # CheckPoint 14
 Primero de todo, tenemos que definir que es `npm`, que es **Node Package Manager**, un administrador de paquetes de JavaScript que gestiona las dependencias en proyectos escritos en **Node.js**.<br/>
 Con este administrador, puede administrar la instalación, actualización y eliminación de paquetes (bibliotecas). En términos generales, `npm` es el registro de software más grande del mundo.<br/><br/>
+<p align="center">
+  <img src="images/figure_4.png" >
+</p>
+ 
 `npm` tiene 3 componentes principales:<br/>
 **1. Sitio web** ➡️ Desde el sitio web se pueden encontrar paquetes, configurar y administrar otros aspectos.<br/>
 **2. Interfaz de línea de comando (Command Line Interface)** ➡️ Se ejecuta en la terminal a través de la cual los desarrolladores interactúan con `npm`.<br/>
@@ -23,6 +27,10 @@ En resumen, el uso de `npm` tiene numerosos beneficios, así como:<br/>
 
 
 ## Tipos de componentes de reacción
+<p align="center">
+  <img src="images/figure_5.png" | width=50% >
+</p>
+ 
 En React, los dos tipos principales de componentes son los **componentes de clase** y los **componentes funcionales**. Su uso es diferente, al igual que su sintaxis, y aunque su uso pueda ser el mismo en ciertas ocasiones, ambos tienen ventajas frente al otro método: 
 
 |Componentes DE CLASE | Componentes FUNCIONALES |
