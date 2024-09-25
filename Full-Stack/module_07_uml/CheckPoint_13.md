@@ -22,6 +22,8 @@ Por ejemplo, una clase "Coche" podría tener: <br/>
 - Atributos: marca, modelo, año<br/>
 - Métodos: arrancar(), frenar(), acelerar()<br/>
 
+![](images/figure_1.png)
+
 ### RELACIONES<br/>
 Las relaciones muestran cómo las clases interactúan entre sí. Las principales son: <br/><br/>
 **1.	Asociación:** Representa una conexión estructural y puede ser unidireccional o bidireccional. Por ejemplo, en un diagrama de clases de un sistema de ventas, puede haber una asociación entre las clases "Cliente" y "Producto", indicando que un cliente puede comprar varios productos.<br/><br/>
@@ -36,7 +38,7 @@ Los diagramas de clases son beneficiosos porque:<br/>
 Los diagramas de implementación, o también conocidos como “Deployment Diagrams” son diagramas estructurales.<br/>
 Principalmente, los diagramas de implementación se utilizan para representar la arquitectura física de un sistema, incluyendo los nodos, componentes y sus relaciones.
 Como tienen en común los diagramas estructurales, los diagramas de implementación se centran en la organización estática del sistema.<br/>
-Propósito y función de los diagramas de implementación:<br/>
+### Propósito y función de los diagramas de implementación:<br/>
 - Muestran la estructura del sistema de tiempo de ejecución.
 - Capturan el hardware que se utilizará para implementar el sistema y los enlaces entre diferentes elementos de hardware.
 - Modelan los elementos de hardware físico y las vías de comunicación entre ellos
@@ -47,21 +49,27 @@ Entre los beneficios del uso de diagramas de implementación están:<br/>
 - Ayudan a planificar la infraestructura necesaria.
 - Facilitan la identificación de posibles cuellos de botella en el rendimiento.
 
+
+<p align="center">
+  <img src="images/figure_2.png" alt="figure_2" title="figure_2">
+</p> 
+
 Este ejemplo es un ejemplo muy simple del diagrama de implementación, en el que se muestra la estructura de un sistema. Hay diferentes nodos (cajas 3D), dentro de los nodos se pueden encontrar los artefactos entre <<>>. Por otro lado, estan las asociaciones que se decriben con líneas rectas, para indicar las relaciones entre los diferentes nodos del sistema. Es asi, como se explica mediante un diagrama de implementación, el uso de la banca online, en el que se entra por mediación de Internet y qué elementos se usan para utilizarlo.<br/>
-
-
-
 
 ## Diagrama de actividades
 
-Un diagrama de actividades en UML es una representación gráifca que muestra un flujo de actividades o acciones en un proceso o procedimiento. Es considerado un diagrama de comportamiento, mostrando las acciones que se realizan y cómo se relacionan entre si.<br/>
-De forma específica, los diagramas de actividades muestran el flujo de control o de objetos con énfasis en la secuencia y las condiciones del flujo, proporcionando la posibilidad de fraccionar en parte más pequeñas y manejables. Se pueden usar como boceto inicial para tener una idea de cómo continuar con el desarrollo de un sistema. Sus componentes son “Estado Inicial”, “Estado de Actividad”, “Flujo de Acción”, “Estado de Decisión”, “Condiciones” y “Estado Final”.<br/>
-Elementos clave de un diagrama de actividades: <br/>
+Un diagrama de actividades en UML es una representación gráifca que muestra un flujo de actividades o acciones en un proceso o procedimiento. Es considerado un diagrama de comportamiento, mostrando las acciones que se realizan y cómo se relacionan entre si.<br/><br/>
+De forma específica, los diagramas de actividades muestran el flujo de control o de objetos con énfasis en la secuencia y las condiciones del flujo, proporcionando la posibilidad de fraccionar en parte más pequeñas y manejables. Se pueden usar como boceto inicial para tener una idea de cómo continuar con el desarrollo de un sistema. Sus componentes son “Estado Inicial”, “Estado de Actividad”, “Flujo de Acción”, “Estado de Decisión”, “Condiciones” y “Estado Final”.<br/><br/>
+### Elementos clave de un diagrama de actividades: <br/><br/>
 **1.	Nodos de acción:** Representan tareas individuales.<br/>
 **2.	Nodos de decisión:** Muestran puntos de bifurcación en el flujo.<br/>
 **3.	Nodos de inicio y fin:** Indican dónde comienza y termina el proceso.<br/>
 **4.	Flujos de control:** Conectan las actividades y muestran el orden de ejecución.<br/>
 Un ejemplo de uso de los diagramas de actividad es el siguiente de a continuación, en el que se expone el proceso de compra online:
+
+<p align="center">
+  <img src="images/figure_3.png" >
+</p>
  
 **(Estado Inicial)** ➡️ Una vez recibido el pedido **(Nodo de acción)**, las actividades se dividen en dos conjuntos paralelos de actividades. Un lado llena y envía el pedido mientras que el otro se encarga de la facturación.
 En el lado de la orden de “llenado”, el método de entrega se decide condicionalmente **(Nodo de decisión)**. Dependiendo de la condición, se realiza la actividad de entrega nocturna o la actividad de entrega regular. Finalmente las actividades paralelas se combinan para cerrar el orden **(Estado Final)**.
@@ -75,7 +83,7 @@ Por otro lado, los diagramas de actividad se pueden utilizar para visualizar y m
 - Progreso del flujo de trabajo.
 
 ## Diseño del sistema en el proceso de desarrollo<br/>
-El diseño del sistema es crucial para el proceso de desarrollo, ya que tiene un impacto muy significativo por varias razones: <br/>
+El diseño del sistema es crucial para el proceso de desarrollo, ya que tiene un impacto muy significativo por varias razones: <br/><br/>
 **1.	Planificación efectiva:** Proporciona una hoja de ruta clara para el desarrollo, reduciendo la incertidumbre y los riesgos. <br/>
 **2.	Optimización de recursos:** Ayuda a identificar y asignar eficientemente los recursos necesarios para el proyecto. <br/>
 **3.	Detección temprana de problemas:** Permite identificar y resolver problemas potenciales antes de que se conviertan en costosos errores durante la implementación.<br/> 
@@ -84,5 +92,5 @@ El diseño del sistema es crucial para el proceso de desarrollo, ya que tiene un
 **6.	Documentación:** Actúan como documentación visual del sistema, útil para el mantenimiento y modificaciones futuras.<br/>
 **7.	Traceabilidad:** Permiten el seguimiento de cómo los requisitos se traducen en componentes de diseño y luego en código.<br/>
 **8.	Reutilizabilidad:** Facilitan la identificación de componentes reutilizables, promoviendo la eficiencia en el desarrollo.<br/>
-**9.	Gestión de la complejidad:** Ayudan a descompuestos sistemas complejos en partes manejables.<br/>
+**9.	Gestión de la complejidad:** Ayudan a descompuestos sistemas complejos en partes manejables.<br/><br/>
 En resumen, el diseño de sistema es **fundamental** para el proceso de desarrollo, siendo muy útiles por la gran cantidad de beneficios que aportan.
