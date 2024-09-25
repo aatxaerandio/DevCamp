@@ -81,7 +81,7 @@ Por otro lado, los diagramas de actividad se pueden utilizar para visualizar y m
 - Elementos de arquitectura de software.
 - Progreso del flujo de trabajo.
 
-## Diseño del sistema en el proceso de desarrollo<br/>
+## Diseño del sistema en el proceso de desarrollo - ¿Que aporta su uso?<br/>
 El diseño del sistema es crucial para el proceso de desarrollo, ya que tiene un impacto muy significativo por varias razones: <br/><br/>
 **1.	Planificación efectiva:** Proporciona una hoja de ruta clara para el desarrollo, reduciendo la incertidumbre y los riesgos. <br/>
 **2.	Optimización de recursos:** Ayuda a identificar y asignar eficientemente los recursos necesarios para el proyecto. <br/>
