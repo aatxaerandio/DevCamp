@@ -1,4 +1,5 @@
 # CheckPoint 14
+## Node Package Manager - NPM
 Primero de todo, tenemos que definir que es `npm`, que es **Node Package Manager**, un administrador de paquetes de JavaScript que gestiona las dependencias en proyectos escritos en **Node.js**.<br/>
 Con este administrador, puede administrar la instalación, actualización y eliminación de paquetes (bibliotecas). En términos generales, `npm` es el registro de software más grande del mundo.<br/><br/>
 <p align="center">
