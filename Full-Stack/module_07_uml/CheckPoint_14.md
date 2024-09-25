@@ -1,22 +1,22 @@
 # CheckPoint 14
-
-Primero de todo, tenemos que definir que es npm, que es Node Package Manager, un administrador de paquetes de JavaScript que gestiona las dependencias en proyectos escritos en Node.js.
-Con este administrador, puede administrar la instalación, actualización y eliminación de paquetes (bibliotecas). En términos generales, npm es el registro de software más grande del mundo.
-npm tiene 3 componentes principales:
-1-	Sitio web:
-o	Desde el sitio web se pueden encontrar paquetes, configurar y administrar otros aspectos.
-2-	Interfaz de línea de comando (Command Line Interface):
-o	Se ejecuta en la terminal a través de la cual los desarrolladores interactúan con npm.
-3-	Resgistro:
-o	Es una gran base de datos publuca con software JavaScript e información que lo acompaña.
-Una de las acciones mas comunes y sencillas de ejecutar en npm, es instalar un módulo de Node. Para ello se requiere que se ejecute en la terminal el siguiente comando:
+Primero de todo, tenemos que definir que es npm, que es Node Package Manager, un administrador de paquetes de JavaScript que gestiona las dependencias en proyectos escritos en Node.js.<br/>
+Con este administrador, puede administrar la instalación, actualización y eliminación de paquetes (bibliotecas). En términos generales, npm es el registro de software más grande del mundo.<br/>
+npm tiene 3 componentes principales:<br/>
+**1. Sitio web** ➡️ Desde el sitio web se pueden encontrar paquetes, configurar y administrar otros aspectos.<br/>
+**2. Interfaz de línea de comando (Command Line Interface)** ➡️ Se ejecuta en la terminal a través de la cual los desarrolladores interactúan con npm.<br/>
+**3. Registro** ➡️ Es una gran base de datos publuca con software JavaScript e información que lo acompaña.<br/>
+Una de las acciones mas comunes y sencillas de ejecutar en npm, es instalar un módulo de Node. Para ello se requiere que se ejecute en la terminal el siguiente comando:<br/>
+```javascript
 npm install <nombre-del-modulo>
-También se puede abreviar como:
+```
+También se puede abreviar como:<br/>
+```javascript
 npm i <nombre-del-modulo>
-Ambos comandos descargan e instalan el moduclo especificado en el proyecto en el que se esté trabajando. A partir de la ejecución de este comando, se crará un directorio llamada node_mocules en el directorio actual y se descsargaré en él la versión mas reciente del paquete.
-En resumen, el uso de npm tiene numerosos beneficios, asi como:
--	Es facil de instalar
--	Facil gestión de dependencias.
+```
+Ambos comandos descargan e instalan el módulo especificado en el proyecto en el que se esté trabajando. A partir de la ejecución de este comando, se creará un directorio llamada **`node_modules`** en el directorio actual y se desencargará en él la versión mas reciente del paquete.<br/>
+En resumen, el uso de `npm` tiene numerosos beneficios, así como:<br/>
+-	Es fácil de instalar
+-	Fácil gestión de dependencias.
 -	Tiene una gran cantidad de paquetes disponibles
 -	Tiene un control de versiones, pudiendo usar diferentes versiones dependiendo de las compatibilidades del sistema o con otros modulos.
 -	Tiene soporte en línea de comando, automatizando la instalación y gestión.
@@ -288,7 +288,4 @@ Funcionamiento General
 3. El método incrementar actualiza el estado del componente, incrementando el valor del contador en 1.
 4. La interfaz se vuelve a renderizar automáticamente para reflejar el nuevo valor del contador.
 
-
-
-
-
+Este código es un ejemplo básico de un componente de React que gestiona su propio estado y permite a los usuarios interactuar con él mediante un botón para incrementar un contador. 
