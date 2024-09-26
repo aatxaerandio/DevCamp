@@ -1,11 +1,10 @@
 # CheckPoint 15
 
 ## AXIOS
-Axios es una popular librería de JavaScript utilizada para realizar solicitudes HTTP desde el navegador o desde un entorno Node.js. Muchos proyectos en la web necesitan interactuar con una API REST en algún momento de su desarrollo, y axios nos brinda una interfaz sencilla y potente para interactuar con APIs y servicios web.<br/>
+Axios es una popular librería de JavaScript utilizada para realizar solicitudes HTTP desde el navegador o desde un entorno Node.js. Muchos proyectos en la web necesitan interactuar con una API REST en algún momento de su desarrollo, y axios nos brinda una interfaz sencilla y potente para interactuar con APIs y servicios web.
 <p align="center">
-  <img src="images/figudre_7.png" width=100% >
+  <img src="images/figure_7.png">
 </p>
-
 ### Las principales características de axios son las siguientes:
 **1.	Es un cliente HTTP basado en promesas:** Axios utiliza promesas de JavaScript, lo que facilita el manejo de operaciones asincrónicas y permite escribir código más limpio y legible.<br/>
 **2.	Compatibilidad:** Funciona tanto en el navegador como en Node.js, lo que permite utilizarlo en una amplia gama de proyectos.<br/>
