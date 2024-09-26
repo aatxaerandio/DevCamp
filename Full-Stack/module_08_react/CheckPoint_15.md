@@ -5,6 +5,7 @@ Axios es una popular librería de JavaScript utilizada para realizar solicitudes
 <p align="center">
   <img src="images/figure_7.png">
 </p>
+
 ### Las principales características de axios son las siguientes:
 **1.	Es un cliente HTTP basado en promesas:** Axios utiliza promesas de JavaScript, lo que facilita el manejo de operaciones asincrónicas y permite escribir código más limpio y legible.<br/>
 **2.	Compatibilidad:** Funciona tanto en el navegador como en Node.js, lo que permite utilizarlo en una amplia gama de proyectos.<br/>
