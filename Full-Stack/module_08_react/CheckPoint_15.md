@@ -1,9 +1,9 @@
-# CheckPotin 15
+# CheckPoint 15
 
 ## AXIOS
-Axios es una popular librería de JavaScript utilizada para realizar solicitudes HTTP desde el navegador o desde un entorno Node.js. Muchos proyectos en la web necesitan interactuar con una API REST en algún momento de su desarrollo, y axios nos brinda una interfaz sencilla y potente para interactuar con APIs y servicios web. 
+Axios es una popular librería de JavaScript utilizada para realizar solicitudes HTTP desde el navegador o desde un entorno Node.js. Muchos proyectos en la web necesitan interactuar con una API REST en algún momento de su desarrollo, y axios nos brinda una interfaz sencilla y potente para interactuar con APIs y servicios web.<br/>
 
-Las principales características de axios son las siguientes:
+### Las principales características de axios son las siguientes:
 1.	Es un cliente HTTP basado en promesas: Axios utiliza promesas de JavaScript, lo que facilita el manejo de operaciones asincrónicas y permite escribir código más limpio y legible.
 2.	Compatibilidad: Funciona tanto en el navegador como en Node.js, lo que permite utilizarlo en una amplia gama de proyectos.
 3.	Transformación automática de datos: Axios puede transformar automáticamente los datos de respuesta en formato JSON, ahorrando tiempo y esfuerzo al desarrollador.
@@ -14,15 +14,15 @@ Debido a las características de axios, el uso de esta librería es muy amplia y
 3.	Cancelación de solicitudes: Permite cancelar solicitudes en curso, lo cual es útil para optimizar el rendimiento y evitar operaciones innecesarias. 
 4.	Configuración global: Ofrece la posibilidad de establecer configuraciones por defecto para todas las solicitudes, lo que simplifica la gestión de opciones comunes. 
 5.	Transformación de datos: Facilita la manipulación y transformación de datos tanto en las solicitudes como en las respuestas. 
-
-Usos de axios
-Axios es especialmente útil en las siguientes situaciones: 
+<br/>
+### Usos de axios
+Axios es especialmente útil en las siguientes situaciones: <br/>
 1.	Desarrollo de aplicaciones web modernas: Es ideal para proyectos que requieren interacción frecuente con APIs RESTful.  
 2.	Aplicaciones React o Angular: Se integra perfectamente con estos frameworks, facilitando la gestión de estado y la actualización de componentes basada en datos de API. 
 3.	Proyectos Node.js: Cuando necesitas realizar solicitudes HTTP desde el lado del servidor. 
 4.	Aplicaciones que requieren cancelación de solicitudes: En situaciones donde necesitas cancelar solicitudes pendientes, como en búsquedas en tiempo real o cargas de archivos interrumpibles. 
 5.	Escenarios de autenticación complejos: Axios simplifica la implementación de flujos de autenticación y renovación de tokens. 
-
+<br/>
 Para usar axios es fundamental tenerlo instalado mediante el siguiente comando:
 ```javascript
 npm install axios
@@ -32,8 +32,6 @@ Además de ello, para poder utilizarlo hay que importarlo en el archivo que se q
 import axios from 'axios';
 ```
 Tras ello, se pueden realizar diferentes peticiones HTTP usando los métodos de Axios, como por ejemplo, una petición GET:
-
-
 ```javascript
 const [data, setData] = useState(null);
 
@@ -47,67 +45,74 @@ useEffect(() => {
     });
 }, []);
 ```
+### Desglosando el codigo paso a paso:
 
 ```javascript
 const [data, setData] = useState(null);
 ```
+**1. PASO**<br/>
 Esta línea utiliza el hook useState para crear una variable de estado llamada data y una función setData para actualizarla. Inicialmente, data se establece como null.
-
 ```javascript
 useEffect(() => {
   // ... código dentro del efecto
 }, [])
 ```
+**2. PASO**<br/>
 El hook useEffect se utiliza para ejecutar efectos secundarios en componentes funcionales. En este caso, se usa para realizar la petición HTTP cuando el componente se monta. 
 ```javascript
 axios.get('https://api.example.com/data')
 ```
+**3. PASO**<br/>
 Esta línea realiza una petición GET a la URL especificada utilizando Axios1
 ```javascript
 .then(response => {
   setData(response.data);
 })
 ```
- Si la petición es exitosa, se ejecuta esta función. response.data contiene los datos devueltos por la API, que se guardan en el estado data usando setData. 
+**4. PASO**<br/>
+Si la petición es exitosa, se ejecuta esta función. response.data contiene los datos devueltos por la API, que se guardan en el estado data usando setData. 
 ```javascript
 .catch(error => {
   console.error('Error:', error);
 });
 ```
- Si ocurre un error durante la petición, se captura y se registra en la consola. 
+**5. PASO**<br/>
+Si ocurre un error durante la petición, se captura y se registra en la consola. 
 
 ```javascript
 }, [])
 ```
- El array vacío como segundo argumento de useEffect indica que este efecto solo debe ejecutarse una vez, cuando el componente se monta.
-
-
- En resumen, Axios es una herramienta versátil y potente que simplifica significativamente el proceso de realizar solicitudes HTTP en aplicaciones JavaScript. Su facilidad de uso, robustez y características avanzadas la convierten en una excelente opción para una amplia gama de proyectos de desarrollo web y de aplicaciones.
-
+**6. PASO**<br/>
+El array vacío como segundo argumento de useEffect indica que este efecto solo debe ejecutarse una vez, cuando el componente se monta.
+<br/>
+**En resumen, Axios es una herramienta versátil y potente que simplifica significativamente el proceso de realizar solicitudes HTTP en aplicaciones JavaScript. Su facilidad de uso, robustez y características avanzadas la convierten en una excelente opción para una amplia gama de proyectos de desarrollo web y de aplicaciones.**
 
 ## ReactDevTools - ¿Qué son y para qué se usan?
 
-Primero de todo tenemos que partir de que la depuración es una parte muy importante del desarrollo de software. Esto, permite detectar errores en el código de forma temprana y ser más eficiente.
-React es una de las bibliotecas de front-end que permite interfaces de usuario complejas e interactivas, dando la opción a los desarrolladores de utilizar un conjunto de herramientas para la depuración, llamadas React DevTools.
-Las ReactDevTools son una extensión de navegador que permite inspeccionar la jerarquía de componentes de React en las herramientas des desarrolladore del navegador que se esté utilizando. Estas herramientas proporcionan unos widgets de inspección para ayudar en el desarrollo y depuración.
+Primero de todo tenemos que partir de que la **depuración es una parte muy importante** del desarrollo de software. Esto, permite detectar errores en el código de forma temprana y ser más eficiente.<br/>
+React es una de las bibliotecas de front-end que permite interfaces de usuario complejas e interactivas, dando la opción a los desarrolladores de utilizar un conjunto de herramientas para la depuración, llamadas **React DevTools**.<br/>
+Las ReactDevTools son una extensión de navegador que permite inspeccionar la jerarquía de componentes de React en las herramientas des desarrollador del navegador que se esté utilizando. Estas herramientas proporcionan unos widgets de inspección para ayudar en el desarrollo y depuración.
+<br/>
+### Uso de ReactDevTools
+Entre otras, las ReactDevTools nos permiten hacer las siguientes acciones:<br/>
+- Inspección de componentes
+  - Permite ver la estructura jerárquica de componentes React en una aplicación.
+  - Muestra los props y el estado de cada componente, facilitando la depuración.
+  - Permite seleccionar componentes en la página y verlos resaltados en la estructura de árbol.
+- Edición en tiempo real
+  - Permite editar props y estado de los componentes directamente desde la herramienta, viendo los cambios reflejados inmediatamente en la interfaz.
+- Análisis de rendimiento
+  -  Incluye un Profiler para registrar y analizar el rendimiento de la renderización de componentes.
+  -  Ayuda a identificar cuellos de botella y optimizar el rendimiento.
+- Depuración
+  - Facilita encontrar problemas al poder inspeccionar la estructura interna de la aplicación React.
+  - Permite ver cómo fluyen los datos entre componentes.
+- Desarrollo más rápido
+  - Acelera el proceso de desarrollo al proporcionar una visión clara de la estructura y estado de la aplicación.
+  - Ayuda a ubicar rápidamente componentes y entender su funcionamiento.
 
-Entre otras, las ReactDevTools nos permiten hacer las siguientes acciones:
-Inspección de componentes
-•	Permite ver la estructura jerárquica de componentes React en una aplicación.
-•	Muestra los props y el estado de cada componente, facilitando la depuración.
-•	Permite seleccionar componentes en la página y verlos resaltados en la estructura de árbol.
-Edición en tiempo real
-•	Permite editar props y estado de los componentes directamente desde la herramienta, viendo los cambios reflejados inmediatamente en la interfaz.
-Análisis de rendimiento
-•	Incluye un Profiler para registrar y analizar el rendimiento de la renderización de componentes.
-•	Ayuda a identificar cuellos de botella y optimizar el rendimiento.
-Depuración
-•	Facilita encontrar problemas al poder inspeccionar la estructura interna de la aplicación React.
-•	Permite ver cómo fluyen los datos entre componentes.
-Desarrollo más rápido
-•	Acelera el proceso de desarrollo al proporcionar una visión clara de la estructura y estado de la aplicación.
-•	Ayuda a ubicar rápidamente componentes y entender su funcionamiento.
-En resumen, React Developer Tools mejora significativamente la experiencia de desarrollo con React al proporcionar herramientas poderosas para inspeccionar, depurar y optimizar aplicaciones React directamente desde el navegado.
+
+**En resumen, React Developer Tools mejora significativamente la experiencia de desarrollo con React al proporcionar herramientas poderosas para inspeccionar, depurar y optimizar aplicaciones React directamente desde el navegador.**
 
 
 
