@@ -1,3 +1,6 @@
+# CheckPotin 15
+
+## AXIOS
 Axios es una popular librería de JavaScript utilizada para realizar solicitudes HTTP desde el navegador o desde un entorno Node.js. Muchos proyectos en la web necesitan interactuar con una API REST en algún momento de su desarrollo, y axios nos brinda una interfaz sencilla y potente para interactuar con APIs y servicios web. 
 
 Las principales características de axios son las siguientes:
@@ -82,14 +85,98 @@ Esta línea realiza una petición GET a la URL especificada utilizando Axios1
  En resumen, Axios es una herramienta versátil y potente que simplifica significativamente el proceso de realizar solicitudes HTTP en aplicaciones JavaScript. Su facilidad de uso, robustez y características avanzadas la convierten en una excelente opción para una amplia gama de proyectos de desarrollo web y de aplicaciones.
 
 
+## ReactDevTools - ¿Qué son y para qué se usan?
+
+Primero de todo tenemos que partir de que la depuración es una parte muy importante del desarrollo de software. Esto, permite detectar errores en el código de forma temprana y ser más eficiente.
+React es una de las bibliotecas de front-end que permite interfaces de usuario complejas e interactivas, dando la opción a los desarrolladores de utilizar un conjunto de herramientas para la depuración, llamadas React DevTools.
+Las ReactDevTools son una extensión de navegador que permite inspeccionar la jerarquía de componentes de React en las herramientas des desarrolladore del navegador que se esté utilizando. Estas herramientas proporcionan unos widgets de inspección para ayudar en el desarrollo y depuración.
+
+Entre otras, las ReactDevTools nos permiten hacer las siguientes acciones:
+Inspección de componentes
+•	Permite ver la estructura jerárquica de componentes React en una aplicación.
+•	Muestra los props y el estado de cada componente, facilitando la depuración.
+•	Permite seleccionar componentes en la página y verlos resaltados en la estructura de árbol.
+Edición en tiempo real
+•	Permite editar props y estado de los componentes directamente desde la herramienta, viendo los cambios reflejados inmediatamente en la interfaz.
+Análisis de rendimiento
+•	Incluye un Profiler para registrar y analizar el rendimiento de la renderización de componentes.
+•	Ayuda a identificar cuellos de botella y optimizar el rendimiento.
+Depuración
+•	Facilita encontrar problemas al poder inspeccionar la estructura interna de la aplicación React.
+•	Permite ver cómo fluyen los datos entre componentes.
+Desarrollo más rápido
+•	Acelera el proceso de desarrollo al proporcionar una visión clara de la estructura y estado de la aplicación.
+•	Ayuda a ubicar rápidamente componentes y entender su funcionamiento.
+En resumen, React Developer Tools mejora significativamente la experiencia de desarrollo con React al proporcionar herramientas poderosas para inspeccionar, depurar y optimizar aplicaciones React directamente desde el navegado.
 
 
 
+## Event Listeners o "oyente de eventos" - ¿Qué son y qué beneficios tiene su uso?
+
+Un event listener es una función que se encarga de escuchar y responder a eventos específicos que ocurren en elementos del DOM o en objetos de JavaScript. 
+En el marco de uso con React, es una función que se ejecuta en respuesta a un evento específico, como un clic de botón o un cambio en un campo de entrada. Los event listeners permiten que las aplicaciones React respondan a las interacciones del usuario, haciendo que la interfaz sea dinámica e interactiva.
 
 
+Centrándonos en el uso de EventListeners en React, el uso de EventListener aporta numerosos beneficios, entre ellos:
 
+Interactividad mejorada Los event listeners permiten crear interfaces de usuario altamente interactivas, respondiendo a las acciones del usuario en tiempo real.
+Sintaxis simplificada React proporciona una sintaxis simplificada para agregar event listeners, utilizando propiedades especiales en los elementos JSX.
+Rendimiento optimizado React utiliza un sistema de eventos que mejora el rendimiento y garantiza la compatibilidad entre navegadores.
+Manejo centralizado de eventos Los event listeners en React permiten manejar eventos de manera centralizada, lo que facilita la gestión y el mantenimiento del código.
 
+Para entender mejor el uso, se exponen una serie de ejemplos a continuación:
 
+ Ejemplo 1: Manejo de clics en un botón.
+ ```javascript
+function Button() {
+  const handleClick = () => {
+    console.log('Botón clickeado');
+  };
+
+  return <button onClick={handleClick}>Haz clic</button>;
+}
+```
+ En este ejemplo, el event listener handleClick se ejecuta cuando se hace clic en el botón.
+ 
+
+Ejemplo 2: Manejo de cambios en un campo de entrada 
+```javascript
+function InputField() {
+  const [value, setValue] = useState('');
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
+
+  return <input type="text" value={value} onChange={handleChange} />;
+}
+```
+Aquí, el event listener handleChange se activa cada vez que el usuario escribe en el campo de entrada, actualizando el estado del componente.
+
+Ejemplo 3: Manejo de eventos del teclado 
+```javascript
+function KeyboardListener() {
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        console.log('Tecla Escape presionada');
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
+  return <div>Presiona la tecla Escape</div>;
+}
+
+```
+ Este ejemplo muestra cómo agregar un event listener para eventos del teclado utilizando el hook useEffect. El listener se agrega cuando el componente se monta y se elimina cuando se desmonta, evitando fugas de memoria.
+ 
+ En resumen, los event listeners en React son fundamentales para crear aplicaciones interactivas y receptivas. Proporcionan una forma eficiente y declarativa de manejar las interacciones del usuario, mejorando la experiencia general de la aplicación.
 
 
 
