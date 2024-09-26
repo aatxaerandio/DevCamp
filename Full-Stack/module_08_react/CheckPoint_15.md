@@ -160,7 +160,7 @@ function Button() {
   return <button onClick={handleClick}>Haz clic</button>;
 }
 ```
- En este ejemplo, el event listener handleClick se ejecuta cuando se hace clic en el botón.
+ En este ejemplo, el event listener `handleClick` se ejecuta cuando se hace clic en el botón.
  
 ---
 
@@ -176,7 +176,7 @@ function InputField() {
   return <input type="text" value={value} onChange={handleChange} />;
 }
 ```
-Aquí, el event listener handleChange se activa cada vez que el usuario escribe en el campo de entrada, actualizando el estado del componente.
+Aquí, el event listener `handleChange` se activa cada vez que el usuario escribe en el campo de entrada, actualizando el estado del componente.
 
 ---
 
@@ -201,7 +201,7 @@ function KeyboardListener() {
 }
 
 ```
- Este ejemplo muestra cómo agregar un event listener para eventos del teclado utilizando el hook useEffect. El listener se agrega cuando el componente se monta y se elimina cuando se desmonta, evitando fugas de memoria.
+ Este ejemplo muestra cómo agregar un event listener para eventos del teclado utilizando el hook `useEffect`. El listener se agrega cuando el componente se monta y se elimina cuando se desmonta, evitando fugas de memoria.
 
 ---
  
