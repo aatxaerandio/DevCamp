@@ -105,36 +105,33 @@ Content-Length: 27
 
 username=john&password=secret
 ```
-Desglosandolo:
+Desglosándolo:
+
 ```javascript
 POST /submit-form HTTP/1.1
 ```
-
-    POST: Este es el método HTTP que se está utilizando. POST se usa típicamente para enviar datos que serán procesados por el servidor.
-    /submit-form: Esta es la ruta en el servidor a la que se está enviando la solicitud.
-    HTTP/1.1: Esto indica la versión del protocolo HTTP que se está utilizando.
+1. POST: Este es el método HTTP que se está utilizando. POST se usa típicamente para enviar datos que serán procesados por el servidor.
+2. submit-form: Esta es la ruta en el servidor a la que se está enviando la solicitud.
+3. HTTP/1.1: Esto indica la versión del protocolo HTTP que se está utilizando.
 
 ```javascript
 Host: www.example.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 27
 ```
-
-    Host: Especifica el nombre de dominio del servidor (www.example.com).
-    Content-Type: Indica el tipo de medio del recurso que se está enviando al servidor. En este caso, es "application/x-www-form-urlencoded", que se usa comúnmente para enviar datos de formularios HTML.
-    Content-Length: Indica el tamaño del cuerpo de la solicitud en bytes (27 bytes en este caso).
-
+4. Host: Especifica el nombre de dominio del servidor (www.example.com).
+5. Content-Type: Indica el tipo de medio del recurso que se está enviando al servidor. En este caso, es "application/x-www-form-urlencoded", que se usa comúnmente para enviar datos de formularios HTML.
+6. Content-Length: Indica el tamaño del cuerpo de la solicitud en bytes (27 bytes en este caso).
 ```javascript
 username=john&password=secret
-
 ```
 Estos son los datos reales que se están enviando al servidor. Están formateados como pares clave-valor, separados por símbolos "&", que es el formato estándar para datos "application/x-www-form-urlencoded".
+```javascript
+username=john: El nombre de usuario que se está enviando es "john".
+password=secret: La contraseña que se está enviando es "secret".
+```
 
-    username=john: El nombre de usuario que se está enviando es "john".
-    password=secret: La contraseña que se está enviando es "secret".
-
-
-En resumen, las solicitudes POST son fundamentales para el envío seguro y eficiente de datos al servidor, especialmente cuando se trata de información sensible o voluminosa. Su uso adecuado es crucial para mantener la seguridad y funcionalidad de las aplicaciones web modernas.
+**En resumen, las solicitudes POST son fundamentales para el envío seguro y eficiente de datos al servidor, especialmente cuando se trata de información sensible o voluminosa. Su uso adecuado es crucial para mantener la seguridad y funcionalidad de las aplicaciones web modernas.**
 
 ---
 
