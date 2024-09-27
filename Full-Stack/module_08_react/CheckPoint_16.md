@@ -20,7 +20,53 @@ Por las características de los Route Guards, son muy útiles en numerosos casos
 
 
 El uso de los Route Guards tiene una serie de **inconvenientes**, ya que requiere una complejidad adicional en la lógica de nacegacion, se pueden bloquar accidentalmente rutas legitimas si la lógica es incorecta, o incluso se puede tener un impacto en el rendimiento si no se implementan correctamente.<br/>
+
 Pese a ello, el **no uso de los Route Guards conlleva muchos mas riesgos**, ya que no usarlos puede llevar a una perdida de datos, a vulnerabilidades de seguridad (Usuarios no autorizados podrían acceder a áreas restringidas de la aplicación), o a la expreience de usuario deficiente, en la que se ace la carga sin los datos necesarios, llevando a errores o pantallas en blanco.<br/>
+
+### Para entender mejor su uso, se expone un ejemplo a continuación:
+
+#### 1.  Primero, creamos un componente PrivateRoute que actuará como nuestro Route Guard:
+
+```JSX
+import { Navigate, Outlet } from 'react-router-dom';
+
+const PrivateRoute = () => {
+  const isAuthenticated = localStorage.getItem('token');
+  
+  return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
+}
+
+export default PrivateRoute;
+```
+ Este componente verifica si el usuario está autenticado (en este caso, comprobando si existe un token en el localStorage). Si está autenticado, renderiza el componente hijo (<Outlet />), de lo contrario, redirige al usuario a la página de login. 
+
+#### 2.  Luego, configuramos nuestras rutas utilizando el componente PrivateRoute: 
+```JSX
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import PrivateRoute from './PrivateRoute';
+import Home from './Home';
+import Dashboard from './Dashboard';
+import Login from './Login';
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+```
+En este ejemplo, la ruta /dashboard está protegida por el PrivateRoute. Solo los usuarios autenticados podrán acceder a esta página
+
+
 **En resumen, los Route Guards son una característica crucial en React para mejorar la seguridad, la integridad de los datos y la experiencia del usuario. Su uso adecuado puede prevenir problemas significativos, mientras que no utilizarlos puede exponer la aplicación a riesgos de seguridad y usabilidad.**
 
 --- 
@@ -47,7 +93,7 @@ Algunos riesgos asociados al uso de POST incluyen el envío accidental de datos 
 Pero por otro lado, no usar POST cuando es apropiado puede conllevar  a una exposición de datos sensibles en la URL si se usa GET, limitaciones en la cantidad de datos que se pueden enviar, problemas de seguridad al enviar información confidencial de forma visible, o dificultad para manejar operaciones que modifican el estado del servidor.
 
 Una solicitud POST típicamente consta de:
-``` javasccipt
+```javasccipt
 POST /submit-form HTTP/1.1
 
 Host: www.example.com
@@ -69,7 +115,6 @@ POST /submit-form HTTP/1.1
 Host: www.example.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 27
-
 ```
 
     Host: Especifica el nombre de dominio del servidor (www.example.com).
