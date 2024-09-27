@@ -38,7 +38,7 @@ const PrivateRoute = () => {
 
 export default PrivateRoute;
 ```
- Este componente verifica si el usuario está autenticado (en este caso, comprobando si existe un token en el localStorage). Si está autenticado, renderiza el componente hijo (<Outlet />), de lo contrario, redirige al usuario a la página de login. 
+ Este componente verifica si el usuario está autenticado (en este caso, comprobando si existe un token en el `localStorage`). Si está autenticado, renderiza el componente hijo (`<Outlet />`), de lo contrario, redirige al usuario a la página de login. 
 
 #### 2.  Luego, configuramos nuestras rutas utilizando el componente PrivateRoute: 
 ```JSX
@@ -64,7 +64,7 @@ const App = () => {
 
 export default App;
 ```
-En este ejemplo, la ruta /dashboard está protegida por el PrivateRoute. Solo los usuarios autenticados podrán acceder a esta página
+En este ejemplo, la ruta `/dashboard` está protegida por el `PrivateRoute`. Solo los usuarios autenticados podrán acceder a esta página
 
 
 **En resumen, los Route Guards son una característica crucial en React para mejorar la seguridad, la integridad de los datos y la experiencia del usuario. Su uso adecuado puede prevenir problemas significativos, mientras que no utilizarlos puede exponer la aplicación a riesgos de seguridad y usabilidad.**
@@ -74,23 +74,26 @@ En este ejemplo, la ruta /dashboard está protegida por el PrivateRoute. Solo lo
 ## Solicitud POST - Usos y funciones
 Una solicitud POST es un método HTTP que permite enviar datos al servidor para que sean procesados. A diferencia de GET, los datos se envían en el cuerpo de la solicitud en lugar de en la URL, lo que proporciona mayor seguridad y capacidad de envío. 
 
-Para qué sirve
+### Para qué sirve
 Las solicitudes POST se utilizan principalmente para: 
-•	Enviar datos de formularios al servidor
-•	Cargar archivos al servidor
-•	Actualizar información en una base de datos
-•	Crear nuevos recursos en el servidor
-•	Enviar datos sensibles de forma más segura
-Cuándo utilizarlas
+- Enviar datos de formularios al servidor.
+- Cargar archivos al servidor.
+- Actualizar información en una base de datos.
+- Crear nuevos recursos en el servidor.
+- Enviar datos sensibles de forma más segura.
+
+### Cuándo utilizarlas
 Es recomendable utilizar solicitudes POST en los siguientes casos: 
-•	Al enviar información confidencial (contraseñas, datos personales)
-•	Cuando se necesita enviar grandes cantidades de datos
-•	Para crear o modificar recursos en el servidor
-•	Al subir archivos
-•	En general, cuando la acción implica un cambio en el estado del servidor
-Riesgos de usarla
-Algunos riesgos asociados al uso de POST incluyen el envío accidental de datos duplicados al recargar la página, la mayor complejidad en la implementación comparado con GET y los posibles problemas de seguridad si no se manejan adecuadamente los datos recibidos
-Pero por otro lado, no usar POST cuando es apropiado puede conllevar  a una exposición de datos sensibles en la URL si se usa GET, limitaciones en la cantidad de datos que se pueden enviar, problemas de seguridad al enviar información confidencial de forma visible, o dificultad para manejar operaciones que modifican el estado del servidor.
+- Al enviar información confidencial (contraseñas, datos personales).
+- Cuando se necesita enviar grandes cantidades de datos.
+- Para crear o modificar recursos en el servidor.
+- Al subir archivos.
+- En general, cuando la acción implica un cambio en el estado del servidor.
+
+### Riesgos de usar o NO usar
+Algunos riesgos asociados al uso de POST incluyen el envío accidental de datos duplicados al recargar la página, la mayor complejidad en la implementación comparado con GET y los posibles problemas de seguridad si no se manejan adecuadamente los datos recibidos.
+
+Pero por otro lado, **no usar POST cuando es apropiado** puede conllevar  a una exposición de datos sensibles en la URL si se usa GET, limitaciones en la cantidad de datos que se pueden enviar, problemas de seguridad al enviar información confidencial de forma visible, o dificultad para manejar operaciones que modifican el estado del servidor.
 
 Una solicitud POST típicamente consta de:
 ```javasccipt
