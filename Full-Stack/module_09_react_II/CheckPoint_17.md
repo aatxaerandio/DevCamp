@@ -1,4 +1,131 @@
+# CheckPoint 17
+## CRUD
 
+CRUD es un acrónimo que representa las cuatro operaciones fundamentales en la gestión de datos; que son Create (Crear), Read (Leer), Update (Actualizar) y Delete (Eliminar). En el contexto de desarrollo web, estas operaciones son fundamentales para cualquier sistema que requiera interactuar con una base de datos, permitiendo a los usuarios añadir, visualizar, modificar o eliminar información.
+
+<p align="center">
+  <img src="images/figure_13.png" width=50%>
+</p>
+
+Al implementar estas operaciones CRUD, los desarrolladores de software pueden proporcionar una experiencia de usuario intuitiva y fluida que les permita interactuar sin problemas con los datos subyacentes. La implementación de operaciones CRUD a menudo depende de una base de datos SQL o NoSQL, o una API RESTful como hemos visto en las últimas guías.
+
+
+### Beneficios de CRUD
+
+1.	Estandarización: proporciona un sistema que es común a todos para gestionar datos, facilitando la integración y comunicación entre aplicaciones.
+2.	Automatización: las operaciones CRUD pueden automatizarse, siendo no necesario actualizarlas manualmente.
+3.	Escalabilidad: Facilita que los sistemas pueden crecer, ya que el manejo de datos sigue siendo relativamente fácil.
+4.	Simplicidad: el enfoque que usan es claro y directo, siendo útil para todos los desarrolladores tanto junior como senior.
+5.	Compatibilidad: las operaciones CRUD son aplicables a una variedad de tecnologías, así como bases de datos SQL, NoSQL, API RESTful, etc. Esto hace que sean muy versátiles y se puedan usar mas fácilmente.
+
+### ¿Cúando y por qué usar CRUD?
+
+CRUD se usa siempre y cuando se necesite manipular datos. Es decir, siempre que tengamos que añadir, eliminar, actualizar o eliminar datos estaremos haciendo uso de CRUD.<br/>
+Por ejemplo, poniendo ejemplos del día a día, CRUD se usa para el desarrollo de aplicaciones web, en el que se necesita gestionar contenido, usuarios, los productos, etc. Otro claro ejemplo puede ser en las aplicaciones móviles cuando se sincronizan datos entre dispositivos móviles y servidores, como es el caso de la copia de seguridad de WhatsApp a Google Drive para no perder tus conversaciones.<br/>
+Haciendo mas hincapié en el uso de CRUD, utilizaré ejemplos cotidianos para entenderlo mejor.<br/>
+#### Ejemplo 1 – Uso de CRUD en una red social como Instagram.
+Aquí el uso de CRUD es indispensable, realizando las siguientes tareas:<br/>
+-	Create ➡️  Se usaría para crear una nueva publicación/story/video.
+-	Read ➡️  Se usaría para ver el contenido (foto, video, etc) de una cuenta a quien sigues. Incluso se usaría Read para simplemente ver el perfil de esa persona/cuenta.
+-	Update ➡️ Se usaría para editar información de tu perfil, o modificar la descripción de una foto/video que has colgado recientemente.
+-	Delete ➡️  como su nombre indica, se usaría para borrar un elemento, un comentario, una publicación, etc.
+
+#### Ejemplo 2 -  Uso de CRUD para gestionar el inventario de una tienda de muebles.<br/>
+-	Create ➡️ se usaría para añadir un nuevo tipo de mueble al inventario.
+-	Update ➡️  se usaría para actualizar la cantidad de muebles disponible, el color, modificar las características o la descripción del mismo, etc.
+-	Read ➡️  Se usaría para ver el mueble, para consultar la disponibilidad, ver el precio y tiempo de envío, etc.
+-	Delete ➡️  Se usaría para eliminar un producto, bien porque no queda stock y no se pretende traer mas, o porque está actualmente descatalogado. 
+
+ En todos casos, CRUD proporciona una estructura clara, sencilla y eficiente para manejar datos, dando opción a los desarrolladores a crear aplicaciones más intuitivas, escalables y mantenibles, y también de este modo, proporcionan una experiencia de usuario mejor. 
+
+
+## Operador Ternario
+Un operador ternario es una estructura condicional que permite evaluar una condición y devolver uno de dos valores posibles en una sola línea de código. Es una forma abreviada y mas simple de escribir una declaración if-else simple.
+
+<p align="center">
+  <img src="images/figure_14.png" width=75%>
+</p>
+
+La sintaxis general de un operador ternario es:
+```javascript
+condición ? valorSiVerdadero : valorSiFalso
+```` 
+Donde:<br/>
+**condición**: es la expresión que se evalúa como verdadera o falsa. <br/>
+**valorSiVerdadero**: es el valor que se devuelve si la condición es verdadera. <br/>
+**valorSiFalso**: es el valor que se devuelve si la condición es falsa.  <br/>
+
+
+El uso de operadores ternarios trae beneficios. Al ser un un código más simple y conciso, permite expresar una lógica condicional simple en una sola línea. Además, contribuyen a la legibilidad del código, ya que hacen que sea el código más fácil para leer uy entender. A parte de esto, al ser una expresión mas compacta, puede ligeramente ser más eficiente para el rendimiento del sistema. <br/>
+Aun así, los operadores ternarios son mas adecuados cuando se quieren hacer condicionales simples, así como evaluar una condición sencilla y devolver uno de los dos valores posibles, o también para el retorno de funciones, cuando una función necesita devolver uno de dos valores basados en una condición. <br/>
+
+Para entenderlo mejor, se exponen ejemplos del uso de operadores ternarios a continuación: <br/>
+#### Ejemplo 1 – Hacer descuento
+En una pagina web, queremos aplicar un descuento a un cliente fiel, antiguo, o que se haya gastado bastante dinero en el último año.
+```javascript
+let precioTotal;
+
+if (clienteFiel) {
+    precioTotal = precioProducto * 0.85;
+} else {
+    precioTotal = precioProducto;
+}
+```
+Este seria realizando una declaración if else, como hemos aprendido hasta ahora. Mediante el uso de operadores ternarios hemos simplificado y hecho más conciso el condicional:
+```javascript
+const precioTotal = clienteFiel ¿ precioProducto * 0.85 : precioProducto;
+```
+siendo precioProducto el precio del producto/carrito y precioTotal, el precio final una vez evaluado si es un cliente fiel/antiguo o no.
+De este modo, para calcular precioTotal, se evalua si el cliente es clienteFiel. Si lo es, se ejecuta la primera parte, lo cual se le hace un descuento del 15%, si no se cumple, el cliente paga el valor del producto.
+
+#### Ejemplo 2 – Saludo a usuario registrado
+
+```javascript
+const saludoInicial = usuarioRegistrado ¿ “Bienvenido ${nombreUsuario}!” : “Bienvenido invitado!” ;
+```
+Si no usásemos el operador ternario seria del siguiente modo:
+```javascript
+let saludoInicial;
+
+if (usuarioRegistrado) {
+    saludoInicial = `Bienvenido ${nombreUsuario}!`;
+} else {
+    saludoInicial = "Bienvenido invitado!";
+}
+```
+Seria un código que nos llevaría al mismo resultado, pero es mas extenso…
+
+#### Ejemplo 3 - Manejo de permisos
+```javascript
+const accionPermitida = usuario.esAdmin ? 'Acceso total' : 'Acceso limitado';
+```
+Igualmente, con el último ejemplo, en el que podemos llegar a la mismo conclusión usando una declaración if else, pero sería más adecuado el uso de operadores ternarios para simplificar el condicional.
+```javascript
+let accionPermitida;
+
+if (usuario.esAdmin) {
+    accionPermitida = 'Acceso total';
+} else {
+    accionPermitida = 'Acceso limitado';
+}
+
+```
+
+Es importante recordar que, aunque los operadores ternarios son útiles, no deben abusarse. Se usan principalmente para condiciones simples, por el contrario, para condiciones más complejas o cuando se requiere más de una operación, es preferible utilizar declaraciones if-else tradicionales para mantener la claridad del código.
+
+
+## Código Dinámico
+
+## Código Dinámico
+
+## Código Dinámico
+
+El codigo dinámico se refiere al código que se ejecuta en respuesta a eventos o acciones específicas y puede cambiarse o adaptarse según las condiciones o datos en tiempo real. Esta característica ofrece una gran flexibilidad y potencia a las aplicaciones React. 
+Es decir, en ligar de ser in código estático y siempre producir el mismo resultado, el código dinámico puede generar diferentes resultados basadas en entradas variables, interacciones del usuario, etc.
+En el mundo del desarrollo web, esto se traduce en páginas que cambian su contenido o comportamiento según las interacciones del usuario o datos que provienen de una base de datos.
+
+Para entenderlo mejor, se expone un ejemplo para explicar el uso del código dinámico para cargar componentes. Partimos de la base en el que en un proyecto React tenemos un componente que se llama `AñadirPersona.js`.
+src/components/AñadirPersona.js
 
 
 En este paso, utilizará Axios con otro método de solicitud HTTP denominado POST.
@@ -81,3 +208,6 @@ A continuación, ejecute la aplicación:
 npm start
 ```
 Ver la aplicación en el navegador. Se le presentará un formulario para enviar nuevos usuarios. Compruebe la consola después de enviar un nuevo usuario.
+
+
+A parte de la carga dinámica de componentes, el código dinámico se puede utilizar también para la generación dinámica de formularios, o renderizado condicional avanzado entre otras. 
