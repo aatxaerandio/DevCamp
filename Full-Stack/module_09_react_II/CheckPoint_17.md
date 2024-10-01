@@ -124,7 +124,7 @@ Es importante recordar que, aunque los operadores ternarios son útiles, no debe
 
 ## ¿Qué tipo de solicitud de API hacemos cuando queremos eliminar datos?
 
-Como comentamos en el [CheckPoint 12](../module_06_git_&_github/CheckPotin_12.md), las rutas HTTP se asocian a un verbo como GET, PUT, POST o DELETE.
+Como comentamos en el [CheckPoint 12](../module_06_git_&_github/CheckPotin_12.md/#), las rutas HTTP se asocian a un verbo como GET, PUT, POST o DELETE.
 
 En el caso de las solicitudes de API para eliminar datos, esta es una solicitud DELETE. En el caso de API, y usando la librería axios, si se usa DELETE, este envía una solicitud HTPP DELETE a la api que estemos utilizando en cuestión y recibe un mensaje de vuelta. 
 
