@@ -189,7 +189,6 @@ Partimos de la base que queremos modificar datos en un servidor. Usando PUT en a
 
 ```javascript
 componentDidMount() {
-    // Simple PUT request with a JSON body using axios
     const article = { title: 'React PUT Request Example' };
     axios.put('https://url_ejemplo/api/articles/1', article)
         .then(response => this.setState({ updatedAt: response.data.updatedAt }))
@@ -200,48 +199,27 @@ componentDidMount() {
 
 ```
 
-
-
 Se crea un objeto llamado article con una propiedad title. Este objeto representa los datos que se enviarán en la solicitud PUT.
 
-Se utiliza Axios para realizar una solicitud PUT a la URL 'https://url_ejemplo/api/articles/1'. El segundo argumento de axios.put() es el objeto article que se enviará como cuerpo de la solicitud.
+Se utiliza Axios para realizar una solicitud PUT a la URL `https://url_ejemplo/api/articles/1`. El segundo argumento de `axios.put()` es el objeto `article` que se enviará como cuerpo de la solicitud.
 
-Axios devuelve una promesa. Cuando la solicitud se completa con éxito, se ejecuta la función de callback en el método then(). Esta función toma la respuesta del servidor y actualiza el estado del componente con el valor de updatedAt de la respuesta
+Axios devuelve una promesa. Cuando la solicitud se completa con éxito, se ejecuta la función de callback en el método `then()`. Esta función toma la respuesta del servidor y actualiza el estado del componente con el valor de `updatedAt` de la respuesta.
 
 En ambos casos, la elección entre PATCH y PUT dependerá de lo que necesites realizar. PATCH es generalmente para actualizaciones parciales, mientras que PUT se usa para reemplazos completos.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Código Dinámico
 
-El codigo dinámico se refiere al código que se ejecuta en respuesta a eventos o acciones específicas y puede cambiarse o adaptarse según las condiciones o datos en tiempo real. Esta característica ofrece una gran flexibilidad y potencia a las aplicaciones React. 
+El código dinámico se refiere al código que se ejecuta en respuesta a eventos o acciones específicas y puede cambiarse o adaptarse según las condiciones o datos en tiempo real. Esta característica ofrece una gran flexibilidad y potencia a las aplicaciones React. 
 Es decir, en ligar de ser in código estático y siempre producir el mismo resultado, el código dinámico puede generar diferentes resultados basadas en entradas variables, interacciones del usuario, etc.
 En el mundo del desarrollo web, esto se traduce en páginas que cambian su contenido o comportamiento según las interacciones del usuario o datos que provienen de una base de datos.
 
 Para entenderlo mejor, se expone un ejemplo para explicar el uso del código dinámico para cargar componentes. Partimos de la base en el que en un proyecto React tenemos un componente que se llama `AñadirPersona.js`.
-src/components/AñadirPersona.js
-
 
 En este paso, utilizará Axios con otro método de solicitud HTTP denominado POST.
 
-Dentro de tu proyecto de React, necesitarás crear un nuevo componente llamado PersonAdd.
+Dentro del proyecto de React, necesitarás crear un nuevo componente llamado `AñadirPersona.js`.
 
-Cree PersonAdd.js y agregue el siguiente código para crear un formulario que permita la entrada del usuario y, posteriormente, publique el contenido en una API:
+Se crea `AñadirPerdona.js` y se agrega el siguiente código para crear un formulario que permita la entrada del usuario y, posteriormente, publique el contenido en una API:
 
 src/components/AñadirPersona.js
 
