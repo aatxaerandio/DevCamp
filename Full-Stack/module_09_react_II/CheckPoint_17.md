@@ -268,19 +268,18 @@ export default class AñadirPersona extends React.Component {
 
 
 
-Dentro de la función handleSubmit, se impide la acción predeterminada del formulario. A continuación, actualice el estado a la entrada del usuario.
+Dentro de la función `handleSubmit`, se impide la acción predeterminada del formulario. A continuación, se actualiza el estado a la entrada del usuario.
 
 El uso de POST le proporciona el mismo objeto de respuesta con información que puede usar dentro de una llamada.
 
-Para completar la solicitud POST, primero debe capturar la entrada del usuario. Luego agrega la entrada junto con la solicitud POST, que le dará una respuesta. A continuación, puede console.log la respuesta, que debe mostrar la entrada de usuario en el formulario.
+Para completar la solicitud POST, primero debe capturar la entrada del usuario. Luego agrega la entrada junto con la solicitud POST, que le dará una respuesta. A continuación, puede `console.log` la respuesta, que debe mostrar la entrada de usuario en el formulario.
 
-Añade este componente a tu app.js:
+Este componente se añade despues a `app.js`:
 
-src/app.js
+`src/app.js`
 
 ```javascript
-import PersonList from './components/PersonList';
-import PersonAdd from './components/PersonAdd';
+import AñadirPersona from './components/AñadirPersona';
 
 function App() {
   return (
@@ -294,7 +293,6 @@ A continuación, ejecute la aplicación:
 ```javascript
 npm start
 ```
-Ver la aplicación en el navegador. Se le presentará un formulario para enviar nuevos usuarios. Compruebe la consola después de enviar un nuevo usuario.
-
+Ahora se puede ver la aplicación en el navegador, y se podrá ver un formulario para enviar nuevos usuarios.
 
 A parte de la carga dinámica de componentes, el código dinámico se puede utilizar también para la generación dinámica de formularios, o renderizado condicional avanzado entre otras. 
