@@ -114,35 +114,38 @@ if (usuario.esAdmin) {
 Es importante recordar que, aunque los operadores ternarios son útiles, no deben abusarse. Se usan principalmente para condiciones simples, por el contrario, para condiciones más complejas o cuando se requiere más de una operación, es preferible utilizar declaraciones if-else tradicionales para mantener la claridad del código.
 
 
-## ¿Qué tipo de solicitud de API hacemos cuando queremos eliminar datos?
 
+
+
+
+
+
+
+
+## ¿Qué tipo de solicitud de API hacemos cuando queremos eliminar datos?
 
 Como comentamos en el checkpoint 12 (https://github.com/aatxaerandio/DevCamp/blob/ee32f0560136bcc639c53379765266f1aa9a8868/Full-Stack/module_06_git_%26_github/CheckPotin_12.md) , las rutas HTTP se asocian a un verbo como GET, PUT, POST o DELETE.
 
 En el caso de las solicitudes de API para eliminar datos, esta es una solicitud DELETE. En el caso de API, y usando la librería axios, si se usa DELETE, este envía una solicitud HTPP DELETE a la api que estemos utilizando en cuestión y recibe un mensaje de vuelta. 
-En el siguiente ejemplo:
+
+Partimos de la base de un codigo con un ciclo de vida en un componenete de React, especificamente `componentDidMount()` que se ejecuta automaticamente después de que un componente dse monta en el DOM. 
+
+#### En el siguiente ejemplo:
 ```javascript
 componentDidMount() {
-    // Simple DELETE request with axios
     axios.delete('https://api_ejemplo/api/posts/1')
         .then(() => this.setState({ status: 'Delete successful' }));
 }
 ```
-Cuando se recibe la respuesta, el componente React muestra el mensaje de estado 'Eliminar correctamente'.
-Usar DELETE es simple, directo y claro para eliminar datos. Además, y tal y como hemos comentado, forma parte de la arquitectura REST, lo que facilita la interoperabilidad.
-DELETE se usa en diversas situaciones donde es necesario eliminar datos, así como, eliminar un post/foto/video de una red social, quitar un producto de un catalogo de tienda, eliminar una cuenta de un usuario, o simplemente eliminar un archivo en un sistema de almacenamiento.
-
-
-
-
-
-
-Ejemplo de uso de DELETE:
-Eliminar un post en Instagram.
+Cuando se recibe la respuesta, el componente React muestra el mensaje de estado 'Eliminar correctamente'.</br>
+Usar DELETE es simple, directo y claro para eliminar datos. Además, y tal y como hemos comentado, forma parte de la arquitectura REST, lo que facilita la interoperabilidad. </br>
+DELETE se usa en diversas situaciones donde es necesario eliminar datos, así como, eliminar un post/foto/video de una red social, quitar un producto de un catalogo de tienda, eliminar una cuenta de un usuario, o simplemente eliminar un archivo en un sistema de almacenamiento.</br>
+#### Ejemplo de uso de DELETE:</br>
+Eliminar un post en Instagram.</br>
 ```javascript
 componentDidMount() {
     // Simple DELETE request with axios
-    axios.delete('https://api_prueba/api/posts/1')
+    axios.delete('https://api.instagram.com/v1/media/1')
         .then(() => this.setState({ status: 'Delete successful' }))
         .catch(error => {
             console.error('Error al eliminar:', error);
@@ -150,6 +153,10 @@ componentDidMount() {
         });
 }
 ```
+Se utiliza la biblioteca axios para hacer una solicitud HTTP DELETE a la URL especificada (https://api.instagram.com/v1/media/1) para eliminar un recurso específico (en este caso, un medio de Instagram con ID 1).</br>
+Si la solicitud DELETE es exitosa, se ejecuta la función `then(...)`. Aquí, se actualiza el estado del componente con `this.setState({ status: 'Delete successful' })`, lo que informará al usuario que la eliminación fue exitosa. </br>
+Si ocurre un error durante la solicitud, se ejecuta el siguiente bloque `.catch(error => {...}):`. Se imprime el error en la consola con `console.error(...)`, y se actualiza el estado del componente para reflejar que hubo un problema: `this.setState({ status: 'Error en la eliminación' })`.
+
 
 
 
