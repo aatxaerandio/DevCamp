@@ -56,7 +56,7 @@ Donde:<br/>
 **valorSiFalso**: es el valor que se devuelve si la condición es falsa.  <br/>
 
 
-El uso de operadores ternarios trae beneficios. Al ser un un código más simple y conciso, permite expresar una lógica condicional simple en una sola línea. Además, contribuyen a la legibilidad del código, ya que hacen que sea el código más fácil para leer uy entender. A parte de esto, al ser una expresión mas compacta, puede ligeramente ser más eficiente para el rendimiento del sistema. <br/>
+El uso de operadores ternarios trae beneficios. Al ser un un código más simple y conciso, permite expresar una lógica condicional simple en una sola línea. Además, contribuyen a la legibilidad del código, ya que hacen que sea el código más fácil para leer uy entender. A parte de esto, al ser una expresión mas compacta, puede ligeramente ser más eficiente para el rendimiento del sistema. <br/><br/>
 Aun así, los operadores ternarios son mas adecuados cuando se quieren hacer condicionales simples, así como evaluar una condición sencilla y devolver uno de los dos valores posibles, o también para el retorno de funciones, cuando una función necesita devolver uno de dos valores basados en una condición. <br/>
 
 Para entenderlo mejor, se exponen ejemplos del uso de operadores ternarios a continuación: <br/>
@@ -114,9 +114,79 @@ if (usuario.esAdmin) {
 Es importante recordar que, aunque los operadores ternarios son útiles, no deben abusarse. Se usan principalmente para condiciones simples, por el contrario, para condiciones más complejas o cuando se requiere más de una operación, es preferible utilizar declaraciones if-else tradicionales para mantener la claridad del código.
 
 
-## Código Dinámico
+## ¿Qué tipo de solicitud de API hacemos cuando queremos eliminar datos?
+
+
+Como comentamos en el checkpoint 12 (https://github.com/aatxaerandio/DevCamp/blob/ee32f0560136bcc639c53379765266f1aa9a8868/Full-Stack/module_06_git_%26_github/CheckPotin_12.md) , las rutas HTTP se asocian a un verbo como GET, PUT, POST o DELETE.
+
+En el caso de las solicitudes de API para eliminar datos, esta es una solicitud DELETE. En el caso de API, y usando la librería axios, si se usa DELETE, este envía una solicitud HTPP DELETE a la api que estemos utilizando en cuestión y recibe un mensaje de vuelta. 
+En el siguiente ejemplo:
+```javascript
+componentDidMount() {
+    // Simple DELETE request with axios
+    axios.delete('https://api_ejemplo/api/posts/1')
+        .then(() => this.setState({ status: 'Delete successful' }));
+}
+```
+Cuando se recibe la respuesta, el componente React muestra el mensaje de estado 'Eliminar correctamente'.
+Usar DELETE es simple, directo y claro para eliminar datos. Además, y tal y como hemos comentado, forma parte de la arquitectura REST, lo que facilita la interoperabilidad.
+DELETE se usa en diversas situaciones donde es necesario eliminar datos, así como, eliminar un post/foto/video de una red social, quitar un producto de un catalogo de tienda, eliminar una cuenta de un usuario, o simplemente eliminar un archivo en un sistema de almacenamiento.
+
+
+
+
+
+
+Ejemplo de uso de DELETE:
+Eliminar un post en Instagram.
+```javascript
+componentDidMount() {
+    // Simple DELETE request with axios
+    axios.delete('https://api_prueba/api/posts/1')
+        .then(() => this.setState({ status: 'Delete successful' }))
+        .catch(error => {
+            console.error('Error al eliminar:', error);
+            this.setState({ status: 'Error en la eliminación' });
+        });
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Código Dinámico
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Código Dinámico
 
