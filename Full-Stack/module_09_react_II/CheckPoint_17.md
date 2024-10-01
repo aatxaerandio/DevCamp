@@ -138,7 +138,8 @@ componentDidMount() {
 }
 ```
 Cuando se recibe la respuesta, el componente React muestra el mensaje de estado 'Eliminar correctamente'.</br>
-Usar DELETE es simple, directo y claro para eliminar datos. Además, y tal y como hemos comentado, forma parte de la arquitectura REST, lo que facilita la interoperabilidad. </br>
+Usar DELETE es simple, directo y claro para eliminar datos. Además, y tal y como hemos comentado, forma parte de la arquitectura REST, lo que facilita la interoperabilidad.
+
 DELETE se usa en diversas situaciones donde es necesario eliminar datos, así como, eliminar un post/foto/video de una red social, quitar un producto de un catalogo de tienda, eliminar una cuenta de un usuario, o simplemente eliminar un archivo en un sistema de almacenamiento.</br>
 #### Ejemplo de uso de DELETE:</br>
 Eliminar un post en Instagram.</br>
@@ -153,8 +154,8 @@ componentDidMount() {
         });
 }
 ```
-Se utiliza la biblioteca axios para hacer una solicitud HTTP DELETE a la URL especificada (https://api.instagram.com/v1/media/1) para eliminar un recurso específico (en este caso, un medio de Instagram con ID 1).</br>
-Si la solicitud DELETE es exitosa, se ejecuta la función `then(...)`. Aquí, se actualiza el estado del componente con `this.setState({ status: 'Delete successful' })`, lo que informará al usuario que la eliminación fue exitosa. </br>
+Se utiliza la biblioteca `axios` para hacer una solicitud HTTP DELETE a la URL especificada `(https://api.instagram.com/v1/media/1)` para eliminar un recurso específico (en este caso, un medio de Instagram con ID 1).</br> </br>
+Si la solicitud DELETE es exitosa, se ejecuta la función `then(...)`. Aquí, se actualiza el estado del componente con `this.setState({ status: 'Delete successful' })`, lo que informará al usuario que la eliminación fue exitosa. </br> </br>
 Si ocurre un error durante la solicitud, se ejecuta el siguiente bloque `.catch(error => {...}):`. Se imprime el error en la consola con `console.error(...)`, y se actualiza el estado del componente para reflejar que hubo un problema: `this.setState({ status: 'Error en la eliminación' })`.
 
 
@@ -176,7 +177,38 @@ Si ocurre un error durante la solicitud, se ejecuta el siguiente bloque `.catch(
 
 
 
-## Código Dinámico
+## ¿Qué tipo de solicitud de API hacemos cuando queremos actualizar los datos?
+
+En el caso de que queramos actualizar los datos, la solicitud de API que se utiliza es generalmente una solicitud HTTP PUT o PATCH. 
+
+La solicitud PUT se usa para reemplazar completamente un recurso, y de este modo asegura que el recurso esté presente en el sistema, es decir, evita problemas de consistencia (ya que sería eliminar un recurso e implementar otro).
+
+Por otro lado esta PATCH, que permite actualizar solo los campos específicos que necesitan los cambios, y es más eficiente que enviar todos los datos del recurso. Este último se usa para pequeñas modificaciones y específicas.
+
+Partimos de la base que queremos modificar datos en un servidor. Usando PUT en axios, seria de la siguiente manera:
+
+```javascript
+componentDidMount() {
+    // Simple PUT request with a JSON body using axios
+    const article = { title: 'React PUT Request Example' };
+    axios.put('https://url_ejemplo/api/articles/1', article)
+        .then(response => this.setState({ updatedAt: response.data.updatedAt }))
+        .catch(error => {
+            console.error('Error en la solicitud PUT:', error);
+        });
+}
+
+```
+
+
+
+Se crea un objeto llamado article con una propiedad title. Este objeto representa los datos que se enviarán en la solicitud PUT.
+
+Se utiliza Axios para realizar una solicitud PUT a la URL 'https://url_ejemplo/api/articles/1'. El segundo argumento de axios.put() es el objeto article que se enviará como cuerpo de la solicitud.
+
+Axios devuelve una promesa. Cuando la solicitud se completa con éxito, se ejecuta la función de callback en el método then(). Esta función toma la respuesta del servidor y actualiza el estado del componente con el valor de updatedAt de la respuesta
+
+En ambos casos, la elección entre PATCH y PUT dependerá de lo que necesites realizar. PATCH es generalmente para actualizaciones parciales, mientras que PUT se usa para reemplazos completos.
 
 
 
