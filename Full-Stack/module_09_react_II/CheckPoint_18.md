@@ -62,7 +62,7 @@ A parte de los ejemplos que se han expuesto, los modales pueden usarse también 
 ## Scroll infinito
 
 <p align="center">
-  <img src="images/scroll.png" >
+  <img src="images/scroll_I.png" width=75% >
 </p>
 
 
@@ -77,7 +77,7 @@ El scroll infinito tiene como fin **mejorar la experiencia del usuario, permitie
 
 En cuanto a usos del scroll infinito, estos son muy numerosos y aparecen en muchas aplicaciones tanto web como móviles.
 
-### Ejemplo 1 – Instagram
+#### Ejemplo 1 – Instagram
 
 <p align="center">
   <img src="images/instagram.gif">
@@ -93,6 +93,8 @@ Instagram usa el scroll infinito para mostrar un flujo continuo de publicaciones
   <img src="images/tiktok.gif">
 </p>
 
+Tik tok al igual que Instagram, hace uso del scroll infinito para ir cargando contenido a medida que se desplaza en la página/app.
+
 ---
 
 ### Ejemplo 3 – Pinterest
@@ -101,6 +103,9 @@ Instagram usa el scroll infinito para mostrar un flujo continuo de publicaciones
   <img src="images/pinterest.gif">
 </p>
 
+Pinteret utiliza el mismo recurso, a medida que el usuario va desplazandose se va cargando nuevo contenido, nuevas imágenes.
+
+---
 
 Actualmente hay otras muchas aplicaciones web que utilizan el scroll infinito, así como:
 
