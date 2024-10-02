@@ -2,6 +2,10 @@
 
 ## Modales - Qué son y para qué se utilizan
 
+<p align="center">
+  <img src="images/modals.png" >
+</p>
+
 En React, un Modal es un componente de la interfaz que “sale y entra” en la interfaz, es decir, se superpone al contenido de la página con el fin de mostrar información adicional, mostrar avisos o para que el usuario de la página tenga que realizar alguna acción. Se podría decir que es como una ventana emergente que aparece sobre el contenido, y se puede configurar de tal modo que se oscurezca o se desenfoque el fondo para que se resalte más.
 
 **Los modales en React no tienen otro objetivo más que mejorar la experiencia del usuario, mostrando el contenido sin necesidad de navegar a otra página, agilizando la interacción.**
