@@ -53,7 +53,6 @@ CREATE TABLE Estudiantes (
     fecha_nacimiento DATE
 );
 ```
-
 | Nombre de columna | Tipo de dato   |
 | ----------------- | -------------- | 
 | `estudiante_ID`     | `INT`          |
@@ -74,7 +73,6 @@ CREATE TABLE Profesores (
     departamento VARCHAR(50)
 );
 ```
-
 | Nombre de columna  | Tipo de dato  | 
 | ------------------ | ------------- | 
 | `profesor_ID`      | `INT`         | 
@@ -95,8 +93,6 @@ CREATE TABLE Asignaturas (
     FOREIGN KEY (profesor_ID) REFERENCES Profesores(profesor_ID)
 );
 ```
-
-
 | Nombre de columna | Tipo de dato  | Características                               |
 | ----------------- | ------------- | --------------------------------------------- |
 | `asignatura_ID`   | `INT`         | Primary Key, Not Null, Unique, Auto Increment |
@@ -232,7 +228,7 @@ Al ser la primera consulta, se desglosa a continuación:
 5. Agrupa los resultados por `profesor_ID`, `nombre` y `apellido` del profesor. Esto permite calcular la nota media para cada profesor.
 6. Ordena los resultados por la `nota_media` en orden descendente (DESC).Los profesores con las `nota_media` más altas aparecerán primero.
 
-```
+
 > Resultado:
 >
 > | nombre      | apellido    | nota_media |
@@ -242,7 +238,7 @@ Al ser la primera consulta, se desglosa a continuación:
 > | Nerea       | Alonso      |  7.675000  |
 > | Begoña      | Jugo        |  6.500000  | 
 > | Oscar       | Ecenarro    |  6.066667  |
-```
+
 
 <br/>
 
@@ -260,10 +256,10 @@ ORDER BY MejorNota DESC;
 >
 > | nombre      | apellido     |  mejor_nota  |
 > | ----------- | ------------ |  ----------  |
-> | Luis	    | Landa	       |  9.70        |
-> | Aritz	    | Mendiet      |  8.50        |
-> | María    	| Gonzále      |  8.40        |
-> | Ana	        | Sánchez	   |  7.90        |
+> | Luis	       | Landa	       |  9.70        |
+> | Aritz	    | Mendieta     |  8.50        |
+> | María    	 | González     |  8.40        |
+> | Ana	       | Sánchez	    |  7.90        |
 > | Aitor	    | Garcia       |  7.40        |
 
 <br/>
@@ -287,21 +283,21 @@ ORDER BY asignatura_ID;
 >
 > | nombre    | apellido   | asignatura_ID | nombre_asignatura   |
 > | --------- | ---------- | --------------| -----------------   |
-> | Aritz	  | Mendieta   |	1	       | Fisiología Animal   |
-> | Ana	      | Sánchez    |	1	       | Fisiología Animal   |
-> | Aitor     |	Garcia     |	2	       | Física Cuántica     |
-> | María     |	González   |	2	       | Física Cuántica     |
-> | Luis      |	Landa      |	2	       | Física Cuántica     |
-> | Aitor     |	Garcia     |	3	       | Bioquímica Básica   |
-> | María	  | González   |	3	       | Bioquímica Básica   |
-> | Aitor	  | Garcia     |	4	       | Bioquímica Avanzada |
-> | María	  | González   |	4	       | Bioquímica Avanzada |
-> | Luis      |	Landa      |	5	       | Geología de Costas  |
-> | Luis      |	Landa      |	6	       | Geología de Valles  |
-> | Aritz     |	Mendieta   |	7	       | Química Analítica   |
-> | Ana       | Sánchez    |	7	       | Química Analítica   |
-> | Aritz     |	Mendieta   |	8	       | Química Orgánica    |
-> | Ana       |	Sánchez    |	8	       | Química Orgánica    |
+> | Aritz	  | Mendieta   |	1	          | Fisiología Animal   |
+> | Ana	     | Sánchez    |	1	          | Fisiología Animal   |
+> | Aitor     | Garcia     |	2	          | Física Cuántica     |
+> | María     | González   |	2	          | Física Cuántica     |
+> | Luis      | Landa      |	2	          | Física Cuántica     |
+> | Aitor     | Garcia     |	3	          | Bioquímica Básica   |
+> | María	  | González   |	3	          | Bioquímica Básica   |
+> | Aitor	  | Garcia     |	4	          | Bioquímica Avanzada |
+> | María	  | González   |	4	          | Bioquímica Avanzada |
+> | Luis      | Landa      |	5	          | Geología de Costas  |
+> | Luis      | Landa      |	6	          | Geología de Valles  |
+> | Aritz     | Mendieta   |	7	          | Química Analítica   |
+> | Ana       | Sánchez    |	7   	       | Química Analítica   |
+> | Aritz     | Mendieta   |	8	          | Química Orgánica    |
+> | Ana       | Sánchez    |	8	          | Química Orgánica    |
 
 <br/>
 
@@ -320,7 +316,7 @@ ORDER BY nota_media ASC;
 > |     asignatura      |  nota_media  |
 > | ------------------  |  ----------  |
 > | Química Analítica   |  6.000000    |
-> | Física Cuántica	    |  6.066667    |
+> | Física Cuántica	   |  6.066667    |
 > | Química Orgánica    |  7.000000    |
 > | Bioquímica Avanzada	|  7.550000    |
 > | Bioquímica Básica	|  7.800000    |
