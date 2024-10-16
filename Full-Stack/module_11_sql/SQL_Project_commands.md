@@ -4,14 +4,14 @@
 
 ```sql
 
---Crear base de datos
+-- Crear base de datos
 
 CREATE DATABASE universidad;
 
 USE universidad;
 
 
---Crear Tablas Estudiantes, Profesores, Asignaturas y Calificaciones y también las claves foráneas
+-- Crear Tablas Estudiantes, Profesores, Asignaturas y Calificaciones y también las claves foráneas
 
 CREATE TABLE Estudiantes (
     estudiante_ID INT PRIMARY KEY,
@@ -92,7 +92,7 @@ INSERT INTO Calificaciones (calificacion_ID, estudiante_ID, asignatura_ID, nota)
 
 
 
---Script para la nota media del profesor:
+-- Script para la nota media del profesor:
 
 SELECT p.nombre, p.apellido, AVG(c.nota) as nota_media
 FROM Profesores p
@@ -102,7 +102,7 @@ GROUP BY p.profesor_ID, p.nombre, p.apellido
 ORDER BY nota_media DESC;
 
 
---Script para las mejores notas de cada estudiante:
+-- Script para las mejores notas de cada estudiante:
 
 SELECT e.nombre, e.apellido, MAX(c.nota) AS MejorNota
 FROM Estudiantes e
@@ -124,7 +124,7 @@ JOIN Asignaturas a ON c.asignatura_ID = a.asignatura_ID
 ORDER BY asignatura_ID;
 
 
---Script para crear un informe resumido de los cursos y sus notas medias, ordenados desde el curso más difícil (curso con la nota media más baja) hasta el curso más fácil:
+-- Script para crear un informe resumido de los cursos y sus notas medias, ordenados desde el curso más difícil (curso con la nota media más baja) hasta el curso más fácil:
 
 SELECT a.nombre as asignatura, AVG(c.nota) as nota_media
 FROM Asignaturas a
@@ -133,7 +133,7 @@ GROUP BY a.asignatura_ID, a.nombre
 ORDER BY nota_media ASC;
 
 
---Script para encontrar qué estudiante y profesor tienen más cursos en común:
+-- Script para encontrar qué estudiante y profesor tienen más cursos en común:
  
 SELECT e.nombre as estudiante, p.nombre as profesor, COUNT(DISTINCT a.asignatura_ID) as asignaturas_en_comun
 FROM Estudiantes e
