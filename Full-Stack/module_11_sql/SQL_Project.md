@@ -26,7 +26,9 @@ El proyecto debe contener las siguientes características técnicas:
 
 Teniendo en cuenta en la descripción de la tarea/proyecto, a continuación muestro la forma en la que he creado la base de datos con tablas y qué scripts he creado para poder realizar las consultas.
 
-Mencionar que pese a que se puede crear contenido manualmente mediante MySQL Workbench, utilizando sus características y herramientas, he optado por la opción de escribir todos los comandos. Sea mediatne MySQL Workbench o mediate comandos, he llegado al mismo resultado.
+Mencionar que pese a que se puede crear contenido manualmente mediante MySQL Workbench, utilizando sus características y herramientas, he optado por la opción de escribir todos los comandos. Sea mediante MySQL Workbench o mediate comandos, he llegado al mismo resultado.
+
+ :white_check_mark: Tienes un shortcut a todos los comandos empleados en este proyecto en [este enlace](./SQL_Project_commands.md) a otra página de mi repositorio GitHub.
 
 
 ### Crea la base de datos con las tablas
